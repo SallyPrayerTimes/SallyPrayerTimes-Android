@@ -1,0 +1,102 @@
+<!--  
+ /*******************************Copyright Block*********************************
+ *                                                                             *
+ *                Sally Prayer Times Calculator (Final 24.1.20)                *
+ *           Copyright (C) 2015 http://www.sallyprayertimes.com/               *
+ *                         bibali1980@gmail.com                                *
+ *                                                                             *
+ *     This program is free software: you can redistribute it and/or modify    *
+ *     it under the terms of the GNU General Public License as published by    *
+ *      the Free Software Foundation, either version 3 of the License, or      *
+ *                      (at your option) any later version.                    *
+ *                                                                             *
+ *       This program is distributed in the hope that it will be useful,       *
+ *        but WITHOUT ANY WARRANTY; without even the implied warranty of       *
+ *        MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the        *
+ *                 GNU General Public License for more details.                *
+ *                                                                             *
+ *      You should have received a copy of the GNU General Public License      *
+ *      along with this program.  If not, see http://www.gnu.org/licenses      *
+ *******************************************************************************/
+ -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context="activities.Kibla_Activity">
+
+    <RelativeLayout
+        android:id="@+id/inner_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="5.0dip"
+        android:layout_marginRight="5.0dip"
+        android:layout_marginTop="5.0dip"
+        android:gravity="center" >
+
+    <TextView
+        android:id="@+id/kibla_location"
+        style="@style/locationStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/compass_layout"
+        android:layout_alignParentLeft="true"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="@string/location"
+        android:background="@drawable/tab_menu_active" />
+
+        <RelativeLayout
+            android:id="@+id/compass_layout"
+            android:layout_width="200.0dip"
+            android:layout_height="200.0dip"
+            android:layout_centerInParent="true" >
+
+            <RelativeLayout
+                android:id="@+id/image_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:gravity="center" >
+
+                <ImageView
+                    android:id="@+id/imageViewCompass"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="12.0dip"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/compass_background" />
+
+                <ImageView
+                    android:id="@+id/imageViewPointer"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="18.0dip"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/pointer_1" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    <TextView
+        android:id="@+id/kibla_warning"
+        style="@style/locationStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/compass_layout"
+        android:layout_gravity="center"
+        android:padding="5dp"
+        android:text="@string/app_version" 
+        android:background="@drawable/tab_menu_active"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

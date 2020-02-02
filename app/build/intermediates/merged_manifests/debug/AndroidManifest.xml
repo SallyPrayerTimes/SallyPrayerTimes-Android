@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ /*******************************Copyright Block*********************************
+ *                                                                             *
+ *                Sally Prayer Times Calculator (Final 24.1.20)                *
+ *           Copyright (C) 2015 http://www.sallyprayertimes.com/               *
+ *                         bibali1980@gmail.com                                *
+ *                                                                             *
+ *     This program is free software: you can redistribute it and/or modify    *
+ *     it under the terms of the GNU General Public License as published by    *
+ *      the Free Software Foundation, either version 3 of the License, or      *
+ *                      (at your option) any later version.                    *
+ *                                                                             *
+ *       This program is distributed in the hope that it will be useful,       *
+ *        but WITHOUT ANY WARRANTY; without even the implied warranty of       *
+ *        MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the        *
+ *                 GNU General Public License for more details.                *
+ *                                                                             *
+ *      You should have received a copy of the GNU General Public License      *
+ *      along with this program.  If not, see http://www.gnu.org/licenses      *
+ *******************************************************************************/
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.sally"
+    android:versionCode="2"
+    android:versionName="1.2.15" >
+
+    <uses-sdk android:minSdkVersion="14" />
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+
+    <application
+        android:allowBackup="true"
+        android:debuggable="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:testOnly="true"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="activities.SplashScreen_Activity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="activities.Prayers_Activity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="activities.Info_Activity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="activities.Kibla_Activity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="activities.Home_Programe_Activity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="activities.Settings_Activity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+
+        <receiver
+            android:name="widget.MyWidgetProvider2"
+            android:icon="@drawable/small_widget"
+            android:label="Small Widget" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_provider_2" />
+        </receiver>
+        <receiver android:name="widget.MyWidgetProviderBroadcastReceiver2" />
+        <receiver
+            android:name="widget.MyWidgetProvider"
+            android:icon="@drawable/large_widget"
+            android:label="Large Widget" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_provider" />
+        </receiver>
+        <receiver android:name="widget.MyWidgetProviderBroadcastReceiver" />
+        <receiver
+            android:name="classes.StartServiceAtStartupDevice"
+            android:enabled="true"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="classes.AthanServiceBroasdcastReceiver"
+            android:exported="false" >
+        </receiver>
+
+        <service
+            android:name="classes.AthanService"
+            android:enabled="true"
+            android:exported="true" >
+        </service>
+        <service
+            android:name="widget.MyWidgetProviderService"
+            android:enabled="true"
+            android:exported="true" >
+        </service>
+        <service
+            android:name="widget.MyWidgetProviderService2"
+            android:enabled="true"
+            android:exported="true" >
+        </service>
+
+        <receiver android:name="classes.RefreshDayServiceManager" >
+            <intent-filter>
+                <action android:name="android.intent.action.TIME_SET" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

@@ -1,0 +1,171 @@
+<!--  
+ /*******************************Copyright Block*********************************
+ *                                                                             *
+ *                Sally Prayer Times Calculator (Final 24.1.20)                *
+ *           Copyright (C) 2015 http://www.sallyprayertimes.com/               *
+ *                         bibali1980@gmail.com                                *
+ *                                                                             *
+ *     This program is free software: you can redistribute it and/or modify    *
+ *     it under the terms of the GNU General Public License as published by    *
+ *      the Free Software Foundation, either version 3 of the License, or      *
+ *                      (at your option) any later version.                    *
+ *                                                                             *
+ *       This program is distributed in the hope that it will be useful,       *
+ *        but WITHOUT ANY WARRANTY; without even the implied warranty of       *
+ *        MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the        *
+ *                 GNU General Public License for more details.                *
+ *                                                                             *
+ *      You should have received a copy of the GNU General Public License      *
+ *      along with this program.  If not, see http://www.gnu.org/licenses      *
+ *******************************************************************************/
+ -->
+<resources>
+    
+    <string name="app_name">Sally</string>
+    
+    <string name="fajr">الفجر</string>
+    <string name="shorouk">الشروق</string>
+    <string name="duhr">الظهر</string>
+    <string name="asr">العصر</string>
+    <string name="maghrib">المغرب</string>
+    <string name="ishaa">العشاء</string>
+    <string name="prayers">الصلاة</string>
+    <string name="kibla">القبلة</string>
+    <string name="settings">اعدادات</string>
+    <string name="info">معلومات</string>
+    <string name="error_read_user_config">خطأ في قراءة الاعدادات</string>
+    <string name="error_try_again_later">خطأ : حاول مرة اخرى</string>
+    <string name="gps_is_not_on">GPS غير مفعل</string>
+    <string name="loading">جاري البحث&#8230;</string>
+    <string name="must_first_select_a_country">يجب اختيار البلد اولا</string>
+    <string name="country">البلد</string>
+    <string name="city">المدينة</string>
+    <string name="time_zone">المنطقة الزمنية</string>
+    <string name="latitude">خط العرض</string>
+    <string name="longitude">خط الطول</string>
+    <string name="applay">تنفيد</string>
+    <string name="mazhab">المذهب</string>
+    <string name="calculationMethod">طرق الحساب</string>
+    <string name="type_time">الوقت المعتمد</string>
+    <string name="hijri_adjustment">تعديل التاريخ الهجري</string>
+    <string name="Language">اللغة</string>
+    <string name="location">الموقع</string>
+    <string name="locationgps">تحديد الموقع تلقائيا</string>
+    <string name="confirm">موافق</string>
+    <string name="cancel">إلغاء</string>
+    <string name="stopathan">ايقاف الادان</string>
+    <string name="missing_to">تبقى لصلاة</string>
+    
+    <string name="January">يناير</string>
+    <string name="February">فبراير</string>
+    <string name="March">مارس </string>
+    <string name="April">ابريل</string>
+    <string name="May">مايو </string>
+    <string name="June">يونيو </string>
+    <string name="July">يوليو</string>
+    <string name="August">أغسطس</string>
+    <string name="September">سبتمبر</string>
+    <string name="October">أكتوبر</string>
+    <string name="November">نوفمبر</string>
+    <string name="December">ديسمبر</string>
+    
+    <string name="SUNDAY">الأحد</string>
+    <string name="MONDAY">الاثنين</string>
+    <string name="TUESDAY">الثلاثاء</string>
+    <string name="WEDNESDAY">الأربعاء</string>
+    <string name="THURSDAY">الخميس</string>
+    <string name="FRIDAY">الجمعة</string>
+    <string name="SATURDAY">السبت</string>
+    
+    <string name="al_ahad">الأحد</string>
+    <string name="al_ithnin">الاثنين</string>
+    <string name="attolathaa">الثلاثاء</string>
+    <string name="al_arbiaa">الأربعاء</string>
+    <string name="al_khamis">الخميس</string>
+    <string name="al_jomoa">الجمعة</string>
+    <string name="assabt">السبت</string>
+    
+    <string name="muharram">محرم</string>
+    <string name="safar">صفر</string>
+    <string name="rabi_ul_awwal">ربيع أول</string>
+    <string name="rabi_ul_attani">ربيع ثاني</string>
+    <string name="jumadal_ula">جماد الاول</string>
+    <string name="jumadal_attani">جماد الثاني</string>
+    <string name="rajab">رجب</string>
+    <string name="shaban">شعبان</string>
+    <string name="ramadan">رمضان</string>
+    <string name="shawwal">شوال</string>
+    <string name="dhul_qi_ada">ذي القعدة</string>
+    <string name="dhul_hijja">ذي الحجة</string>
+    
+    <string name="its_the_hour_of">حان وقت صلاة</string>
+    
+    <string name="shafi3i">الشافعي</string>
+    <string name="hanafi">الحنفي</string>
+    
+    <string name="UmmAlQuraUniv">جامعة أم القرى</string>
+    <string name="EgytionGeneralAuthorityofSurvey">الهيئة المصرية العامة للمساحـة</string>
+    <string name="UnivOfIslamicScincesKarachi">جامعة العلوم الإسلامية - كراتشي</string>
+    <string name="IslamicSocietyOfNorthAmerica">الجمعية الاسلامية لأميركا الشمالية</string>
+    <string name="MuslimWorldLeague">رابطة العالم الإسلامي</string>
+    
+    <string name="standard">افتراضي</string>
+    <string name="sayfi">صيفي</string>
+    
+    <string name="arabic">عربي</string>
+    <string name="english">انجليزي</string>
+    <string name="italiano">ايطالي</string>
+    <string name="french">فرنسي</string>
+    
+    <string name="time_adjustment">تعديل الوقت</string>
+    <string name="time">الوقت</string>
+    <string name="time12or24">12h / 24H</string>
+    
+    <string name="time12or24_12">12 h</string>
+    <string name="time12or24_24">24 H</string>
+    <string name="ali_ben_ahmed_mala">علي بن أحمد ملا</string>
+    <string name="abd_el_basset_abd_essamad">عبد الباسط عبد الصمد</string>
+    <string name="farou9_abd_errehmane_hadraoui">فاروق عبدالرحمن حضراوي</string>
+    <string name="mohammad_ali_el_banna">محمد علي البنا</string>
+    <string name="mohammad_khalil_raml">محمد خليل رمل</string>
+    
+    <string name="not_set">......</string>
+    <string name="kibla_warning">الهاتف قد يتاثر بالمعادن المحيطة به لا تعتمد عليه الا في حالة عدم معرفتك لاتجاه القبلة</string>
+    <string name="sensor_is_not_exist">جهاز الاستشعار غير موجود </string>
+    <string name="error_corrupt_user_file_config">خطأ في قراءة ملف الاعدادات احدفه و تاكد من صلاحياتك ثم اعد التشغيل</string>
+    
+    <string name="athan">أذان</string>
+    <string name="vibration">اهتزاز</string>
+    <string name="notification">تنبيه</string>
+    <string name="nothing">لا شيء</string>
+
+    <string name="notificationTitle">حان موعد</string>
+    <string name="notificationMessage">قد حان موعد صلاة</string>
+    
+    <string name="app_info">صَلِّ هو برنامج مجاني و مفتوح المصدر لحساب اوقات الصلاة الاسلامية لمعظم دول العالم</string>
+    <string name="app_version">نسخة نهائية 24.1.20</string>
+    <string name="app_contact">لمزيد من المعلومات الاتصال بي هنا:</string>
+    <string name="app_site">http://www.sallyprayertimes.com</string>
+    <string name="app_footer">صَلِّ هو برنامج مجاني و مفتوح المصدر و يحق لكل شخص استعماله و نشره, فقط لا تنسونا من خالص دعائكم</string>
+
+    <string name="no_network_provider_is_enabled">لم يتم تمكين مزود شبكة ، يرجى تمكين خيار الموقع</string>
+
+    <string name="battery">البطارية</string>
+    <string name="battery_optimization">تحسين البطارية</string>
+    <string name="optimized">مستبعد من تحسين البطارية</string>
+    <string name="not_optimized">غير مستبعد من تحسين البطارية</string>
+    <string name="application_already_optimized">تطبيق مستبعد بالفعل من تحسين البطارية</string>
+
+    <string name="fajr_widget">الفجر</string>
+    <string name="shorouk_widget">الشروق</string>
+    <string name="duhr_widget">الظهر</string>
+    <string name="asr_widget">العصر</string>
+    <string name="maghrib_widget">المغرب</string>
+    <string name="ishaa_widget">العشاء</string>
+
+    <string name="widget">القطعة</string>
+    <string name="widget_background_color">لون خلفية القطعة</string>
+    <string name="color">اللون</string>
+
+    
+</resources>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lint>
+    <issue id="DefaultLocale" severity="ignore" />
+    <issue id="DrawAllocation">
+        <ignore path="src/com/sally/activities/Kibla_Activity.java" />
+    </issue>
+    <issue id="HandlerLeak">
+        <ignore path="src/com/sally/classes/AthanService.java" />
+    </issue>
+    <issue id="InlinedApi" severity="ignore" />
+    <issue id="NewApi" severity="ignore" />
+    <issue id="SdCardPath">
+        <ignore path="src/com/sally/classes/DataBaseHelper.java" />
+        <ignore path="src/com/sally/classes/DatabaseManager.java" />
+    </issue>
+    <issue id="ShowToast" severity="ignore" />
+</lint>

@@ -1,0 +1,86 @@
+<!--  
+ /*******************************Copyright Block*********************************
+ *                                                                             *
+ *                Sally Prayer Times Calculator (Final 24.1.20)                *
+ *           Copyright (C) 2015 http://www.sallyprayertimes.com/               *
+ *                         bibali1980@gmail.com                                *
+ *                                                                             *
+ *     This program is free software: you can redistribute it and/or modify    *
+ *     it under the terms of the GNU General Public License as published by    *
+ *      the Free Software Foundation, either version 3 of the License, or      *
+ *                      (at your option) any later version.                    *
+ *                                                                             *
+ *       This program is distributed in the hope that it will be useful,       *
+ *        but WITHOUT ANY WARRANTY; without even the implied warranty of       *
+ *        MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the        *
+ *                 GNU General Public License for more details.                *
+ *                                                                             *
+ *      You should have received a copy of the GNU General Public License      *
+ *      along with this program.  If not, see http://www.gnu.org/licenses      *
+ *******************************************************************************/
+ -->
+<resources>
+    <string-array name="calculationMethod_array">
+        <item>@string/UmmAlQuraUniv</item>
+        <item>@string/EgytionGeneralAuthorityofSurvey</item>
+        <item>@string/UnivOfIslamicScincesKarachi</item>
+        <item>@string/IslamicSocietyOfNorthAmerica</item>
+        <item>@string/MuslimWorldLeague</item>
+    </string-array> 
+    
+    <string-array name="mazhab_array">
+        <item>@string/shafi3i</item>
+        <item>@string/hanafi</item>
+    </string-array>
+    
+     <string-array name="typeTime_array">
+        <item>@string/standard</item>
+        <item>@string/sayfi</item>
+    </string-array>
+    
+     <string-array name="time12or24_array">
+        <item>@string/time12or24_12</item>
+        <item>@string/time12or24_24</item>
+    </string-array>
+    
+     <string-array name="athan_array">
+        <item>@string/ali_ben_ahmed_mala</item>
+        <item>@string/abd_el_basset_abd_essamad</item>
+        <item>@string/farou9_abd_errehmane_hadraoui</item>
+        <item>@string/mohammad_ali_el_banna</item>
+        <item>@string/mohammad_khalil_raml</item>
+    </string-array> 
+    
+      <string-array name="language_array">
+        <item>@string/arabic</item>
+        <item>@string/english</item>
+        <item>@string/french</item>
+        <item>@string/italiano</item>
+    </string-array>
+    
+      <string-array name="athan_Alert_Array">
+        <item>@string/athan</item>
+        <item>@string/vibration</item>
+          <item>@string/notification</item>
+          <item>@string/nothing</item>
+    </string-array>
+
+    <string-array name="widget_colors">
+        <item name="silver">Silver</item>
+        <item name="gray">Gray</item>
+        <item name="black">Black</item>
+        <item name="red">Red</item>
+        <item name="maroon">Maroon</item>
+        <item name="yellow">Yellow</item>
+        <item name="olive">Olive</item>
+        <item name="lime">Lime</item>
+        <item name="green">Green</item>
+        <item name="aqua">Aqua</item>
+        <item name="teal">Teal</item>
+        <item name="blue">Blue</item>
+        <item name="navy">Navy</item>
+        <item name="fuchsia">Fuchsia</item>
+        <item name="purple">Purple</item>
+    </string-array>
+
+</resources>

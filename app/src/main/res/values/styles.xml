@@ -1,0 +1,113 @@
+<!--
+ /*******************************Copyright Block*********************************
+ *                                                                             *
+ *                Sally Prayer Times Calculator (Final 24.1.20)                *
+ *           Copyright (C) 2015 http://www.sallyprayertimes.com/               *
+ *                         bibali1980@gmail.com                                *
+ *                                                                             *
+ *     This program is free software: you can redistribute it and/or modify    *
+ *     it under the terms of the GNU General Public License as published by    *
+ *      the Free Software Foundation, either version 3 of the License, or      *
+ *                      (at your option) any later version.                    *
+ *                                                                             *
+ *       This program is distributed in the hope that it will be useful,       *
+ *        but WITHOUT ANY WARRANTY; without even the implied warranty of       *
+ *        MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the        *
+ *                 GNU General Public License for more details.                *
+ *                                                                             *
+ *      You should have received a copy of the GNU General Public License      *
+ *      along with this program.  If not, see http://www.gnu.org/licenses      *
+ *******************************************************************************/
+ -->
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="missing_time_Style_label_time">
+        <item name="android:textSize">30.0dip</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="missing_time_Style_label">
+        <item name="android:textSize">30.0dip</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="missing_time_Style_name">
+        <item name="android:textSize">20.0dip</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="missing_time_Style">
+        <item name="android:textSize">50.0dip</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="widget_missing_time_Style">
+        <item name="android:textSize">40.0dip</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="time_label_widget2">
+        <item name="android:textSize">14.0dip</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="time_value_widget2">
+        <item name="android:textSize">14.0dip</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="time_label">
+        <item name="android:textSize">18.0dip</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="time_value">
+        <item name="android:textSize">16.0dip</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="locationStyle">
+        <item name="android:textSize">15.0dip</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="hijri_miladi_label">
+        <item name="android:textSize">16.0dip</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+    <style name="AlertDialogCustom" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <!-- Used for the buttons -->
+        <item name="colorAccent">@android:color/holo_blue_bright</item>
+        <!-- Used for the title and text -->
+        <item name="android:textColorPrimary">@android:color/darker_gray</item>
+        <!-- Used for the background -->
+        <item name="android:background">@android:color/white</item>
+    </style>
+
+    <style name="AlertProgressCustom" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">@android:color/holo_blue_bright</item>
+    </style>
+
+</resources>

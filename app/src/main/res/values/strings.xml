@@ -1,0 +1,173 @@
+<!--  
+ /*******************************Copyright Block*********************************
+ *                                                                             *
+ *                Sally Prayer Times Calculator (Final 24.1.20)                *
+ *           Copyright (C) 2015 http://www.sallyprayertimes.com/               *
+ *                         bibali1980@gmail.com                                *
+ *                                                                             *
+ *     This program is free software: you can redistribute it and/or modify    *
+ *     it under the terms of the GNU General Public License as published by    *
+ *      the Free Software Foundation, either version 3 of the License, or      *
+ *                      (at your option) any later version.                    *
+ *                                                                             *
+ *       This program is distributed in the hope that it will be useful,       *
+ *        but WITHOUT ANY WARRANTY; without even the implied warranty of       *
+ *        MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the        *
+ *                 GNU General Public License for more details.                *
+ *                                                                             *
+ *      You should have received a copy of the GNU General Public License      *
+ *      along with this program.  If not, see http://www.gnu.org/licenses      *
+ *******************************************************************************/
+ -->
+<resources>
+    
+    <color name="azure">#007FFF</color>
+    <color name="arsenic">#3B444B</color>
+    <color name="armygreen">#4B5320</color>
+    
+    <string name="app_name">Sally</string>
+    <string name="fajr">FAJR</string>
+    <string name="shorouk">SHOROUK</string>
+    <string name="duhr">DUHR</string>
+    <string name="asr">ASR</string>
+    <string name="maghrib">MAGHRIB</string>
+    <string name="ishaa">ISHAA</string>
+    <string name="prayers">Prayers</string>
+    <string name="kibla">Kibla</string>
+    <string name="settings">Settings</string>
+    <string name="info">Info</string>
+    <string name="error_read_user_config">ERROR reading user config</string>
+    <string name="error_try_again_later">ERROR try again_later</string>
+    <string name="gps_is_not_on">GPS is not on &#8230;</string>
+    <string name="loading">Loading &#8230;</string>
+    <string name="must_first_select_a_country">Must first select a country</string>
+    <string name="country">Country</string>
+    <string name="city">City</string>
+    <string name="time_zone">Time Zone</string>
+    <string name="latitude">Latitude</string>
+    <string name="longitude">Longitude</string>
+    <string name="applay">Apply</string>
+    <string name="mazhab">Mazhab</string>
+    <string name="calculationMethod">Calculation Methods</string>
+    <string name="type_time">Type time</string>
+    <string name="hijri_adjustment">Hijri Adjustment</string>
+    <string name="Language">Language</string>
+    <string name="location">Location</string>
+    <string name="locationgps">Location GPS</string>
+    <string name="confirm">Confirm</string>
+    <string name="cancel">Cancel</string>
+    <string name="stopathan">Stop Athan</string>
+    <string name="missing_to">Missing To</string>
+    
+    <string name="January">January</string>
+    <string name="February">February</string>
+    <string name="March">March</string>
+    <string name="April">April</string>
+    <string name="May">May</string>
+    <string name="June">June</string>
+    <string name="July">July</string>
+    <string name="August">August</string>
+    <string name="September">September</string>
+    <string name="October">October</string>
+    <string name="November">November</string>
+    <string name="December">December</string>
+    
+    <string name="SUNDAY">Sunday</string>
+    <string name="MONDAY">Monday</string>
+    <string name="TUESDAY">Tuesday</string>
+    <string name="WEDNESDAY">Wednesday</string>
+    <string name="THURSDAY">Thursday</string>
+    <string name="FRIDAY">Friday</string>
+    <string name="SATURDAY">Saturday</string>
+    
+    <string name="al_ahad">Al Ahad</string>
+    <string name="al_ithnin">Al Ithnin</string>
+    <string name="attolathaa">Attolathaa</string>
+    <string name="al_arbiaa">Al Arbiaa</string>
+    <string name="al_khamis">Al Khamis</string>
+    <string name="al_jomoa">Al Jomoa</string>
+    <string name="assabt">Assabt</string>
+    
+    <string name="muharram">Muharram</string>
+    <string name="safar">Safar</string>
+    <string name="rabi_ul_awwal">Rabiul Awwal</string>
+    <string name="rabi_ul_attani">Rabiul Attani</string>
+    <string name="jumadal_ula">Jumadal Ula</string>
+    <string name="jumadal_attani">Jumadal Attani</string>
+    <string name="rajab">Rajab</string>
+    <string name="shaban">Shaaban</string>
+    <string name="ramadan">Ramadan</string>
+    <string name="shawwal">Shawwal</string>
+    <string name="dhul_qi_ada">Dhul Qiada</string>
+    <string name="dhul_hijja">Dhul Hijja</string>
+    
+    <string name="its_the_hour_of">ITS THE HOUR OF</string>
+    
+    <string name="shafi3i">Shafi3i</string>
+    <string name="hanafi">hanafi</string>
+    
+    <string name="UmmAlQuraUniv">Umm Al Qura Univ</string>
+    <string name="EgytionGeneralAuthorityofSurvey">Egytion General Authority of Survey</string>
+    <string name="UnivOfIslamicScincesKarachi">Univ Of Islamic Scinces Karachi</string>
+    <string name="IslamicSocietyOfNorthAmerica">Islamic Society Of North America</string>
+    <string name="MuslimWorldLeague">Muslim World League</string>
+    
+    <string name="standard">Standard</string>
+    <string name="sayfi">Summery</string>
+    
+    <string name="arabic">arabic</string>
+    <string name="english">english</string>
+    <string name="italiano">Italian</string>
+    <string name="french">French</string>
+    
+    <string name="time_adjustment">Time Adjustment</string>
+    <string name="time">Time</string>
+    <string name="time12or24">12h / 24H</string>
+    
+    <string name="time12or24_12">12 h</string>
+    <string name="time12or24_24">24 H</string>
+    <string name="ali_ben_ahmed_mala">ali ben ahmed mala</string>
+    <string name="abd_el_basset_abd_essamad">abd el basset abd essamad</string>
+    <string name="farou9_abd_errehmane_hadraoui">farou9 abd errehmane hadraoui</string>
+    <string name="mohammad_ali_el_banna">mohammad ali el_banna</string>
+    <string name="mohammad_khalil_raml">mohammad khalil raml</string>
+    
+    <string name="not_set">......</string>
+    <string name="kibla_warning">Phone may be affected by the surrounding minerals do not rely on it, but in case you do not know the direction of Kibla</string>
+    <string name="sensor_is_not_exist">The sensor does not exist</string>
+    <string name="error_corrupt_user_file_config">File sallyUserConfig.xml corrupt , delete it if exists and restart or check your permission</string>
+    
+    <string name="athan">Athan</string>
+    <string name="vibration">Vibration</string>
+    <string name="notification">Notification</string>
+    <string name="nothing">Nothing</string>
+
+    <string name="notificationTitle">It is time for</string>
+    <string name="notificationMessage">It is now time for prayer</string>
+    
+    <string name="app_info">Sally is a free and open source application to calculate Islamic prayer times for most of the world</string>
+    <string name="app_version">Version : Final 24.1.20</string>
+    <string name="app_contact">For more information contact me here:</string>
+    <string name="app_site">http://www.sallyprayertimes.com</string>
+    <string name="app_footer">Sally is a free and open source, and everyone has the right use and publication, just do not forget the sincere prayers</string>
+    <string name="no_network_provider_is_enabled">No network provider is enabled please enable Location option</string>
+
+    <string name="battery">Battery</string>
+    <string name="battery_optimization">Battery optimization</string>
+    <string name="optimized">excluded from battery optimization</string>
+    <string name="not_optimized">not excluded from battery optimization</string>
+    <string name="application_already_optimized">application already excluded from battery optimization</string>
+
+    <string name="fajr_widget">Fajr</string>
+    <string name="shorouk_widget">Shorouk</string>
+    <string name="duhr_widget">Duhr</string>
+    <string name="asr_widget">Asr</string>
+    <string name="maghrib_widget">Magrib</string>
+    <string name="ishaa_widget">Isha</string>
+
+
+    <string name="widget">Widget</string>
+    <string name="widget_background_color">Widget background color</string>
+    <string name="color">Color</string>
+
+</resources>

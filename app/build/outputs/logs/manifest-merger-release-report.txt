@@ -1,0 +1,254 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:22:1-126:12
+INJECTED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:22:1-126:12
+INJECTED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:22:1-126:12
+INJECTED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:22:1-126:12
+MERGED from [com.android.support:appcompat-v7:25.1.0] C:\Users\ALI\.gradle\caches\transforms-2\files-2.1\1e907517efda6813157e8bc5ee119c67\appcompat-v7-25.1.0\AndroidManifest.xml:17:1-27:12
+MERGED from [com.android.support:animated-vector-drawable:25.1.0] C:\Users\ALI\.gradle\caches\transforms-2\files-2.1\1e516425cba7a24791629f2929bead24\animated-vector-drawable-25.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:support-vector-drawable:25.1.0] C:\Users\ALI\.gradle\caches\transforms-2\files-2.1\e04119058e7cee5328927fd9f0bcf0a9\support-vector-drawable-25.1.0\AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.support:support-v4:25.1.0] C:\Users\ALI\.gradle\caches\transforms-2\files-2.1\3f3e961535fe14c3146c7d8decd7b886\support-v4-25.1.0\AndroidManifest.xml:17:1-27:12
+MERGED from [com.android.support:support-fragment:25.1.0] C:\Users\ALI\.gradle\caches\transforms-2\files-2.1\8b81eedb1632e92fd70a323e8cd92ce3\support-fragment-25.1.0\AndroidManifest.xml:17:1-27:12
+MERGED from [com.android.support:support-media-compat:25.1.0] C:\Users\ALI\.gradle\caches\transforms-2\files-2.1\467dd7915266f750c24dfa11bad78ac7\support-media-compat-25.1.0\AndroidManifest.xml:17:1-27:12
+MERGED from [com.android.support:support-core-utils:25.1.0] C:\Users\ALI\.gradle\caches\transforms-2\files-2.1\1bf7fc753abb475f02b691221a78b145\support-core-utils-25.1.0\AndroidManifest.xml:17:1-27:12
+MERGED from [com.android.support:support-core-ui:25.1.0] C:\Users\ALI\.gradle\caches\transforms-2\files-2.1\f36640f27d52c21468b47bdb45cb53c5\support-core-ui-25.1.0\AndroidManifest.xml:17:1-27:12
+MERGED from [com.android.support:support-compat:25.1.0] C:\Users\ALI\.gradle\caches\transforms-2\files-2.1\a68d8e033ab72be2a066d1ad82ecca83\support-compat-25.1.0\AndroidManifest.xml:17:1-27:12
+INJECTED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:22:1-126:12
+INJECTED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:22:1-126:12
+INJECTED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:22:1-126:12
+	package
+		ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:23:5-24
+		INJECTED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml
+	android:versionName
+		ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:25:5-33
+		INJECTED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:22:11-69
+	android:versionCode
+		ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:24:5-28
+		INJECTED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:27:5-81
+	android:name
+		ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:27:22-78
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:28:5-79
+	android:name
+		ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:28:22-76
+uses-permission#android.permission.ACCESS_LOCATION_EXTRA_COMMANDS
+ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:29:5-89
+	android:name
+		ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:29:22-86
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:30:5-79
+	android:name
+		ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:30:22-76
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:31:5-67
+	android:name
+		ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:31:22-64
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:32:5-81
+	android:name
+		ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:32:22-78
+uses-permission#android.permission.VIBRATE
+ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:33:5-66
+	android:name
+		ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:33:22-63
+uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
+ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:34:5-81
+	android:name
+		ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:34:22-78
+uses-permission#android.permission.WAKE_LOCK
+ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:35:5-68
+	android:name
+		ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:35:22-65
+application
+ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:37:5-124:19
+MERGED from [com.android.support:appcompat-v7:25.1.0] C:\Users\ALI\.gradle\caches\transforms-2\files-2.1\1e907517efda6813157e8bc5ee119c67\appcompat-v7-25.1.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:appcompat-v7:25.1.0] C:\Users\ALI\.gradle\caches\transforms-2\files-2.1\1e907517efda6813157e8bc5ee119c67\appcompat-v7-25.1.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.1.0] C:\Users\ALI\.gradle\caches\transforms-2\files-2.1\1e516425cba7a24791629f2929bead24\animated-vector-drawable-25.1.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.1.0] C:\Users\ALI\.gradle\caches\transforms-2\files-2.1\1e516425cba7a24791629f2929bead24\animated-vector-drawable-25.1.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-vector-drawable:25.1.0] C:\Users\ALI\.gradle\caches\transforms-2\files-2.1\e04119058e7cee5328927fd9f0bcf0a9\support-vector-drawable-25.1.0\AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:support-vector-drawable:25.1.0] C:\Users\ALI\.gradle\caches\transforms-2\files-2.1\e04119058e7cee5328927fd9f0bcf0a9\support-vector-drawable-25.1.0\AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:support-v4:25.1.0] C:\Users\ALI\.gradle\caches\transforms-2\files-2.1\3f3e961535fe14c3146c7d8decd7b886\support-v4-25.1.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-v4:25.1.0] C:\Users\ALI\.gradle\caches\transforms-2\files-2.1\3f3e961535fe14c3146c7d8decd7b886\support-v4-25.1.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-fragment:25.1.0] C:\Users\ALI\.gradle\caches\transforms-2\files-2.1\8b81eedb1632e92fd70a323e8cd92ce3\support-fragment-25.1.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-fragment:25.1.0] C:\Users\ALI\.gradle\caches\transforms-2\files-2.1\8b81eedb1632e92fd70a323e8cd92ce3\support-fragment-25.1.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-media-compat:25.1.0] C:\Users\ALI\.gradle\caches\transforms-2\files-2.1\467dd7915266f750c24dfa11bad78ac7\support-media-compat-25.1.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-media-compat:25.1.0] C:\Users\ALI\.gradle\caches\transforms-2\files-2.1\467dd7915266f750c24dfa11bad78ac7\support-media-compat-25.1.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-utils:25.1.0] C:\Users\ALI\.gradle\caches\transforms-2\files-2.1\1bf7fc753abb475f02b691221a78b145\support-core-utils-25.1.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-utils:25.1.0] C:\Users\ALI\.gradle\caches\transforms-2\files-2.1\1bf7fc753abb475f02b691221a78b145\support-core-utils-25.1.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-ui:25.1.0] C:\Users\ALI\.gradle\caches\transforms-2\files-2.1\f36640f27d52c21468b47bdb45cb53c5\support-core-ui-25.1.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-ui:25.1.0] C:\Users\ALI\.gradle\caches\transforms-2\files-2.1\f36640f27d52c21468b47bdb45cb53c5\support-core-ui-25.1.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:25.1.0] C:\Users\ALI\.gradle\caches\transforms-2\files-2.1\a68d8e033ab72be2a066d1ad82ecca83\support-compat-25.1.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:25.1.0] C:\Users\ALI\.gradle\caches\transforms-2\files-2.1\a68d8e033ab72be2a066d1ad82ecca83\support-compat-25.1.0\AndroidManifest.xml:25:5-20
+	android:label
+		ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:40:9-41
+	android:icon
+		ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:39:9-45
+	android:allowBackup
+		ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:38:9-35
+	android:theme
+		ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:41:9-40
+activity#activities.SplashScreen_Activity
+ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:42:9-51:20
+	android:screenOrientation
+		ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:44:13-49
+	android:theme
+		ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:45:13-60
+	android:name
+		ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:43:13-60
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:46:13-50:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:47:17-69
+	android:name
+		ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:47:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:49:17-77
+	android:name
+		ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:49:27-74
+activity#activities.Prayers_Activity
+ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:52:9-56:20
+	android:screenOrientation
+		ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:54:13-49
+	android:theme
+		ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:55:13-60
+	android:name
+		ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:53:13-55
+activity#activities.Info_Activity
+ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:57:9-61:20
+	android:screenOrientation
+		ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:59:13-49
+	android:theme
+		ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:60:13-60
+	android:name
+		ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:58:13-52
+activity#activities.Kibla_Activity
+ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:62:9-66:20
+	android:screenOrientation
+		ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:64:13-49
+	android:theme
+		ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:65:13-60
+	android:name
+		ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:63:13-53
+activity#activities.Home_Programe_Activity
+ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:67:9-71:20
+	android:screenOrientation
+		ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:69:13-49
+	android:theme
+		ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:70:13-60
+	android:name
+		ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:68:13-61
+activity#activities.Settings_Activity
+ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:72:9-76:20
+	android:screenOrientation
+		ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:74:13-49
+	android:theme
+		ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:75:13-60
+	android:name
+		ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:73:13-56
+activity#activities.Athan_Activity
+ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:77:9-81:20
+	android:screenOrientation
+		ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:79:13-49
+	android:theme
+		ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:80:13-60
+	android:name
+		ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:78:13-53
+receiver#widget.MyWidgetProvider2
+ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:83:9-91:20
+	android:label
+		ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:85:13-41
+	android:icon
+		ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:84:13-50
+	android:name
+		ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:83:19-58
+intent-filter#action:name:android.appwidget.action.APPWIDGET_UPDATE
+ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:86:13-88:29
+action#android.appwidget.action.APPWIDGET_UPDATE
+ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:87:17-84
+	android:name
+		ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:87:25-81
+meta-data#android.appwidget.provider
+ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:89:13-90:61
+	android:resource
+		ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:90:17-58
+	android:name
+		ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:89:24-65
+receiver#widget.MyWidgetProviderBroadcastReceiver2
+ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:93:9-77
+	android:name
+		ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:93:19-75
+receiver#widget.MyWidgetProvider
+ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:95:13-103:24
+	android:label
+		ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:97:17-45
+	android:icon
+		ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:96:17-54
+	android:name
+		ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:95:23-61
+receiver#widget.MyWidgetProviderBroadcastReceiver
+ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:105:13-80
+	android:name
+		ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:105:23-78
+receiver#classes.StartServiceAtStartupDevice
+ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:108:9-116:20
+	android:enabled
+		ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:110:13-35
+	android:exported
+		ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:111:13-37
+	android:name
+		ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:109:13-63
+intent-filter#action:name:android.intent.action.BOOT_COMPLETED+category:name:android.intent.category.DEFAULT
+ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:112:13-115:29
+action#android.intent.action.BOOT_COMPLETED
+ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:113:17-79
+	android:name
+		ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:113:25-76
+category#android.intent.category.DEFAULT
+ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:114:17-76
+	android:name
+		ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:114:27-73
+receiver#classes.AthanServiceBroasdcastReceiver
+ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:118:9-74
+	android:name
+		ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:118:19-72
+service#classes.AthanService
+ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:120:9-123:19
+	android:enabled
+		ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:122:13-35
+	android:name
+		ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:121:13-48
+uses-sdk
+INJECTED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml
+MERGED from [com.android.support:appcompat-v7:25.1.0] C:\Users\ALI\.gradle\caches\transforms-2\files-2.1\1e907517efda6813157e8bc5ee119c67\appcompat-v7-25.1.0\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:appcompat-v7:25.1.0] C:\Users\ALI\.gradle\caches\transforms-2\files-2.1\1e907517efda6813157e8bc5ee119c67\appcompat-v7-25.1.0\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:25.1.0] C:\Users\ALI\.gradle\caches\transforms-2\files-2.1\1e516425cba7a24791629f2929bead24\animated-vector-drawable-25.1.0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:25.1.0] C:\Users\ALI\.gradle\caches\transforms-2\files-2.1\1e516425cba7a24791629f2929bead24\animated-vector-drawable-25.1.0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.1.0] C:\Users\ALI\.gradle\caches\transforms-2\files-2.1\e04119058e7cee5328927fd9f0bcf0a9\support-vector-drawable-25.1.0\AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:support-vector-drawable:25.1.0] C:\Users\ALI\.gradle\caches\transforms-2\files-2.1\e04119058e7cee5328927fd9f0bcf0a9\support-vector-drawable-25.1.0\AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:support-v4:25.1.0] C:\Users\ALI\.gradle\caches\transforms-2\files-2.1\3f3e961535fe14c3146c7d8decd7b886\support-v4-25.1.0\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:25.1.0] C:\Users\ALI\.gradle\caches\transforms-2\files-2.1\3f3e961535fe14c3146c7d8decd7b886\support-v4-25.1.0\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.1.0] C:\Users\ALI\.gradle\caches\transforms-2\files-2.1\8b81eedb1632e92fd70a323e8cd92ce3\support-fragment-25.1.0\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-fragment:25.1.0] C:\Users\ALI\.gradle\caches\transforms-2\files-2.1\8b81eedb1632e92fd70a323e8cd92ce3\support-fragment-25.1.0\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.1.0] C:\Users\ALI\.gradle\caches\transforms-2\files-2.1\467dd7915266f750c24dfa11bad78ac7\support-media-compat-25.1.0\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:25.1.0] C:\Users\ALI\.gradle\caches\transforms-2\files-2.1\467dd7915266f750c24dfa11bad78ac7\support-media-compat-25.1.0\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-utils:25.1.0] C:\Users\ALI\.gradle\caches\transforms-2\files-2.1\1bf7fc753abb475f02b691221a78b145\support-core-utils-25.1.0\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-utils:25.1.0] C:\Users\ALI\.gradle\caches\transforms-2\files-2.1\1bf7fc753abb475f02b691221a78b145\support-core-utils-25.1.0\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-ui:25.1.0] C:\Users\ALI\.gradle\caches\transforms-2\files-2.1\f36640f27d52c21468b47bdb45cb53c5\support-core-ui-25.1.0\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:25.1.0] C:\Users\ALI\.gradle\caches\transforms-2\files-2.1\f36640f27d52c21468b47bdb45cb53c5\support-core-ui-25.1.0\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:25.1.0] C:\Users\ALI\.gradle\caches\transforms-2\files-2.1\a68d8e033ab72be2a066d1ad82ecca83\support-compat-25.1.0\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:25.1.0] C:\Users\ALI\.gradle\caches\transforms-2\files-2.1\a68d8e033ab72be2a066d1ad82ecca83\support-compat-25.1.0\AndroidManifest.xml:21:5-23:58
+INJECTED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml
+	tools:overrideLibrary
+		ADDED from [com.android.support:appcompat-v7:25.1.0] C:\Users\ALI\.gradle\caches\transforms-2\files-2.1\1e907517efda6813157e8bc5ee119c67\appcompat-v7-25.1.0\AndroidManifest.xml:23:9-75
+	android:minSdkVersion
+		INJECTED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml
