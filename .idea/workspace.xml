@@ -10,7 +10,13 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="No Filters" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="90df10d6-3ae7-420e-a23e-1476dbe1e167" name="Default Changelist" comment="" />
+    <list default="true" id="90df10d6-3ae7-420e-a23e-1476dbe1e167" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +66,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/classes/AthanService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3026">
+            <state relative-caret-position="133">
               <caret line="200" column="116" selection-start-line="200" selection-start-column="116" selection-end-line="200" selection-end-column="116" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -118,6 +124,9 @@
     <option name="KEY_STORE_PATH" value="C:\Users\ALI\sallyAndroidStudioKey.jks" />
     <option name="KEY_ALIAS" value="key0" />
     <option name="BUILD_TARGET_KEY" value="apk" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -187,6 +196,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="ProjectPane" />
       <pane id="AndroidView">
         <subPane>
           <expand>
@@ -199,7 +209,6 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -208,6 +217,7 @@
     <property name="ExportApk.ApkPath" value="C:\Users\ALI\Desktop\Sally Android Studio\app" />
     <property name="ExportApk.BuildVariants" value="release" />
     <property name="ExportApk.SignV2" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.sdk.path" value="E:/Android_SDK" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/drawable" />
@@ -755,7 +765,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/classes/AthanService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3026">
+        <state relative-caret-position="133">
           <caret line="200" column="116" selection-start-line="200" selection-start-column="116" selection-end-line="200" selection-end-column="116" />
           <folding>
             <element signature="imports" expanded="true" />
