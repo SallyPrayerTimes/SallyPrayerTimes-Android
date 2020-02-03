@@ -881,10 +881,11 @@ public class Prayers_Activity extends Activity {
 					this.missing_to.setText(getResources().getString(R.string.its_the_hour_of));
 					this.missing_salat.setText(getNextPrayerName());
 				}
+				setActualPrayerBackground(AthanService.actualPrayerCode);
 			}
 			else
 			{
-				setActualPrayerBackground(AthanService.nextPrayerCode);
+				setActualPrayerBackground(AthanService.actualPrayerCode);
 				
 				if(this.language.equals("ar")){
 					this.missing_to.setText(ArabicReshape.reshape(getNextPrayerName()));

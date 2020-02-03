@@ -1797,6 +1797,7 @@ public class Settings_Activity extends Activity implements LocationListener{
 										int timeZoneOffset = timezone.getRawOffset()/(60 * 60 * 1000);
 										UserConfig.getSingleton().setTimezone(String.valueOf(timeZoneOffset));
 										time_zone_calcolated.setText(timeZoneOffset);
+                                        timeZone_value.setText(finalTimeZone);
 									} catch (Exception e) {}
 									setDefaultLanguage(UserConfig.getSingleton().getLanguage());
 								}

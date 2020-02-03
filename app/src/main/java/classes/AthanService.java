@@ -117,26 +117,17 @@ public class AthanService extends Service{
 
 			if(ifActualSalatTime == false)
 			{
-                if (totalMinutes == AthanService.nextPrayerTimeInMinutes) {//if actual hour and actual minutes equal the next prayer time hour and minutes
-
-					actualPrayerCode = AthanService.nextPrayerCode;
-                    actualSalatTimeMinutes = totalMinutes;
-                    ifActualSalatTime = true;
-                }
-                else
-                {
-                    if(AthanService.nextPrayerTimeInMinutes > totalMinutes){
-                        AthanService.missing_hours_to_nextPrayer = ((AthanService.nextPrayerTimeInMinutes-1) - totalMinutes) / 60;
-                        AthanService.missing_minutes_to_nextPrayer = ((AthanService.nextPrayerTimeInMinutes-1) - totalMinutes) % 60;
-                        AthanService.missing_seconds_to_nextPrayer = 59 - second;
-                    }
-                    else
-                    {
-                        AthanService.missing_hours_to_nextPrayer = (((AthanService.nextPrayerTimeInMinutes+1440)-1) - totalMinutes) / 60;
-                        AthanService.missing_minutes_to_nextPrayer = (((AthanService.nextPrayerTimeInMinutes+1440)-1) - totalMinutes) % 60;
-                        AthanService.missing_seconds_to_nextPrayer = 59 - second;
-                    }
-                }
+				if(AthanService.nextPrayerTimeInMinutes > totalMinutes){
+					AthanService.missing_hours_to_nextPrayer = ((AthanService.nextPrayerTimeInMinutes-1) - totalMinutes) / 60;
+					AthanService.missing_minutes_to_nextPrayer = ((AthanService.nextPrayerTimeInMinutes-1) - totalMinutes) % 60;
+					AthanService.missing_seconds_to_nextPrayer = 59 - second;
+				}
+				else
+				{
+					AthanService.missing_hours_to_nextPrayer = (((AthanService.nextPrayerTimeInMinutes+1440)-1) - totalMinutes) / 60;
+					AthanService.missing_minutes_to_nextPrayer = (((AthanService.nextPrayerTimeInMinutes+1440)-1) - totalMinutes) % 60;
+					AthanService.missing_seconds_to_nextPrayer = 59 - second;
+				}
             }
 			else
 			    {
