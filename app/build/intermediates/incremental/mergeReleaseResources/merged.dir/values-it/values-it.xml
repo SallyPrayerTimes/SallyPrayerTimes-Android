@@ -56,26 +56,33 @@
     <string name="app_info">Sally è un programma gratuito e open source per calcolare i tempi di preghiera islamica per la maggior parte del mondo</string>
     <string name="app_name">Sally</string>
     <string name="app_site">http://www.sallyprayertimes.com</string>
-    <string name="app_version">Versione : Final 1.2.15</string>
+    <string name="app_version">Versione : Final 24.1.20</string>
     <string name="applay">Applica</string>
+    <string name="application_already_optimized">applicazione già esclusa dalla ottimizzazione della batteria</string>
     <string name="arabic">Arabo</string>
     <string name="asr">ASR</string>
+    <string name="asr_widget">Asr</string>
     <string name="assabt">Assabt</string>
     <string name="athan">Athan</string>
     <string name="attolathaa">Attolathaa</string>
+    <string name="battery">Batteria</string>
+    <string name="battery_optimization">Ottimizzazione della batteria</string>
     <string name="calculationMethod">Metodi Di Calcolo</string>
     <string name="cancel">Cancella</string>
     <string name="city">Città</string>
+    <string name="color">Colore</string>
     <string name="confirm">Confirma</string>
     <string name="country">Nazione</string>
     <string name="dhul_hijja">Dhul Hijja</string>
     <string name="dhul_qi_ada">Dhul Qiada</string>
     <string name="duhr">DUHR</string>
+    <string name="duhr_widget">Duhr</string>
     <string name="english">Inglese</string>
     <string name="error_corrupt_user_file_config">File sallyUserConfig.xml danneggiato, cancellarlo se esiste e controllare i vostri permessi e riavviare</string>
     <string name="error_read_user_config">ERRORE di leggere la configurazione del utente</string>
     <string name="error_try_again_later">ERRORE riprova più tardi</string>
     <string name="fajr">FAJR</string>
+    <string name="fajr_widget">Fajr</string>
     <string name="farou9_abd_errehmane_hadraoui">farou9 abd errehmane hadraoui</string>
     <string name="french">Francese</string>
     <string name="gps_is_not_on">GPS non e attivato</string>
@@ -83,6 +90,7 @@
     <string name="hijri_adjustment">Hijri Regolazione</string>
     <string name="info">Info</string>
     <string name="ishaa">ISHAA</string>
+    <string name="ishaa_widget">Isha</string>
     <string name="italiano">Italiano</string>
     <string name="its_the_hour_of">E LORA DI</string>
     <string name="jumadal_attani">Jumadal Attani</string>
@@ -95,6 +103,7 @@
     <string name="locationgps">Posizione GPS</string>
     <string name="longitude">longitudine</string>
     <string name="maghrib">MAGHRIB</string>
+    <string name="maghrib_widget">Magrib</string>
     <string name="mazhab">Mazhab</string>
     <string name="missing_to">Manca Per</string>
     <string name="mohammad_ali_el_banna">mohammad ali el_banna</string>
@@ -102,8 +111,13 @@
     <string name="muharram">Muharram</string>
     <string name="must_first_select_a_country">Deve selezionare prima una nazione</string>
     <string name="no_network_provider_is_enabled">Nessun provider di rete abilitato, abilitare lopzione Posizione</string>
+    <string name="not_optimized">non escluso dalla ottimizzazione della batteria</string>
     <string name="not_set">......</string>
     <string name="nothing">Niente</string>
+    <string name="notification">Notifica</string>
+    <string name="notificationMessage">ora è tempo di pregare</string>
+    <string name="notificationTitle">è il tempo di</string>
+    <string name="optimized">escluso dalla ottimizzazione della batteria</string>
     <string name="prayers">Preghiere</string>
     <string name="rabi_ul_attani">Rabiul Attani</string>
     <string name="rabi_ul_awwal">Rabiul Awwal</string>
@@ -118,6 +132,7 @@
     <string name="shafi3i">Shafi3i</string>
     <string name="shawwal">Shawwal</string>
     <string name="shorouk">SHOROUK</string>
+    <string name="shorouk_widget">Shorouk</string>
     <string name="standard">Normale</string>
     <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">"999+"</string>
     <string name="stopathan">Stop Athan</string>
@@ -129,4 +144,6 @@
     <string name="time_zone">Fuso orario</string>
     <string name="type_time">Ora Legale</string>
     <string name="vibration">Vibrazione</string>
+    <string name="widget">Aggeggio</string>
+    <string name="widget_background_color">Colore di sfondo del widget</string>
 </resources>

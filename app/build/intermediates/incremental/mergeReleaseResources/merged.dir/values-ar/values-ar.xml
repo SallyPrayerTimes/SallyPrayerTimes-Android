@@ -56,26 +56,33 @@
     <string name="app_info">صَلِّ هو برنامج مجاني و مفتوح المصدر لحساب اوقات الصلاة الاسلامية لمعظم دول العالم</string>
     <string name="app_name">Sally</string>
     <string name="app_site">http://www.sallyprayertimes.com</string>
-    <string name="app_version">نسخة نهائية 1.2.15</string>
+    <string name="app_version">نسخة نهائية 24.1.20</string>
     <string name="applay">تنفيد</string>
+    <string name="application_already_optimized">تطبيق مستبعد بالفعل من تحسين البطارية</string>
     <string name="arabic">عربي</string>
     <string name="asr">العصر</string>
+    <string name="asr_widget">العصر</string>
     <string name="assabt">السبت</string>
     <string name="athan">أذان</string>
     <string name="attolathaa">الثلاثاء</string>
+    <string name="battery">البطارية</string>
+    <string name="battery_optimization">تحسين البطارية</string>
     <string name="calculationMethod">طرق الحساب</string>
     <string name="cancel">إلغاء</string>
     <string name="city">المدينة</string>
+    <string name="color">اللون</string>
     <string name="confirm">موافق</string>
     <string name="country">البلد</string>
     <string name="dhul_hijja">ذي الحجة</string>
     <string name="dhul_qi_ada">ذي القعدة</string>
     <string name="duhr">الظهر</string>
+    <string name="duhr_widget">الظهر</string>
     <string name="english">انجليزي</string>
     <string name="error_corrupt_user_file_config">خطأ في قراءة ملف الاعدادات احدفه و تاكد من صلاحياتك ثم اعد التشغيل</string>
     <string name="error_read_user_config">خطأ في قراءة الاعدادات</string>
     <string name="error_try_again_later">خطأ : حاول مرة اخرى</string>
     <string name="fajr">الفجر</string>
+    <string name="fajr_widget">الفجر</string>
     <string name="farou9_abd_errehmane_hadraoui">فاروق عبدالرحمن حضراوي</string>
     <string name="french">فرنسي</string>
     <string name="gps_is_not_on">GPS غير مفعل</string>
@@ -83,6 +90,7 @@
     <string name="hijri_adjustment">تعديل التاريخ الهجري</string>
     <string name="info">معلومات</string>
     <string name="ishaa">العشاء</string>
+    <string name="ishaa_widget">العشاء</string>
     <string name="italiano">ايطالي</string>
     <string name="its_the_hour_of">حان وقت صلاة</string>
     <string name="jumadal_attani">جماد الثاني</string>
@@ -95,6 +103,7 @@
     <string name="locationgps">تحديد الموقع تلقائيا</string>
     <string name="longitude">خط الطول</string>
     <string name="maghrib">المغرب</string>
+    <string name="maghrib_widget">المغرب</string>
     <string name="mazhab">المذهب</string>
     <string name="missing_to">تبقى لصلاة</string>
     <string name="mohammad_ali_el_banna">محمد علي البنا</string>
@@ -102,8 +111,13 @@
     <string name="muharram">محرم</string>
     <string name="must_first_select_a_country">يجب اختيار البلد اولا</string>
     <string name="no_network_provider_is_enabled">لم يتم تمكين مزود شبكة ، يرجى تمكين خيار الموقع</string>
+    <string name="not_optimized">غير مستبعد من تحسين البطارية</string>
     <string name="not_set">......</string>
     <string name="nothing">لا شيء</string>
+    <string name="notification">تنبيه</string>
+    <string name="notificationMessage">قد حان موعد صلاة</string>
+    <string name="notificationTitle">حان موعد</string>
+    <string name="optimized">مستبعد من تحسين البطارية</string>
     <string name="prayers">الصلاة</string>
     <string name="rabi_ul_attani">ربيع ثاني</string>
     <string name="rabi_ul_awwal">ربيع أول</string>
@@ -118,6 +132,7 @@
     <string name="shafi3i">الشافعي</string>
     <string name="shawwal">شوال</string>
     <string name="shorouk">الشروق</string>
+    <string name="shorouk_widget">الشروق</string>
     <string name="standard">افتراضي</string>
     <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">"+999"</string>
     <string name="stopathan">ايقاف الادان</string>
@@ -129,4 +144,6 @@
     <string name="time_zone">المنطقة الزمنية</string>
     <string name="type_time">الوقت المعتمد</string>
     <string name="vibration">اهتزاز</string>
+    <string name="widget">القطعة</string>
+    <string name="widget_background_color">لون خلفية القطعة</string>
 </resources>

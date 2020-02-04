@@ -52,30 +52,37 @@
     <string name="al_khamis">Al Khamis</string>
     <string name="ali_ben_ahmed_mala">ali ben ahmed mala</string>
     <string name="app_contact">Pour plus dinformations contactez-moi ici:</string>
-    <string name="app_footer">Sally est un libre et open source, et tout le monde a le droit utilisation et la publication, il suffit de nous pas oublier pour les prières sincères</string>
+    <string name="app_footer">Sally est libre et open source, et tout le monde a le droit utilisation et la publication, il suffit de nous pas oublier pour les prières sincères</string>
     <string name="app_info">Sally est une application gratuite et open source pour calculer les temps de prière islamique pour la plupart du monde</string>
     <string name="app_name">Sally</string>
     <string name="app_site">http://www.sallyprayertimes.com</string>
-    <string name="app_version">Version : Final 1.2.15</string>
+    <string name="app_version">Version : Final 24.1.20</string>
     <string name="applay">Appliquer</string>
+    <string name="application_already_optimized">application déjà exclue de le optimisation de la batterie</string>
     <string name="arabic">Arabe</string>
     <string name="asr">ASR</string>
+    <string name="asr_widget">Asr</string>
     <string name="assabt">Assabt</string>
     <string name="athan">Athan</string>
     <string name="attolathaa">Attolathaa</string>
+    <string name="battery">Batterie</string>
+    <string name="battery_optimization">Optimisation de la batterie</string>
     <string name="calculationMethod">Méthodes de calcul</string>
     <string name="cancel">Annuler</string>
     <string name="city">Ville</string>
+    <string name="color">Couleur</string>
     <string name="confirm">Confirmer</string>
     <string name="country">Pays</string>
     <string name="dhul_hijja">Dhul Hijja</string>
     <string name="dhul_qi_ada">Dhul Qiada</string>
     <string name="duhr">DUHR</string>
+    <string name="duhr_widget">Duhr</string>
     <string name="english">Anglais</string>
     <string name="error_corrupt_user_file_config">Fichier sallyUserConfig.xml corrompu, supprimer si elle existe et redémarrez ou vérifier votre permission</string>
     <string name="error_read_user_config">ERREUR de lecture Utilisateur config</string>
     <string name="error_try_again_later">ERREUR reessayer plus tard</string>
     <string name="fajr">FAJR</string>
+    <string name="fajr_widget">Fajr</string>
     <string name="farou9_abd_errehmane_hadraoui">farou9 abd errehmane hadraoui</string>
     <string name="french">Français</string>
     <string name="gps_is_not_on">GPS nest pas sur …</string>
@@ -83,6 +90,7 @@
     <string name="hijri_adjustment">Hijri Réglage</string>
     <string name="info">Info</string>
     <string name="ishaa">ISHAA</string>
+    <string name="ishaa_widget">Isha</string>
     <string name="italiano">Italien</string>
     <string name="its_the_hour_of">CEST LHEURE DE LA</string>
     <string name="jumadal_attani">Jumadal Attani</string>
@@ -95,6 +103,7 @@
     <string name="locationgps">Emplacement GPS</string>
     <string name="longitude">Longitude</string>
     <string name="maghrib">MAGHRIB</string>
+    <string name="maghrib_widget">Magrib</string>
     <string name="mazhab">Mazhab</string>
     <string name="missing_to">Reste a</string>
     <string name="mohammad_ali_el_banna">mohammad ali el_banna</string>
@@ -102,8 +111,13 @@
     <string name="muharram">Muharram</string>
     <string name="must_first_select_a_country">Il faut dabord sélectionner un pays</string>
     <string name="no_network_provider_is_enabled">Aucun fournisseur de réseau nest activé, veuillez activer loption Position</string>
+    <string name="not_optimized">pas exclu de le optimisation de la batterie</string>
     <string name="not_set">......</string>
     <string name="nothing">Rien</string>
+    <string name="notification">Notification</string>
+    <string name="notificationMessage">Il est maintenant temps de prier</string>
+    <string name="notificationTitle">Il est temps de</string>
+    <string name="optimized">exclus de le optimisation de la batterie</string>
     <string name="prayers">Prières</string>
     <string name="rabi_ul_attani">Rabiul Attani</string>
     <string name="rabi_ul_awwal">Rabiul Awwal</string>
@@ -118,6 +132,7 @@
     <string name="shafi3i">Shafi3i</string>
     <string name="shawwal">Shawwal</string>
     <string name="shorouk">SHOROUK</string>
+    <string name="shorouk_widget">Shorouk</string>
     <string name="standard">Standard</string>
     <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">">999"</string>
     <string name="stopathan">Arreter Athan</string>
@@ -129,4 +144,6 @@
     <string name="time_zone">temps Zone</string>
     <string name="type_time">Type de temps</string>
     <string name="vibration">Vibration</string>
+    <string name="widget">Widget</string>
+    <string name="widget_background_color">Couleur de arrière-plan du widget</string>
 </resources>

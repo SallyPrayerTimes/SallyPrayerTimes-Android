@@ -3,7 +3,8 @@
     <string-array name="athan_Alert_Array">
         <item>@string/athan</item>
         <item>@string/vibration</item>
-        <item>@string/nothing</item>
+          <item>@string/notification</item>
+          <item>@string/nothing</item>
     </string-array>
     <string-array name="athan_array">
         <item>@string/ali_ben_ahmed_mala</item>
@@ -37,6 +38,23 @@
         <item>@string/standard</item>
         <item>@string/sayfi</item>
     </string-array>
+    <string-array name="widget_colors">
+        <item name="silver">Silver</item>
+        <item name="gray">Gray</item>
+        <item name="black">Black</item>
+        <item name="red">Red</item>
+        <item name="maroon">Maroon</item>
+        <item name="yellow">Yellow</item>
+        <item name="olive">Olive</item>
+        <item name="lime">Lime</item>
+        <item name="green">Green</item>
+        <item name="aqua">Aqua</item>
+        <item name="teal">Teal</item>
+        <item name="blue">Blue</item>
+        <item name="navy">Navy</item>
+        <item name="fuchsia">Fuchsia</item>
+        <item name="purple">Purple</item>
+    </string-array>
     <attr format="reference" name="drawerArrowStyle"/>
     <attr format="dimension" name="height"/>
     <attr format="boolean" name="isLightTheme"/>
@@ -52,6 +70,7 @@
     <color name="abc_search_url_text_selected">@android:color/black</color>
     <color name="accent_material_dark">@color/material_deep_teal_200</color>
     <color name="accent_material_light">@color/material_deep_teal_500</color>
+    <color name="aqua">#00FFFF</color>
     <color name="armygreen">#4B5320</color>
     <color name="arsenic">#3B444B</color>
     <color name="azure">#007FFF</color>
@@ -60,6 +79,7 @@
     <color name="background_material_dark">@color/material_grey_850</color>
     <color name="background_material_light">@color/material_grey_50</color>
     <color name="black">#000000</color>
+    <color name="blue">#0000FF</color>
     <color name="bright_foreground_disabled_material_dark">#80ffffff</color>
     <color name="bright_foreground_disabled_material_light">#80000000</color>
     <color name="bright_foreground_inverse_material_dark">@color/bright_foreground_material_light</color>
@@ -74,9 +94,13 @@
     <color name="dim_foreground_material_light">#ff323232</color>
     <color name="foreground_material_dark">@android:color/white</color>
     <color name="foreground_material_light">@android:color/black</color>
-    <color name="gray">#BBBBBB </color>
+    <color name="fuchsia">#FF00FF</color>
+    <color name="gray">#808080</color>
+    <color name="green">#008000</color>
     <color name="highlighted_text_material_dark">#6680cbc4</color>
     <color name="highlighted_text_material_light">#66009688</color>
+    <color name="lime">#00FF00</color>
+    <color name="maroon">#800000</color>
     <color name="material_blue_grey_800">#ff37474f</color>
     <color name="material_blue_grey_900">#ff263238</color>
     <color name="material_blue_grey_950">#ff21272b</color>
@@ -89,9 +113,11 @@
     <color name="material_grey_800">#ff424242</color>
     <color name="material_grey_850">#ff303030</color>
     <color name="material_grey_900">#ff212121</color>
+    <color name="navy">#000080</color>
     <color name="notification_action_color_filter">#ffffffff</color>
     <color name="notification_icon_bg_color">#ff9e9e9e</color>
     <color name="notification_material_background_media_default_color">#ff424242</color>
+    <color name="olive">#808000</color>
     <color name="primary_dark_material_dark">@android:color/black</color>
     <color name="primary_dark_material_light">@color/material_grey_600</color>
     <color name="primary_material_dark">@color/material_grey_900</color>
@@ -100,6 +126,7 @@
     <color name="primary_text_default_material_light">#de000000</color>
     <color name="primary_text_disabled_material_dark">#4Dffffff</color>
     <color name="primary_text_disabled_material_light">#39000000</color>
+    <color name="purple">#800080</color>
     <color name="red">#FF0000</color>
     <color name="ripple_material_dark">#33ffffff</color>
     <color name="ripple_material_light">#1f000000</color>
@@ -107,10 +134,14 @@
     <color name="secondary_text_default_material_light">#8a000000</color>
     <color name="secondary_text_disabled_material_dark">#36ffffff</color>
     <color name="secondary_text_disabled_material_light">#24000000</color>
+    <color name="silver">#C0C0C0</color>
     <color name="switch_thumb_disabled_material_dark">#ff616161</color>
     <color name="switch_thumb_disabled_material_light">#ffbdbdbd</color>
     <color name="switch_thumb_normal_material_dark">#ffbdbdbd</color>
     <color name="switch_thumb_normal_material_light">#fff1f1f1</color>
+    <color name="teal">#008080</color>
+    <color name="widget_actual_prayer_color">#FFFFD700</color>
+    <color name="yellow">#FFFF00</color>
     <dimen name="abc_action_bar_content_inset_material">16dp</dimen>
     <dimen name="abc_action_bar_content_inset_with_nav">72dp</dimen>
     <dimen name="abc_action_bar_default_height_material">56dp</dimen>
@@ -292,26 +323,33 @@
     <string name="app_info">Sally is a free and open source application to calculate Islamic prayer times for most of the world</string>
     <string name="app_name">Sally</string>
     <string name="app_site">http://www.sallyprayertimes.com</string>
-    <string name="app_version">Version : Final 1.2.15</string>
+    <string name="app_version">Version : Final 24.1.20</string>
     <string name="applay">Apply</string>
+    <string name="application_already_optimized">application already excluded from battery optimization</string>
     <string name="arabic">arabic</string>
     <string name="asr">ASR</string>
+    <string name="asr_widget">Asr</string>
     <string name="assabt">Assabt</string>
     <string name="athan">Athan</string>
     <string name="attolathaa">Attolathaa</string>
+    <string name="battery">Battery</string>
+    <string name="battery_optimization">Battery optimization</string>
     <string name="calculationMethod">Calculation Methods</string>
     <string name="cancel">Cancel</string>
     <string name="city">City</string>
+    <string name="color">Color</string>
     <string name="confirm">Confirm</string>
     <string name="country">Country</string>
     <string name="dhul_hijja">Dhul Hijja</string>
     <string name="dhul_qi_ada">Dhul Qiada</string>
     <string name="duhr">DUHR</string>
+    <string name="duhr_widget">Duhr</string>
     <string name="english">english</string>
     <string name="error_corrupt_user_file_config">File sallyUserConfig.xml corrupt , delete it if exists and restart or check your permission</string>
     <string name="error_read_user_config">ERROR reading user config</string>
     <string name="error_try_again_later">ERROR try again_later</string>
     <string name="fajr">FAJR</string>
+    <string name="fajr_widget">Fajr</string>
     <string name="farou9_abd_errehmane_hadraoui">farou9 abd errehmane hadraoui</string>
     <string name="french">French</string>
     <string name="gps_is_not_on">GPS is not on …</string>
@@ -319,6 +357,7 @@
     <string name="hijri_adjustment">Hijri Adjustment</string>
     <string name="info">Info</string>
     <string name="ishaa">ISHAA</string>
+    <string name="ishaa_widget">Isha</string>
     <string name="italiano">Italian</string>
     <string name="its_the_hour_of">ITS THE HOUR OF</string>
     <string name="jumadal_attani">Jumadal Attani</string>
@@ -331,6 +370,7 @@
     <string name="locationgps">Location GPS</string>
     <string name="longitude">Longitude</string>
     <string name="maghrib">MAGHRIB</string>
+    <string name="maghrib_widget">Magrib</string>
     <string name="mazhab">Mazhab</string>
     <string name="missing_to">Missing To</string>
     <string name="mohammad_ali_el_banna">mohammad ali el_banna</string>
@@ -338,8 +378,13 @@
     <string name="muharram">Muharram</string>
     <string name="must_first_select_a_country">Must first select a country</string>
     <string name="no_network_provider_is_enabled">No network provider is enabled please enable Location option</string>
+    <string name="not_optimized">not excluded from battery optimization</string>
     <string name="not_set">......</string>
     <string name="nothing">Nothing</string>
+    <string name="notification">Notification</string>
+    <string name="notificationMessage">It is now time for prayer</string>
+    <string name="notificationTitle">It is time for</string>
+    <string name="optimized">excluded from battery optimization</string>
     <string name="prayers">Prayers</string>
     <string name="rabi_ul_attani">Rabiul Attani</string>
     <string name="rabi_ul_awwal">Rabiul Awwal</string>
@@ -354,6 +399,7 @@
     <string name="shafi3i">Shafi3i</string>
     <string name="shawwal">Shawwal</string>
     <string name="shorouk">SHOROUK</string>
+    <string name="shorouk_widget">Shorouk</string>
     <string name="standard">Standard</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="stopathan">Stop Athan</string>
@@ -365,6 +411,8 @@
     <string name="time_zone">Time Zone</string>
     <string name="type_time">Type time</string>
     <string name="vibration">Vibration</string>
+    <string name="widget">Widget</string>
+    <string name="widget_background_color">Widget background color</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
     <style name="AlertDialogCustom" parent="Theme.AppCompat.Light.Dialog.Alert">
@@ -1782,11 +1830,11 @@
         <item name="android:textColor">#FFFFFF</item>
     </style>
     <style name="missing_time_Style">
-        <item name="android:textSize">75.0dip</item>
+        <item name="android:textSize">50.0dip</item>
         <item name="android:textColor">#FFFFFF</item>
     </style>
     <style name="missing_time_Style_label">
-        <item name="android:textSize">40.0dip</item>
+        <item name="android:textSize">30.0dip</item>
         <item name="android:textColor">#FFFFFF</item>
     </style>
     <style name="missing_time_Style_label_time">
@@ -1801,9 +1849,19 @@
         <item name="android:textSize">18.0dip</item>
         <item name="android:textColor">#FFFFFF</item>
     </style>
+    <style name="time_label_widget2">
+        <item name="android:textSize">14.0dip</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+    </style>
     <style name="time_value">
         <item name="android:textSize">16.0dip</item>
         <item name="android:textColor">#FFFFFF</item>
+    </style>
+    <style name="time_value_widget2">
+        <item name="android:textSize">14.0dip</item>
+        <item name="android:textColor">@android:color/white</item>
     </style>
     <style name="widget_missing_time_Style">
         <item name="android:textSize">40.0dip</item>

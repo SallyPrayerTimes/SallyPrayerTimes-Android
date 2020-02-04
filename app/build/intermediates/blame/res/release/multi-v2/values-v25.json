@@ -4,7 +4,7 @@
             "outputFile": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-v25\\values-v25.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\ALI\\.gradle\\caches\\transforms-2\\files-2.1\\1e907517efda6813157e8bc5ee119c67\\appcompat-v7-25.1.0\\res\\values-v25\\values-v25.xml",
+                    "source": "C:\\Users\\ALI\\.gradle\\caches\\transforms-2\\files-2.1\\45e09eb23339a1ec5cee281482022afc\\appcompat-v7-25.1.0\\res\\values-v25\\values-v25.xml",
                     "from": {
                         "startLines": "2,3,4,6",
                         "startColumns": "4,4,4,4",
