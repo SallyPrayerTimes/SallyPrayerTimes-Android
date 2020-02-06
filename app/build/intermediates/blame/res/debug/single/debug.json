@@ -8,20 +8,16 @@
         "source": "C:\\Users\\ALI\\.gradle\\caches\\transforms-2\\files-2.1\\45e09eb23339a1ec5cee281482022afc\\appcompat-v7-25.1.0\\res\\drawable-hdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png"
     },
     {
-        "merged": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_icon_group.xml.flat",
-        "source": "C:\\Users\\ALI\\.gradle\\caches\\transforms-2\\files-2.1\\45e09eb23339a1ec5cee281482022afc\\appcompat-v7-25.1.0\\res\\layout\\notification_template_icon_group.xml"
-    },
-    {
         "merged": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_spinner_mtrl_am_alpha.9.png.flat",
         "source": "C:\\Users\\ALI\\.gradle\\caches\\transforms-2\\files-2.1\\45e09eb23339a1ec5cee281482022afc\\appcompat-v7-25.1.0\\res\\drawable-xxxhdpi-v4\\abc_spinner_mtrl_am_alpha.9.png"
     },
     {
-        "merged": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_search_dropdown_item_icons_2line.xml.flat",
-        "source": "C:\\Users\\ALI\\.gradle\\caches\\transforms-2\\files-2.1\\45e09eb23339a1ec5cee281482022afc\\appcompat-v7-25.1.0\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
-    },
-    {
         "merged": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_switch_track_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\ALI\\.gradle\\caches\\transforms-2\\files-2.1\\45e09eb23339a1ec5cee281482022afc\\appcompat-v7-25.1.0\\res\\drawable-xxxhdpi-v4\\abc_switch_track_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_search_dropdown_item_icons_2line.xml.flat",
+        "source": "C:\\Users\\ALI\\.gradle\\caches\\transforms-2\\files-2.1\\45e09eb23339a1ec5cee281482022afc\\appcompat-v7-25.1.0\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
     },
     {
         "merged": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\build\\intermediates\\res\\merged\\debug\\drawable_asr_background.jpg.flat",
@@ -44,16 +40,16 @@
         "source": "C:\\Users\\ALI\\.gradle\\caches\\transforms-2\\files-2.1\\45e09eb23339a1ec5cee281482022afc\\appcompat-v7-25.1.0\\res\\drawable-xxhdpi-v4\\abc_btn_check_to_on_mtrl_015.png"
     },
     {
-        "merged": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_textfield_search_default_mtrl_alpha.9.png.flat",
-        "source": "C:\\Users\\ALI\\.gradle\\caches\\transforms-2\\files-2.1\\45e09eb23339a1ec5cee281482022afc\\appcompat-v7-25.1.0\\res\\drawable-hdpi-v4\\abc_textfield_search_default_mtrl_alpha.9.png"
+        "merged": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\build\\intermediates\\res\\merged\\debug\\color_switch_thumb_material_light.xml.flat",
+        "source": "C:\\Users\\ALI\\.gradle\\caches\\transforms-2\\files-2.1\\45e09eb23339a1ec5cee281482022afc\\appcompat-v7-25.1.0\\res\\color\\switch_thumb_material_light.xml"
     },
     {
         "merged": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\build\\intermediates\\res\\merged\\debug\\drawable_widget_background.png.flat",
         "source": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\src\\main\\res\\drawable\\widget_background.png"
     },
     {
-        "merged": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\build\\intermediates\\res\\merged\\debug\\color_switch_thumb_material_light.xml.flat",
-        "source": "C:\\Users\\ALI\\.gradle\\caches\\transforms-2\\files-2.1\\45e09eb23339a1ec5cee281482022afc\\appcompat-v7-25.1.0\\res\\color\\switch_thumb_material_light.xml"
+        "merged": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_textfield_search_default_mtrl_alpha.9.png.flat",
+        "source": "C:\\Users\\ALI\\.gradle\\caches\\transforms-2\\files-2.1\\45e09eb23339a1ec5cee281482022afc\\appcompat-v7-25.1.0\\res\\drawable-hdpi-v4\\abc_textfield_search_default_mtrl_alpha.9.png"
     },
     {
         "merged": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_list_pressed_holo_dark.9.png.flat",
@@ -80,20 +76,20 @@
         "source": "C:\\Users\\ALI\\.gradle\\caches\\transforms-2\\files-2.1\\45e09eb23339a1ec5cee281482022afc\\appcompat-v7-25.1.0\\res\\drawable-xxhdpi-v4\\abc_ic_commit_search_api_mtrl_alpha.png"
     },
     {
-        "merged": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_ic_star_black_16dp.png.flat",
-        "source": "C:\\Users\\ALI\\.gradle\\caches\\transforms-2\\files-2.1\\45e09eb23339a1ec5cee281482022afc\\appcompat-v7-25.1.0\\res\\drawable-xxxhdpi-v4\\abc_ic_star_black_16dp.png"
-    },
-    {
         "merged": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_star_black_48dp.png.flat",
         "source": "C:\\Users\\ALI\\.gradle\\caches\\transforms-2\\files-2.1\\45e09eb23339a1ec5cee281482022afc\\appcompat-v7-25.1.0\\res\\drawable-hdpi-v4\\abc_ic_star_black_48dp.png"
     },
     {
-        "merged": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\build\\intermediates\\res\\merged\\debug\\menu_athan_activity.xml.flat",
-        "source": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\src\\main\\res\\menu\\athan_activity.xml"
+        "merged": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_ic_star_black_16dp.png.flat",
+        "source": "C:\\Users\\ALI\\.gradle\\caches\\transforms-2\\files-2.1\\45e09eb23339a1ec5cee281482022afc\\appcompat-v7-25.1.0\\res\\drawable-xxxhdpi-v4\\abc_ic_star_black_16dp.png"
     },
     {
         "merged": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_switch_track_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\ALI\\.gradle\\caches\\transforms-2\\files-2.1\\45e09eb23339a1ec5cee281482022afc\\appcompat-v7-25.1.0\\res\\drawable-xxhdpi-v4\\abc_switch_track_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\build\\intermediates\\res\\merged\\debug\\menu_athan_activity.xml.flat",
+        "source": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\src\\main\\res\\menu\\athan_activity.xml"
     },
     {
         "merged": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_dialog_material_background.xml.flat",
@@ -116,12 +112,12 @@
         "source": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\src\\main\\res\\drawable\\athan_notifications.png"
     },
     {
-        "merged": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\build\\intermediates\\res\\merged\\debug\\drawable_widget_actual_prayer_background.xml.flat",
-        "source": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\src\\main\\res\\drawable\\widget_actual_prayer_background.xml"
-    },
-    {
         "merged": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_notify_panel_notification_icon_bg.png.flat",
         "source": "C:\\Users\\ALI\\.gradle\\caches\\transforms-2\\files-2.1\\45e09eb23339a1ec5cee281482022afc\\appcompat-v7-25.1.0\\res\\drawable-hdpi-v4\\notify_panel_notification_icon_bg.png"
+    },
+    {
+        "merged": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\build\\intermediates\\res\\merged\\debug\\drawable_widget_actual_prayer_background.xml.flat",
+        "source": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\src\\main\\res\\drawable\\widget_actual_prayer_background.xml"
     },
     {
         "merged": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_alert_dialog_button_bar_material.xml.flat",
@@ -280,40 +276,40 @@
         "source": "C:\\Users\\ALI\\.gradle\\caches\\transforms-2\\files-2.1\\45e09eb23339a1ec5cee281482022afc\\appcompat-v7-25.1.0\\res\\layout\\support_simple_spinner_dropdown_item.xml"
     },
     {
-        "merged": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\build\\intermediates\\res\\merged\\debug\\anim_abc_grow_fade_in_from_bottom.xml.flat",
-        "source": "C:\\Users\\ALI\\.gradle\\caches\\transforms-2\\files-2.1\\45e09eb23339a1ec5cee281482022afc\\appcompat-v7-25.1.0\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
-    },
-    {
-        "merged": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_popup_background_mtrl_mult.9.png.flat",
-        "source": "C:\\Users\\ALI\\.gradle\\caches\\transforms-2\\files-2.1\\45e09eb23339a1ec5cee281482022afc\\appcompat-v7-25.1.0\\res\\drawable-xxhdpi-v4\\abc_popup_background_mtrl_mult.9.png"
+        "merged": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_btn_radio_to_on_mtrl_015.png.flat",
+        "source": "C:\\Users\\ALI\\.gradle\\caches\\transforms-2\\files-2.1\\45e09eb23339a1ec5cee281482022afc\\appcompat-v7-25.1.0\\res\\drawable-hdpi-v4\\abc_btn_radio_to_on_mtrl_015.png"
     },
     {
         "merged": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\build\\intermediates\\res\\merged\\debug\\drawable_timepicker_down_normal.png.flat",
         "source": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\src\\main\\res\\drawable\\timepicker_down_normal.png"
     },
     {
-        "merged": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_btn_radio_to_on_mtrl_015.png.flat",
-        "source": "C:\\Users\\ALI\\.gradle\\caches\\transforms-2\\files-2.1\\45e09eb23339a1ec5cee281482022afc\\appcompat-v7-25.1.0\\res\\drawable-hdpi-v4\\abc_btn_radio_to_on_mtrl_015.png"
+        "merged": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_popup_background_mtrl_mult.9.png.flat",
+        "source": "C:\\Users\\ALI\\.gradle\\caches\\transforms-2\\files-2.1\\45e09eb23339a1ec5cee281482022afc\\appcompat-v7-25.1.0\\res\\drawable-xxhdpi-v4\\abc_popup_background_mtrl_mult.9.png"
     },
     {
-        "merged": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\build\\intermediates\\res\\merged\\debug\\drawable_red_background.xml.flat",
-        "source": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\src\\main\\res\\drawable\\red_background.xml"
+        "merged": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\build\\intermediates\\res\\merged\\debug\\anim_abc_grow_fade_in_from_bottom.xml.flat",
+        "source": "C:\\Users\\ALI\\.gradle\\caches\\transforms-2\\files-2.1\\45e09eb23339a1ec5cee281482022afc\\appcompat-v7-25.1.0\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
     },
     {
-        "merged": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_tab_indicator_material.xml.flat",
-        "source": "C:\\Users\\ALI\\.gradle\\caches\\transforms-2\\files-2.1\\45e09eb23339a1ec5cee281482022afc\\appcompat-v7-25.1.0\\res\\drawable\\abc_tab_indicator_material.xml"
-    },
-    {
-        "merged": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\build\\intermediates\\res\\merged\\debug\\drawable_prayers_tab_style.xml.flat",
-        "source": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\src\\main\\res\\drawable\\prayers_tab_style.xml"
+        "merged": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_ic_menu_paste_mtrl_am_alpha.png.flat",
+        "source": "C:\\Users\\ALI\\.gradle\\caches\\transforms-2\\files-2.1\\45e09eb23339a1ec5cee281482022afc\\appcompat-v7-25.1.0\\res\\drawable-xxhdpi-v4\\abc_ic_menu_paste_mtrl_am_alpha.png"
     },
     {
         "merged": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\build\\intermediates\\res\\merged\\debug\\drawable_compass_background.png.flat",
         "source": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\src\\main\\res\\drawable\\compass_background.png"
     },
     {
-        "merged": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_ic_menu_paste_mtrl_am_alpha.png.flat",
-        "source": "C:\\Users\\ALI\\.gradle\\caches\\transforms-2\\files-2.1\\45e09eb23339a1ec5cee281482022afc\\appcompat-v7-25.1.0\\res\\drawable-xxhdpi-v4\\abc_ic_menu_paste_mtrl_am_alpha.png"
+        "merged": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\build\\intermediates\\res\\merged\\debug\\drawable_prayers_tab_style.xml.flat",
+        "source": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\src\\main\\res\\drawable\\prayers_tab_style.xml"
+    },
+    {
+        "merged": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_tab_indicator_material.xml.flat",
+        "source": "C:\\Users\\ALI\\.gradle\\caches\\transforms-2\\files-2.1\\45e09eb23339a1ec5cee281482022afc\\appcompat-v7-25.1.0\\res\\drawable\\abc_tab_indicator_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\build\\intermediates\\res\\merged\\debug\\drawable_red_background.xml.flat",
+        "source": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\src\\main\\res\\drawable\\red_background.xml"
     },
     {
         "merged": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\build\\intermediates\\res\\merged\\debug\\drawable_navy_background.xml.flat",
@@ -340,12 +336,12 @@
         "source": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\src\\main\\res\\layout\\splash_screen_activity.xml"
     },
     {
-        "merged": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_textfield_search_activated_mtrl_alpha.9.png.flat",
-        "source": "C:\\Users\\ALI\\.gradle\\caches\\transforms-2\\files-2.1\\45e09eb23339a1ec5cee281482022afc\\appcompat-v7-25.1.0\\res\\drawable-xhdpi-v4\\abc_textfield_search_activated_mtrl_alpha.9.png"
-    },
-    {
         "merged": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_text_select_handle_right_mtrl_light.png.flat",
         "source": "C:\\Users\\ALI\\.gradle\\caches\\transforms-2\\files-2.1\\45e09eb23339a1ec5cee281482022afc\\appcompat-v7-25.1.0\\res\\drawable-mdpi-v4\\abc_text_select_handle_right_mtrl_light.png"
+    },
+    {
+        "merged": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_textfield_search_activated_mtrl_alpha.9.png.flat",
+        "source": "C:\\Users\\ALI\\.gradle\\caches\\transforms-2\\files-2.1\\45e09eb23339a1ec5cee281482022afc\\appcompat-v7-25.1.0\\res\\drawable-xhdpi-v4\\abc_textfield_search_activated_mtrl_alpha.9.png"
     },
     {
         "merged": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\build\\intermediates\\res\\merged\\debug\\layout-v11_notification_template_big_media_narrow_custom.xml.flat",
@@ -354,10 +350,6 @@
     {
         "merged": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_star_half_black_48dp.png.flat",
         "source": "C:\\Users\\ALI\\.gradle\\caches\\transforms-2\\files-2.1\\45e09eb23339a1ec5cee281482022afc\\appcompat-v7-25.1.0\\res\\drawable-hdpi-v4\\abc_ic_star_half_black_48dp.png"
-    },
-    {
-        "merged": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\build\\intermediates\\res\\merged\\debug\\layout-v16_notification_template_custom_big.xml.flat",
-        "source": "C:\\Users\\ALI\\.gradle\\caches\\transforms-2\\files-2.1\\45e09eb23339a1ec5cee281482022afc\\appcompat-v7-25.1.0\\res\\layout-v16\\notification_template_custom_big.xml"
     },
     {
         "merged": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_btn_radio_to_on_mtrl_015.png.flat",
@@ -584,12 +576,12 @@
         "source": "C:\\Users\\ALI\\.gradle\\caches\\transforms-2\\files-2.1\\45e09eb23339a1ec5cee281482022afc\\appcompat-v7-25.1.0\\res\\drawable-xhdpi-v4\\notification_bg_normal_pressed.9.png"
     },
     {
-        "merged": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_select_dialog_material.xml.flat",
-        "source": "C:\\Users\\ALI\\.gradle\\caches\\transforms-2\\files-2.1\\45e09eb23339a1ec5cee281482022afc\\appcompat-v7-25.1.0\\res\\layout\\abc_select_dialog_material.xml"
-    },
-    {
         "merged": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_ic_menu_paste_mtrl_am_alpha.png.flat",
         "source": "C:\\Users\\ALI\\.gradle\\caches\\transforms-2\\files-2.1\\45e09eb23339a1ec5cee281482022afc\\appcompat-v7-25.1.0\\res\\drawable-mdpi-v4\\abc_ic_menu_paste_mtrl_am_alpha.png"
+    },
+    {
+        "merged": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_select_dialog_material.xml.flat",
+        "source": "C:\\Users\\ALI\\.gradle\\caches\\transforms-2\\files-2.1\\45e09eb23339a1ec5cee281482022afc\\appcompat-v7-25.1.0\\res\\layout\\abc_select_dialog_material.xml"
     },
     {
         "merged": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\build\\intermediates\\res\\merged\\debug\\layout_select_dialog_item_material.xml.flat",
@@ -620,20 +612,20 @@
         "source": "C:\\Users\\ALI\\.gradle\\caches\\transforms-2\\files-2.1\\45e09eb23339a1ec5cee281482022afc\\appcompat-v7-25.1.0\\res\\drawable\\abc_ic_voice_search_api_material.xml"
     },
     {
-        "merged": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_tab_indicator_mtrl_alpha.9.png.flat",
-        "source": "C:\\Users\\ALI\\.gradle\\caches\\transforms-2\\files-2.1\\45e09eb23339a1ec5cee281482022afc\\appcompat-v7-25.1.0\\res\\drawable-xxhdpi-v4\\abc_tab_indicator_mtrl_alpha.9.png"
-    },
-    {
-        "merged": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_scrubber_control_off_mtrl_alpha.png.flat",
-        "source": "C:\\Users\\ALI\\.gradle\\caches\\transforms-2\\files-2.1\\45e09eb23339a1ec5cee281482022afc\\appcompat-v7-25.1.0\\res\\drawable-hdpi-v4\\abc_scrubber_control_off_mtrl_alpha.png"
+        "merged": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\build\\intermediates\\res\\merged\\debug\\drawable_kibla_tab.png.flat",
+        "source": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\src\\main\\res\\drawable\\kibla_tab.png"
     },
     {
         "merged": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_textfield_default_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\ALI\\.gradle\\caches\\transforms-2\\files-2.1\\45e09eb23339a1ec5cee281482022afc\\appcompat-v7-25.1.0\\res\\drawable-hdpi-v4\\abc_textfield_default_mtrl_alpha.9.png"
     },
     {
-        "merged": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\build\\intermediates\\res\\merged\\debug\\drawable_kibla_tab.png.flat",
-        "source": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\src\\main\\res\\drawable\\kibla_tab.png"
+        "merged": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_scrubber_control_off_mtrl_alpha.png.flat",
+        "source": "C:\\Users\\ALI\\.gradle\\caches\\transforms-2\\files-2.1\\45e09eb23339a1ec5cee281482022afc\\appcompat-v7-25.1.0\\res\\drawable-hdpi-v4\\abc_scrubber_control_off_mtrl_alpha.png"
+    },
+    {
+        "merged": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_tab_indicator_mtrl_alpha.9.png.flat",
+        "source": "C:\\Users\\ALI\\.gradle\\caches\\transforms-2\\files-2.1\\45e09eb23339a1ec5cee281482022afc\\appcompat-v7-25.1.0\\res\\drawable-xxhdpi-v4\\abc_tab_indicator_mtrl_alpha.9.png"
     },
     {
         "merged": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21_notification_template_custom_big.xml.flat",
@@ -714,10 +706,6 @@
     {
         "merged": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_notify_panel_notification_icon_bg.png.flat",
         "source": "C:\\Users\\ALI\\.gradle\\caches\\transforms-2\\files-2.1\\45e09eb23339a1ec5cee281482022afc\\appcompat-v7-25.1.0\\res\\drawable-xhdpi-v4\\notify_panel_notification_icon_bg.png"
-    },
-    {
-        "merged": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_custom_big.xml.flat",
-        "source": "C:\\Users\\ALI\\.gradle\\caches\\transforms-2\\files-2.1\\45e09eb23339a1ec5cee281482022afc\\appcompat-v7-25.1.0\\res\\layout\\notification_template_custom_big.xml"
     },
     {
         "merged": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\build\\intermediates\\res\\merged\\debug\\drawable_notification_icon_background.xml.flat",
@@ -1376,10 +1364,6 @@
         "source": "C:\\Users\\ALI\\.gradle\\caches\\transforms-2\\files-2.1\\45e09eb23339a1ec5cee281482022afc\\appcompat-v7-25.1.0\\res\\drawable-hdpi-v4\\abc_text_select_handle_middle_mtrl_light.png"
     },
     {
-        "merged": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_edit_text_material.xml.flat",
-        "source": "C:\\Users\\ALI\\.gradle\\caches\\transforms-2\\files-2.1\\45e09eb23339a1ec5cee281482022afc\\appcompat-v7-25.1.0\\res\\drawable\\abc_edit_text_material.xml"
-    },
-    {
         "merged": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_list_menu_item_radio.xml.flat",
         "source": "C:\\Users\\ALI\\.gradle\\caches\\transforms-2\\files-2.1\\45e09eb23339a1ec5cee281482022afc\\appcompat-v7-25.1.0\\res\\layout\\abc_list_menu_item_radio.xml"
     },
@@ -1410,10 +1394,6 @@
     {
         "merged": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\build\\intermediates\\res\\merged\\debug\\drawable_blue_background.xml.flat",
         "source": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\src\\main\\res\\drawable\\blue_background.xml"
-    },
-    {
-        "merged": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_btn_colored_material.xml.flat",
-        "source": "C:\\Users\\ALI\\.gradle\\caches\\transforms-2\\files-2.1\\45e09eb23339a1ec5cee281482022afc\\appcompat-v7-25.1.0\\res\\drawable\\abc_btn_colored_material.xml"
     },
     {
         "merged": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_text_select_handle_left_mtrl_dark.png.flat",
@@ -1574,10 +1554,6 @@
     {
         "merged": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_popup_background_mtrl_mult.9.png.flat",
         "source": "C:\\Users\\ALI\\.gradle\\caches\\transforms-2\\files-2.1\\45e09eb23339a1ec5cee281482022afc\\appcompat-v7-25.1.0\\res\\drawable-xhdpi-v4\\abc_popup_background_mtrl_mult.9.png"
-    },
-    {
-        "merged": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_action.xml.flat",
-        "source": "C:\\Users\\ALI\\.gradle\\caches\\transforms-2\\files-2.1\\45e09eb23339a1ec5cee281482022afc\\appcompat-v7-25.1.0\\res\\layout\\notification_action.xml"
     },
     {
         "merged": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_text_select_handle_left_mtrl_light.png.flat",
@@ -1770,10 +1746,6 @@
     {
         "merged": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\build\\intermediates\\res\\merged\\debug\\drawable_lime_background.xml.flat",
         "source": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\src\\main\\res\\drawable\\lime_background.xml"
-    },
-    {
-        "merged": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_action_tombstone.xml.flat",
-        "source": "C:\\Users\\ALI\\.gradle\\caches\\transforms-2\\files-2.1\\45e09eb23339a1ec5cee281482022afc\\appcompat-v7-25.1.0\\res\\layout\\notification_action_tombstone.xml"
     },
     {
         "merged": "C:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_seekbar_track_material.xml.flat",

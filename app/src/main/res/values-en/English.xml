@@ -165,4 +165,6 @@
     <string name="widget_background_color">Widget background color</string>
     <string name="color">Color</string>
 
+    <string name="gps_permission_error">Please give the app permission to have access to your location</string>
+
 </resources>

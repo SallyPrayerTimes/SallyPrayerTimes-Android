@@ -23,236 +23,233 @@
 23<manifest xmlns:android="http://schemas.android.com/apk/res/android"
 24    package="com.sally"
 25    android:versionCode="2"
-26    android:versionName="1.2.15" >
+26    android:versionName="24.1.20" >
 27
-28    <uses-sdk android:minSdkVersion="14" />
-28-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml
-29
-30    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-30-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:27:5-81
-30-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:27:22-78
-31    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-31-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:28:5-79
-31-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:28:22-76
-32    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
-32-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:29:5-89
-32-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:29:22-86
-33    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-33-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:30:5-79
-33-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:30:22-76
-34    <uses-permission android:name="android.permission.INTERNET" />
-34-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:31:5-67
-34-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:31:22-64
-35    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-35-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:32:5-81
-35-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:32:22-78
+28    <uses-sdk
+29        android:minSdkVersion="21"
+29-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml
+30        android:targetSdkVersion="28" />
+30-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml
+31
+32    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+32-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:25:5-81
+32-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:25:22-78
+33    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+33-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:26:5-79
+33-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:26:22-76
+34    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+34-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:27:5-79
+34-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:27:22-76
+35    <uses-permission android:name="android.permission.INTERNET" />
+35-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:28:5-67
+35-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:28:22-64
 36    <uses-permission android:name="android.permission.VIBRATE" />
-36-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:33:5-66
-36-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:33:22-63
+36-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:29:5-66
+36-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:29:22-63
 37    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-37-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:34:5-81
-37-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:34:22-78
+37-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:30:5-81
+37-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:30:22-78
 38    <uses-permission android:name="android.permission.WAKE_LOCK" />
-38-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:35:5-68
-38-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:35:22-65
+38-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:31:5-68
+38-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:31:22-65
 39    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
-39-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:36:5-95
-39-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:36:22-92
+39-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:32:5-95
+39-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:32:22-92
 40
 41    <application
-41-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:38:5-144:19
+41-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:34:5-140:19
 42        android:allowBackup="true"
-42-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:39:9-35
+42-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:35:9-35
 43        android:icon="@drawable/ic_launcher"
-43-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:40:9-45
+43-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:36:9-45
 44        android:label="@string/app_name"
-44-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:41:9-41
+44-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:37:9-41
 45        android:theme="@style/AppTheme" >
-45-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:42:9-40
+45-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:38:9-40
 46        <activity
-46-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:43:9-52:20
+46-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:39:9-48:20
 47            android:name="activities.SplashScreen_Activity"
-47-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:44:13-60
+47-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:40:13-60
 48            android:screenOrientation="portrait"
-48-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:45:13-49
+48-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:41:13-49
 49            android:theme="@android:style/Theme.NoTitleBar" >
-49-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:46:13-60
+49-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:42:13-60
 50            <intent-filter>
-50-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:47:13-51:29
+50-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:43:13-47:29
 51                <action android:name="android.intent.action.MAIN" />
-51-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:48:17-69
-51-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:48:25-66
+51-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:44:17-69
+51-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:44:25-66
 52
 53                <category android:name="android.intent.category.LAUNCHER" />
-53-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:50:17-77
-53-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:50:27-74
+53-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:46:17-77
+53-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:46:27-74
 54            </intent-filter>
 55        </activity>
 56        <activity
-56-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:53:9-57:20
+56-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:49:9-53:20
 57            android:name="activities.Prayers_Activity"
-57-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:54:13-55
+57-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:50:13-55
 58            android:screenOrientation="portrait"
-58-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:55:13-49
+58-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:51:13-49
 59            android:theme="@android:style/Theme.NoTitleBar" >
-59-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:56:13-60
+59-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:52:13-60
 60        </activity>
 61        <activity
-61-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:58:9-62:20
+61-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:54:9-58:20
 62            android:name="activities.Info_Activity"
-62-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:59:13-52
+62-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:55:13-52
 63            android:screenOrientation="portrait"
-63-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:60:13-49
+63-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:56:13-49
 64            android:theme="@android:style/Theme.NoTitleBar" >
-64-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:61:13-60
+64-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:57:13-60
 65        </activity>
 66        <activity
-66-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:63:9-67:20
+66-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:59:9-63:20
 67            android:name="activities.Kibla_Activity"
-67-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:64:13-53
+67-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:60:13-53
 68            android:screenOrientation="portrait"
-68-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:65:13-49
+68-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:61:13-49
 69            android:theme="@android:style/Theme.NoTitleBar" >
-69-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:66:13-60
+69-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:62:13-60
 70        </activity>
 71        <activity
-71-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:68:9-72:20
+71-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:64:9-68:20
 72            android:name="activities.Home_Programe_Activity"
-72-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:69:13-61
+72-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:65:13-61
 73            android:screenOrientation="portrait"
-73-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:70:13-49
+73-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:66:13-49
 74            android:theme="@android:style/Theme.NoTitleBar" >
-74-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:71:13-60
+74-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:67:13-60
 75        </activity>
 76        <activity
-76-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:73:9-77:20
+76-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:69:9-73:20
 77            android:name="activities.Settings_Activity"
-77-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:74:13-56
+77-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:70:13-56
 78            android:screenOrientation="portrait"
-78-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:75:13-49
+78-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:71:13-49
 79            android:theme="@android:style/Theme.NoTitleBar" >
-79-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:76:13-60
+79-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:72:13-60
 80        </activity>
 81
 82        <receiver
-82-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:79:9-88:20
+82-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:75:9-84:20
 83            android:name="widget.MyWidgetProvider2"
-83-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:79:19-58
+83-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:75:19-58
 84            android:icon="@drawable/small_widget"
-84-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:80:13-50
+84-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:76:13-50
 85            android:label="Small Widget" >
-85-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:81:13-41
+85-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:77:13-41
 86            <intent-filter>
-86-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:82:13-85:29
+86-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:78:13-81:29
 87                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-87-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:83:17-84
-87-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:83:25-81
+87-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:79:17-84
+87-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:79:25-81
 88                <action android:name="android.intent.action.MAIN" />
-88-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:48:17-69
-88-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:48:25-66
+88-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:44:17-69
+88-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:44:25-66
 89            </intent-filter>
 90
 91            <meta-data
-91-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:86:13-87:61
+91-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:82:13-83:61
 92                android:name="android.appwidget.provider"
-92-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:86:24-65
+92-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:82:24-65
 93                android:resource="@xml/widget_provider_2" />
-93-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:87:17-58
+93-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:83:17-58
 94        </receiver>
 95        <receiver android:name="widget.MyWidgetProviderBroadcastReceiver2" />
-95-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:90:9-77
-95-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:90:19-75
+95-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:86:9-77
+95-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:86:19-75
 96        <receiver
-96-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:92:13-101:24
+96-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:88:13-97:24
 97            android:name="widget.MyWidgetProvider"
-97-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:92:23-61
+97-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:88:23-61
 98            android:icon="@drawable/large_widget"
-98-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:93:17-54
+98-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:89:17-54
 99            android:label="Large Widget" >
-99-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:94:17-45
+99-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:90:17-45
 100            <intent-filter>
-100-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:82:13-85:29
+100-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:78:13-81:29
 101                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-101-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:83:17-84
-101-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:83:25-81
+101-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:79:17-84
+101-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:79:25-81
 102                <action android:name="android.intent.action.MAIN" />
-102-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:48:17-69
-102-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:48:25-66
+102-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:44:17-69
+102-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:44:25-66
 103            </intent-filter>
 104
 105            <meta-data
-105-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:86:13-87:61
+105-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:82:13-83:61
 106                android:name="android.appwidget.provider"
-106-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:86:24-65
+106-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:82:24-65
 107                android:resource="@xml/widget_provider" />
-107-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:87:17-58
+107-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:83:17-58
 108        </receiver>
 109        <receiver android:name="widget.MyWidgetProviderBroadcastReceiver" />
-109-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:103:13-80
-109-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:103:23-78
+109-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:99:13-80
+109-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:99:23-78
 110        <receiver
-110-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:106:9-114:20
+110-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:102:9-110:20
 111            android:name="classes.StartServiceAtStartupDevice"
-111-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:107:13-63
+111-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:103:13-63
 112            android:enabled="true"
-112-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:108:13-35
+112-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:104:13-35
 113            android:exported="false" >
-113-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:109:13-37
+113-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:105:13-37
 114            <intent-filter>
-114-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:110:13-113:29
+114-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:106:13-109:29
 115                <action android:name="android.intent.action.BOOT_COMPLETED" />
-115-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:111:17-79
-115-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:111:25-76
+115-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:107:17-79
+115-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:107:25-76
 116
 117                <category android:name="android.intent.category.DEFAULT" />
-117-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:112:17-76
-117-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:112:27-73
+117-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:108:17-76
+117-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:108:27-73
 118            </intent-filter>
 119        </receiver>
 120        <receiver
-120-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:116:9-118:20
+120-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:112:9-114:20
 121            android:name="classes.AthanServiceBroasdcastReceiver"
-121-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:116:19-72
+121-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:112:19-72
 122            android:exported="false" >
-122-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:116:73-97
+122-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:112:73-97
 123        </receiver>
 124
 125        <service
-125-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:120:9-124:19
+125-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:116:9-120:19
 126            android:name="classes.AthanService"
-126-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:121:13-48
+126-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:117:13-48
 127            android:enabled="true"
-127-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:122:13-35
+127-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:118:13-35
 128            android:exported="true" >
-128-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:123:13-36
+128-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:119:13-36
 129        </service>
 130        <service
-130-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:126:9-130:19
+130-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:122:9-126:19
 131            android:name="widget.MyWidgetProviderService"
-131-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:127:13-58
+131-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:123:13-58
 132            android:enabled="true"
-132-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:128:13-35
+132-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:124:13-35
 133            android:exported="true" >
-133-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:129:13-36
+133-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:125:13-36
 134        </service>
 135        <service
-135-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:132:9-136:19
+135-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:128:9-132:19
 136            android:name="widget.MyWidgetProviderService2"
-136-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:133:13-59
+136-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:129:13-59
 137            android:enabled="true"
-137-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:134:13-35
+137-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:130:13-35
 138            android:exported="true" >
-138-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:135:13-36
+138-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:131:13-36
 139        </service>
 140
 141        <receiver android:name="classes.RefreshDayServiceManager" >
-141-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:138:9-142:20
-141-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:138:19-66
+141-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:134:9-138:20
+141-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:134:19-66
 142            <intent-filter>
-142-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:139:13-141:29
+142-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:135:13-137:29
 143                <action android:name="android.intent.action.TIME_SET" />
-143-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:140:17-73
-143-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:140:25-70
+143-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:136:17-73
+143-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:136:25-70
 144            </intent-filter>
 145        </receiver>
 146    </application>

@@ -19,17 +19,25 @@
  *******************************************************************************/
 package activities;
 
+import android.Manifest;
 import android.app.TabActivity;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TabHost;
 import android.widget.TabHost.TabSpec;
+import android.widget.Toast;
+
+import classes.ArabicReshape;
 import classes.AthanService;
 import classes.PreferenceHandler;
+import classes.UserConfig;
 
 import com.sally.R;
 
@@ -61,6 +69,13 @@ public class Home_Programe_Activity extends TabActivity{
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.home_programe_activity);
+
+		String permission1 = Manifest.permission.ACCESS_FINE_LOCATION;
+		if (ContextCompat.checkSelfPermission(getApplicationContext(), permission1) != PackageManager.PERMISSION_GRANTED){
+			if(!ActivityCompat.shouldShowRequestPermissionRationale(Home_Programe_Activity.this, permission1)){
+				requestPermissions(new String[]{permission1},1);
+			}
+		}
 
 		changeMainBackground();
 		

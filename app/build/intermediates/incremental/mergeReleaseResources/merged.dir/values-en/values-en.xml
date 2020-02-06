@@ -67,6 +67,7 @@
     <string name="farou9_abd_errehmane_hadraoui">farou9 abd errehmane hadraoui</string>
     <string name="french">French</string>
     <string name="gps_is_not_on">GPS is not on …</string>
+    <string name="gps_permission_error">Please give the app permission to have access to your location</string>
     <string name="hanafi">hanafi</string>
     <string name="hijri_adjustment">Hijri Adjustment</string>
     <string name="info">Info</string>

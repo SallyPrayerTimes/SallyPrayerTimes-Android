@@ -167,5 +167,7 @@
     <string name="widget_background_color">لون خلفية القطعة</string>
     <string name="color">اللون</string>
 
+    <string name="gps_permission_error">يرجى إعطاء التطبيق إذن الوصول إلى موقعك</string>
+
     
 </resources>

@@ -24,16 +24,16 @@
     package="com.sally"
     android:targetSandboxVersion="2"
     android:versionCode="2"
-    android:versionName="1.2.15" >
+    android:versionName="24.1.20" >
 
-    <uses-sdk android:minSdkVersion="14" />
+    <uses-sdk
+        android:minSdkVersion="21"
+        android:targetSdkVersion="28" />
 
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />

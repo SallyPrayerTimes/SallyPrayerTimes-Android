@@ -166,4 +166,6 @@
     <string name="widget_background_color">Colore di sfondo del widget</string>
     <string name="color">Colore</string>
 
+    <string name="gps_permission_error">Si prega di autorizzare il app ad avere accesso alla sua posizione</string>
+
 </resources>

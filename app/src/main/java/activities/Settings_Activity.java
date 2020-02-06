@@ -28,6 +28,8 @@ import java.util.TimeZone;
 
 import classes.PreferenceHandler;
 import widget.MyWidgetProvider;
+
+import android.Manifest;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
@@ -38,6 +40,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.database.Cursor;
 import android.database.SQLException;
@@ -52,6 +55,8 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -232,7 +237,6 @@ public class Settings_Activity extends Activity implements LocationListener{
 		this.context=this;
 		this.locationManager =(LocationManager) getSystemService(Context.LOCATION_SERVICE);
 	    this.locationListener = new Settings_Activity();
-        this.locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, locationListener);
 	    //Location Setting
 		this.gps_location_row = (TableRow)findViewById(R.id.row_gps_location);
 		this.gps_location_label = (TextView)findViewById(R.id.gps_location_label);
@@ -657,29 +661,32 @@ public class Settings_Activity extends Activity implements LocationListener{
 				this.ishaa_time_value.setText(UserConfig.getSingleton().getIshaa_time());
 			}
 			
-			this.gps_location_row.setOnClickListener(new View.OnClickListener() {  
-		         public void onClick(View view) {    
-		            if (locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) { 
-		            	getLocation(locationManager);
-		            	findLocation(); 	            	
-		              } else { 
-		            	  if(isNetworkAvailable())
-		            	  {
-		            		  getLocation(locationManager);
-				              findLocation();
-		            	  }else
-		            	  {
-		            		  if(UserConfig.getSingleton().getLanguage().equalsIgnoreCase("ar"))
-			            	  {
-			            		  Toast.makeText(getApplicationContext(),ArabicReshape.reshape(getResources().getString(R.string.gps_is_not_on)) , Toast.LENGTH_SHORT).show(); 
-							  }
-							  else
-							  {
-							      Toast.makeText(getApplicationContext(),getResources().getString(R.string.gps_is_not_on) , Toast.LENGTH_SHORT).show(); 
-							  }  
-		            	  } 
-		              }  
-		      
+			this.gps_location_row.setOnClickListener(new View.OnClickListener() {
+		         public void onClick(View view) {
+					 if(checkGpsPermission() == true)
+					 	{
+							locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, locationListener);
+							if (locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
+								getLocation(locationManager);
+								findLocation();
+							} else {
+								if(isNetworkAvailable())
+								{
+									getLocation(locationManager);
+									findLocation();
+								}else
+								{
+									if(UserConfig.getSingleton().getLanguage().equalsIgnoreCase("ar"))
+									{
+										Toast.makeText(getApplicationContext(),ArabicReshape.reshape(getResources().getString(R.string.gps_is_not_on)) , Toast.LENGTH_SHORT).show();
+									}
+									else
+									{
+										Toast.makeText(getApplicationContext(),getResources().getString(R.string.gps_is_not_on) , Toast.LENGTH_SHORT).show();
+									}
+								}
+							}
+						}
 		          }  
 		     }); 
 			
@@ -1897,50 +1904,53 @@ public class Settings_Activity extends Activity implements LocationListener{
 				}
 			} else
 				{
-					if (isNetworkEnabled) {
-						locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER,MIN_TIME_BW_UPDATES,
-								MIN_DISTANCE_CHANGE_FOR_UPDATES,this);
-						if (locationManager != null) {
-							location = locationManager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
-							if (location != null) {
-								latitude = location.getLatitude();
-								longitude = location.getLongitude();
-								if(latitude == 0 || longitude == 0)
-								{
-									location = null;
-								}else
-								{
-									latitude = location.getLatitude();
-									longitude = location.getLongitude();
-									return  location;
+					if(checkGpsPermission() == true)
+						{
+							if (isNetworkEnabled) {
+								locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER,MIN_TIME_BW_UPDATES,
+										MIN_DISTANCE_CHANGE_FOR_UPDATES,this);
+								if (locationManager != null) {
+									location = locationManager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
+									if (location != null) {
+										latitude = location.getLatitude();
+										longitude = location.getLongitude();
+										if(latitude == 0 || longitude == 0)
+										{
+											location = null;
+										}else
+										{
+											latitude = location.getLatitude();
+											longitude = location.getLongitude();
+											return  location;
+										}
+									}else{
+										location = null;
+									}
 								}
-							}else{
-								location = null;
 							}
-						}
-					}
 
-					if (isGPSEnabled) {
-						locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER,MIN_TIME_BW_UPDATES,
-								MIN_DISTANCE_CHANGE_FOR_UPDATES, this);
-						if (locationManager != null) {
-							location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
-							if (location != null) {
-								latitude = location.getLatitude();
-								longitude = location.getLongitude();
-								if(latitude == 0 || longitude == 0)
-								{
-									location = null;
-								}else
-								{
-									latitude = location.getLatitude();
-									longitude = location.getLongitude();
+							if (isGPSEnabled) {
+								locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER,MIN_TIME_BW_UPDATES,
+										MIN_DISTANCE_CHANGE_FOR_UPDATES, this);
+								if (locationManager != null) {
+									location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+									if (location != null) {
+										latitude = location.getLatitude();
+										longitude = location.getLongitude();
+										if(latitude == 0 || longitude == 0)
+										{
+											location = null;
+										}else
+										{
+											latitude = location.getLatitude();
+											longitude = location.getLongitude();
+										}
+									}else{
+										location = null;
+									}
 								}
-							}else{
-								location = null;
 							}
 						}
-					}
 				}
  
         } catch (Exception e) {
@@ -1949,6 +1959,25 @@ public class Settings_Activity extends Activity implements LocationListener{
  
         return location;
     }
+
+    private Boolean checkGpsPermission()
+	{
+		Boolean b = false;
+		String permission1 = Manifest.permission.ACCESS_FINE_LOCATION;
+		if (ContextCompat.checkSelfPermission(getApplicationContext(), permission1) != PackageManager.PERMISSION_GRANTED){
+			if(UserConfig.getSingleton().getLanguage().equalsIgnoreCase("ar")){
+				Toast.makeText(context, ArabicReshape.reshape(getResources().getString(R.string.gps_permission_error)), Toast.LENGTH_LONG).show();
+			}
+			else{
+				Toast.makeText(context, getResources().getString(R.string.gps_permission_error), Toast.LENGTH_LONG).show();
+			}
+		}
+		else
+			{
+				b = true;
+			}
+		return b;
+	}
  
 
 	@Override

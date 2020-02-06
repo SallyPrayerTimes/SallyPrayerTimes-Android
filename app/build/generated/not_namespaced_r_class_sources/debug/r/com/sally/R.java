@@ -2523,66 +2523,67 @@ public final class R {
     public static final int farou9_abd_errehmane_hadraoui=0x7f0d005f;
     public static final int french=0x7f0d0060;
     public static final int gps_is_not_on=0x7f0d0061;
-    public static final int hanafi=0x7f0d0062;
-    public static final int hijri_adjustment=0x7f0d0063;
-    public static final int info=0x7f0d0064;
-    public static final int ishaa=0x7f0d0065;
-    public static final int ishaa_widget=0x7f0d0066;
-    public static final int italiano=0x7f0d0067;
-    public static final int its_the_hour_of=0x7f0d0068;
-    public static final int jumadal_attani=0x7f0d0069;
-    public static final int jumadal_ula=0x7f0d006a;
-    public static final int kibla=0x7f0d006b;
-    public static final int kibla_warning=0x7f0d006c;
-    public static final int latitude=0x7f0d006d;
-    public static final int loading=0x7f0d006e;
-    public static final int location=0x7f0d006f;
-    public static final int locationgps=0x7f0d0070;
-    public static final int longitude=0x7f0d0071;
-    public static final int maghrib=0x7f0d0072;
-    public static final int maghrib_widget=0x7f0d0073;
-    public static final int mazhab=0x7f0d0074;
-    public static final int missing_to=0x7f0d0075;
-    public static final int mohammad_ali_el_banna=0x7f0d0076;
-    public static final int mohammad_khalil_raml=0x7f0d0077;
-    public static final int muharram=0x7f0d0078;
-    public static final int must_first_select_a_country=0x7f0d0079;
-    public static final int no_network_provider_is_enabled=0x7f0d007a;
-    public static final int not_optimized=0x7f0d007b;
-    public static final int not_set=0x7f0d007c;
-    public static final int nothing=0x7f0d007d;
-    public static final int notification=0x7f0d007e;
-    public static final int notificationMessage=0x7f0d007f;
-    public static final int notificationTitle=0x7f0d0080;
-    public static final int optimized=0x7f0d0081;
-    public static final int prayers=0x7f0d0082;
-    public static final int rabi_ul_attani=0x7f0d0083;
-    public static final int rabi_ul_awwal=0x7f0d0084;
-    public static final int rajab=0x7f0d0085;
-    public static final int ramadan=0x7f0d0086;
-    public static final int safar=0x7f0d0087;
-    public static final int sayfi=0x7f0d0088;
-    public static final int search_menu_title=0x7f0d0089;
-    public static final int sensor_is_not_exist=0x7f0d008a;
-    public static final int settings=0x7f0d008b;
-    public static final int shaban=0x7f0d008c;
-    public static final int shafi3i=0x7f0d008d;
-    public static final int shawwal=0x7f0d008e;
-    public static final int shorouk=0x7f0d008f;
-    public static final int shorouk_widget=0x7f0d0090;
-    public static final int standard=0x7f0d0091;
-    public static final int status_bar_notification_info_overflow=0x7f0d0092;
-    public static final int stopathan=0x7f0d0093;
-    public static final int time=0x7f0d0094;
-    public static final int time12or24=0x7f0d0095;
-    public static final int time12or24_12=0x7f0d0096;
-    public static final int time12or24_24=0x7f0d0097;
-    public static final int time_adjustment=0x7f0d0098;
-    public static final int time_zone=0x7f0d0099;
-    public static final int type_time=0x7f0d009a;
-    public static final int vibration=0x7f0d009b;
-    public static final int widget=0x7f0d009c;
-    public static final int widget_background_color=0x7f0d009d;
+    public static final int gps_permission_error=0x7f0d0062;
+    public static final int hanafi=0x7f0d0063;
+    public static final int hijri_adjustment=0x7f0d0064;
+    public static final int info=0x7f0d0065;
+    public static final int ishaa=0x7f0d0066;
+    public static final int ishaa_widget=0x7f0d0067;
+    public static final int italiano=0x7f0d0068;
+    public static final int its_the_hour_of=0x7f0d0069;
+    public static final int jumadal_attani=0x7f0d006a;
+    public static final int jumadal_ula=0x7f0d006b;
+    public static final int kibla=0x7f0d006c;
+    public static final int kibla_warning=0x7f0d006d;
+    public static final int latitude=0x7f0d006e;
+    public static final int loading=0x7f0d006f;
+    public static final int location=0x7f0d0070;
+    public static final int locationgps=0x7f0d0071;
+    public static final int longitude=0x7f0d0072;
+    public static final int maghrib=0x7f0d0073;
+    public static final int maghrib_widget=0x7f0d0074;
+    public static final int mazhab=0x7f0d0075;
+    public static final int missing_to=0x7f0d0076;
+    public static final int mohammad_ali_el_banna=0x7f0d0077;
+    public static final int mohammad_khalil_raml=0x7f0d0078;
+    public static final int muharram=0x7f0d0079;
+    public static final int must_first_select_a_country=0x7f0d007a;
+    public static final int no_network_provider_is_enabled=0x7f0d007b;
+    public static final int not_optimized=0x7f0d007c;
+    public static final int not_set=0x7f0d007d;
+    public static final int nothing=0x7f0d007e;
+    public static final int notification=0x7f0d007f;
+    public static final int notificationMessage=0x7f0d0080;
+    public static final int notificationTitle=0x7f0d0081;
+    public static final int optimized=0x7f0d0082;
+    public static final int prayers=0x7f0d0083;
+    public static final int rabi_ul_attani=0x7f0d0084;
+    public static final int rabi_ul_awwal=0x7f0d0085;
+    public static final int rajab=0x7f0d0086;
+    public static final int ramadan=0x7f0d0087;
+    public static final int safar=0x7f0d0088;
+    public static final int sayfi=0x7f0d0089;
+    public static final int search_menu_title=0x7f0d008a;
+    public static final int sensor_is_not_exist=0x7f0d008b;
+    public static final int settings=0x7f0d008c;
+    public static final int shaban=0x7f0d008d;
+    public static final int shafi3i=0x7f0d008e;
+    public static final int shawwal=0x7f0d008f;
+    public static final int shorouk=0x7f0d0090;
+    public static final int shorouk_widget=0x7f0d0091;
+    public static final int standard=0x7f0d0092;
+    public static final int status_bar_notification_info_overflow=0x7f0d0093;
+    public static final int stopathan=0x7f0d0094;
+    public static final int time=0x7f0d0095;
+    public static final int time12or24=0x7f0d0096;
+    public static final int time12or24_12=0x7f0d0097;
+    public static final int time12or24_24=0x7f0d0098;
+    public static final int time_adjustment=0x7f0d0099;
+    public static final int time_zone=0x7f0d009a;
+    public static final int type_time=0x7f0d009b;
+    public static final int vibration=0x7f0d009c;
+    public static final int widget=0x7f0d009d;
+    public static final int widget_background_color=0x7f0d009e;
   }
   public static final class style {
     public static final int AlertDialog_AppCompat=0x7f0e0000;
@@ -3428,19 +3429,19 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>end</td><td>800005</td><td></td></tr>
-     * <tr><td>start</td><td>800003</td><td></td></tr>
      * <tr><td>bottom</td><td>50</td><td></td></tr>
      * <tr><td>center</td><td>11</td><td></td></tr>
      * <tr><td>center_horizontal</td><td>1</td><td></td></tr>
      * <tr><td>center_vertical</td><td>10</td><td></td></tr>
      * <tr><td>clip_horizontal</td><td>8</td><td></td></tr>
      * <tr><td>clip_vertical</td><td>80</td><td></td></tr>
+     * <tr><td>end</td><td>800005</td><td></td></tr>
      * <tr><td>fill</td><td>77</td><td></td></tr>
      * <tr><td>fill_horizontal</td><td>7</td><td></td></tr>
      * <tr><td>fill_vertical</td><td>70</td><td></td></tr>
      * <tr><td>left</td><td>3</td><td></td></tr>
      * <tr><td>right</td><td>5</td><td></td></tr>
+     * <tr><td>start</td><td>800003</td><td></td></tr>
      * <tr><td>top</td><td>30</td><td></td></tr>
      * </table>
      *
@@ -6004,19 +6005,19 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>end</td><td>800005</td><td></td></tr>
-     * <tr><td>start</td><td>800003</td><td></td></tr>
      * <tr><td>bottom</td><td>50</td><td></td></tr>
      * <tr><td>center</td><td>11</td><td></td></tr>
      * <tr><td>center_horizontal</td><td>1</td><td></td></tr>
      * <tr><td>center_vertical</td><td>10</td><td></td></tr>
      * <tr><td>clip_horizontal</td><td>8</td><td></td></tr>
      * <tr><td>clip_vertical</td><td>80</td><td></td></tr>
+     * <tr><td>end</td><td>800005</td><td></td></tr>
      * <tr><td>fill</td><td>77</td><td></td></tr>
      * <tr><td>fill_horizontal</td><td>7</td><td></td></tr>
      * <tr><td>fill_vertical</td><td>70</td><td></td></tr>
      * <tr><td>left</td><td>3</td><td></td></tr>
      * <tr><td>right</td><td>5</td><td></td></tr>
+     * <tr><td>start</td><td>800003</td><td></td></tr>
      * <tr><td>top</td><td>30</td><td></td></tr>
      * </table>
      *
@@ -6152,19 +6153,19 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>end</td><td>800005</td><td></td></tr>
-     * <tr><td>start</td><td>800003</td><td></td></tr>
      * <tr><td>bottom</td><td>50</td><td></td></tr>
      * <tr><td>center</td><td>11</td><td></td></tr>
      * <tr><td>center_horizontal</td><td>1</td><td></td></tr>
      * <tr><td>center_vertical</td><td>10</td><td></td></tr>
      * <tr><td>clip_horizontal</td><td>8</td><td></td></tr>
      * <tr><td>clip_vertical</td><td>80</td><td></td></tr>
+     * <tr><td>end</td><td>800005</td><td></td></tr>
      * <tr><td>fill</td><td>77</td><td></td></tr>
      * <tr><td>fill_horizontal</td><td>7</td><td></td></tr>
      * <tr><td>fill_vertical</td><td>70</td><td></td></tr>
      * <tr><td>left</td><td>3</td><td></td></tr>
      * <tr><td>right</td><td>5</td><td></td></tr>
+     * <tr><td>start</td><td>800003</td><td></td></tr>
      * <tr><td>top</td><td>30</td><td></td></tr>
      * </table>
      *
@@ -6186,9 +6187,9 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>wrap_content</td><td>fffffffe</td><td></td></tr>
      * <tr><td>fill_parent</td><td>ffffffff</td><td></td></tr>
      * <tr><td>match_parent</td><td>ffffffff</td><td></td></tr>
+     * <tr><td>wrap_content</td><td>fffffffe</td><td></td></tr>
      * </table>
      *
      * @attr name android:layout_width
@@ -6209,9 +6210,9 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>wrap_content</td><td>fffffffe</td><td></td></tr>
      * <tr><td>fill_parent</td><td>ffffffff</td><td></td></tr>
      * <tr><td>match_parent</td><td>ffffffff</td><td></td></tr>
+     * <tr><td>wrap_content</td><td>fffffffe</td><td></td></tr>
      * </table>
      *
      * @attr name android:layout_height
@@ -6363,8 +6364,8 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>none</td><td>0</td><td></td></tr>
      * <tr><td>all</td><td>1</td><td></td></tr>
+     * <tr><td>none</td><td>0</td><td></td></tr>
      * <tr><td>single</td><td>2</td><td></td></tr>
      * </table>
      *
@@ -6933,6 +6934,14 @@ public final class R {
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
+     * <p>Must be one of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>auto</td><td>10</td><td></td></tr>
+     * </table>
      *
      * @attr name android:focusable
      */
@@ -6960,9 +6969,9 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>none</td><td>0</td><td></td></tr>
      * <tr><td>date</td><td>14</td><td></td></tr>
      * <tr><td>datetime</td><td>4</td><td></td></tr>
+     * <tr><td>none</td><td>0</td><td></td></tr>
      * <tr><td>number</td><td>2</td><td></td></tr>
      * <tr><td>numberDecimal</td><td>2002</td><td></td></tr>
      * <tr><td>numberPassword</td><td>12</td><td></td></tr>
@@ -7007,7 +7016,6 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>normal</td><td>0</td><td></td></tr>
      * <tr><td>actionDone</td><td>6</td><td></td></tr>
      * <tr><td>actionGo</td><td>2</td><td></td></tr>
      * <tr><td>actionNext</td><td>5</td><td></td></tr>
@@ -7023,6 +7031,8 @@ public final class R {
      * <tr><td>flagNoEnterAction</td><td>40000000</td><td></td></tr>
      * <tr><td>flagNoExtractUi</td><td>10000000</td><td></td></tr>
      * <tr><td>flagNoFullscreen</td><td>2000000</td><td></td></tr>
+     * <tr><td>flagNoPersonalizedLearning</td><td>1000000</td><td></td></tr>
+     * <tr><td>normal</td><td>0</td><td></td></tr>
      * </table>
      *
      * @attr name android:imeOptions
@@ -7255,9 +7265,9 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>wrap_content</td><td>fffffffe</td><td></td></tr>
      * <tr><td>fill_parent</td><td>ffffffff</td><td></td></tr>
      * <tr><td>match_parent</td><td>ffffffff</td><td></td></tr>
+     * <tr><td>wrap_content</td><td>fffffffe</td><td></td></tr>
      * </table>
      *
      * @attr name android:dropDownWidth
@@ -7573,9 +7583,9 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>normal</td><td>0</td><td></td></tr>
      * <tr><td>bold</td><td>1</td><td></td></tr>
      * <tr><td>italic</td><td>2</td><td></td></tr>
+     * <tr><td>normal</td><td>0</td><td></td></tr>
      * </table>
      *
      * @attr name android:textStyle
@@ -7750,19 +7760,19 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>end</td><td>800005</td><td></td></tr>
-     * <tr><td>start</td><td>800003</td><td></td></tr>
      * <tr><td>bottom</td><td>50</td><td></td></tr>
      * <tr><td>center</td><td>11</td><td></td></tr>
      * <tr><td>center_horizontal</td><td>1</td><td></td></tr>
      * <tr><td>center_vertical</td><td>10</td><td></td></tr>
      * <tr><td>clip_horizontal</td><td>8</td><td></td></tr>
      * <tr><td>clip_vertical</td><td>80</td><td></td></tr>
+     * <tr><td>end</td><td>800005</td><td></td></tr>
      * <tr><td>fill</td><td>77</td><td></td></tr>
      * <tr><td>fill_horizontal</td><td>7</td><td></td></tr>
      * <tr><td>fill_vertical</td><td>70</td><td></td></tr>
      * <tr><td>left</td><td>3</td><td></td></tr>
      * <tr><td>right</td><td>5</td><td></td></tr>
+     * <tr><td>start</td><td>800003</td><td></td></tr>
      * <tr><td>top</td><td>30</td><td></td></tr>
      * </table>
      *
@@ -8153,6 +8163,14 @@ public final class R {
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
+     * <p>Must be one of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>auto</td><td>10</td><td></td></tr>
+     * </table>
      *
      * @attr name android:focusable
      */

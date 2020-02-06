@@ -402,7 +402,7 @@ public class Prayers_Activity extends Activity {
 		setNextPrayerTime();
 		setActualPrayerBackground(AthanService.nextPrayerCode);
 	}
-		   
+
 		   public void athanButtonHandler(final String title ,final String property ,final Button athanButton){
 			   AlertDialog.Builder builder = new AlertDialog.Builder(this,R.style.AlertDialogCustom);
 				final String[] athanTypsArray = getResources().getStringArray(R.array.athan_Alert_Array);

@@ -1018,6 +1018,7 @@ string fajr_widget
 string farou9_abd_errehmane_hadraoui
 string french
 string gps_is_not_on
+string gps_permission_error
 string hanafi
 string hijri_adjustment
 string info
