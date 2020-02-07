@@ -20,11 +20,13 @@
 package classes;
 
 import java.util.Calendar;
+import java.util.Random;
 
 import activities.Home_Programe_Activity;
 
 import android.app.AlarmManager;
 import android.app.Notification;
+import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.appwidget.AppWidgetManager;
@@ -32,12 +34,16 @@ import android.content.BroadcastReceiver;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.Typeface;
+import android.media.AudioAttributes;
 import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Build;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.support.v4.app.NotificationCompat;
+import android.widget.Toast;
 
 
 import com.sally.R;
@@ -165,17 +171,6 @@ public class AthanServiceBroasdcastReceiver extends BroadcastReceiver{
 
 	   static void startNotification(int nextPrayerCode , Context context , String notificationType)
        {
-           String actualAthanTime ="";
-           switch (nextPrayerCode){
-               case 1020:actualAthanTime = context.getResources().getString(R.string.fajr);break;
-               case 1021:actualAthanTime = context.getResources().getString(R.string.shorouk);break;
-               case 1022:actualAthanTime = context.getResources().getString(R.string.duhr);break;
-               case 1023:actualAthanTime = context.getResources().getString(R.string.asr);break;
-               case 1024:actualAthanTime = context.getResources().getString(R.string.maghrib);break;
-               case 1025:actualAthanTime = context.getResources().getString(R.string.ishaa);break;
-               default:break;
-           }
-
            NotificationManager notificationManager = (NotificationManager)context.getSystemService(Context.NOTIFICATION_SERVICE);
 
            //when click on widget let' go to home activity
@@ -191,9 +186,16 @@ public class AthanServiceBroasdcastReceiver extends BroadcastReceiver{
                    .setContentIntent(pendingIntent)
                    //.setAutoCancel(true)
                    .setOngoing(false));
-           if(notificationType.equalsIgnoreCase("notification"))
-           {
-               builder.setSound(RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION));
+
+           String actualAthanTime ="";
+           switch (nextPrayerCode){
+               case 1020:actualAthanTime = context.getResources().getString(R.string.fajr);break;
+               case 1021:actualAthanTime = context.getResources().getString(R.string.shorouk);break;
+               case 1022:actualAthanTime = context.getResources().getString(R.string.duhr);break;
+               case 1023:actualAthanTime = context.getResources().getString(R.string.asr);break;
+               case 1024:actualAthanTime = context.getResources().getString(R.string.maghrib);break;
+               case 1025:actualAthanTime = context.getResources().getString(R.string.ishaa);break;
+               default:break;
            }
 
            if(UserConfig.getSingleton().getLanguage().equalsIgnoreCase("ar")){
@@ -205,19 +207,21 @@ public class AthanServiceBroasdcastReceiver extends BroadcastReceiver{
                builder.setContentText(context.getResources().getString(R.string.notificationMessage)+" "+actualAthanTime);
            }
 
+           if(notificationType.equalsIgnoreCase("notification"))
+           {
+               builder.setSound(RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION));
+           }
+
            if(notificationType.equalsIgnoreCase("vibration"))
            {
                builder.setVibrate(new long[] {1000 ,1000 ,1000 ,1000 ,1000 ,1000 ,1000 ,1000 ,1000 ,1000});
                //builder.setDefaults(Notification.DEFAULT_VIBRATE);
            }
 
-           Notification note = builder.build();
-
+           Uri alarmSound = Uri.parse("android.resource://"+context.getPackageName()+"/" + R.raw.ali_ben_ahmed_mala);
            if(notificationType.equalsIgnoreCase("athan"))
            {
                String athanName = UserConfig.getSingleton().getAthan();
-               Uri alarmSound = Uri.parse("android.resource://"+context.getPackageName()+"/" + R.raw.ali_ben_ahmed_mala);
-
                if(athanName.equalsIgnoreCase("ali_ben_ahmed_mala")){
                    alarmSound = Uri.parse("android.resource://"+context.getPackageName()+"/" + R.raw.ali_ben_ahmed_mala);
                }else{
@@ -248,6 +252,39 @@ public class AthanServiceBroasdcastReceiver extends BroadcastReceiver{
                        }
                    }
                }
+               builder.setSound(alarmSound);
+           }
+
+           if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O)
+           {
+               String channelId = "Sally_channel_id"+ new Random().nextInt(1000);
+               NotificationChannel channel = new NotificationChannel(
+                       channelId,
+                       "Sally Prayer Times",
+                       NotificationManager.IMPORTANCE_HIGH);
+
+               if(notificationType.equalsIgnoreCase("athan"))
+               {
+                   AudioAttributes audioAttributes = new AudioAttributes.Builder()
+                           .setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION)
+                           .setUsage(AudioAttributes.USAGE_NOTIFICATION)
+                           .build();
+                   channel.setSound(alarmSound, audioAttributes);
+               }
+
+               if(notificationType.equalsIgnoreCase("vibration"))
+               {
+                   channel.setVibrationPattern(new long[] {1000 ,1000 ,1000 ,1000 ,1000 ,1000 ,1000 ,1000 ,1000 ,1000});
+               }
+
+               notificationManager.createNotificationChannel(channel);
+               builder.setChannelId(channelId);
+           }
+
+           Notification note = builder.build();
+
+           if(notificationType.equalsIgnoreCase("athan"))
+           {
                note.sound = alarmSound;
                note.defaults |= Notification.DEFAULT_VIBRATE;
                note.flags |= Notification.FLAG_AUTO_CANCEL;
