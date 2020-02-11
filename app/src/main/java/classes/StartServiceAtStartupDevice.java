@@ -39,14 +39,16 @@ public class StartServiceAtStartupDevice extends BroadcastReceiver{
 
 			   AlarmManager am = (AlarmManager)context.getSystemService(Context.ALARM_SERVICE);
 			   Intent AthanServiceBroasdcastReceiverIntent = new Intent(context, RefreshDayServiceManager.class);
-			   PendingIntent pi = PendingIntent.getBroadcast(context, 0, AthanServiceBroasdcastReceiverIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+			   PendingIntent pi = PendingIntent.getBroadcast(context, 70, AthanServiceBroasdcastReceiverIntent, PendingIntent.FLAG_UPDATE_CURRENT);
 
-			   Date date = new Date();
-			   date.setHours(0);
-			   date.setMinutes(1);
-			   date.setSeconds(0);
+			   am.cancel(pi);
 
-			   am.setRepeating(AlarmManager.RTC_WAKEUP, date.getTime() - 86400000L, 86400000L, pi);
+			   Calendar calendar = Calendar.getInstance();
+			   calendar.set(Calendar.HOUR_OF_DAY, 00);
+			   calendar.set(Calendar.MINUTE, 01);
+			   calendar.set(Calendar.SECOND, 00);
+
+			   am.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY, pi);
 		   }
 	}
 }

@@ -93,14 +93,12 @@ public class AthanService extends Service{
         ifActualSalatTime = false;
 		actualPrayerCode = AthanService.nextPrayerCode;
 
-        AlarmManager am = (AlarmManager)getApplicationContext().getSystemService(Context.ALARM_SERVICE);
-        Intent AthanServiceBroasdcastReceiverIntent = new Intent(getApplicationContext(), AthanServiceBroasdcastReceiver.class);
-        PendingIntent pi = PendingIntent.getBroadcast(getApplicationContext(), 25, AthanServiceBroasdcastReceiverIntent, PendingIntent.FLAG_UPDATE_CURRENT);
-        am.cancel(pi);
-
 		AthanServiceBroasdcastReceiver.startNextPrayer(false , getApplicationContext());
 
 		runnable.run();
+
+		this.startService(new Intent(this, MyWidgetProviderService.class));
+		this.startService(new Intent(this, MyWidgetProviderService2.class));
 
 		return Service.START_STICKY;
 	}
@@ -184,12 +182,11 @@ public class AthanService extends Service{
 										AthanService.nextPrayerCode = 1020;//fajr time code
 
 										calendar.add(Calendar.DATE , 1);
-										AthanService.prayerTimes = new PrayersTimes(calendar , PreferenceHandler.getSingleton().getUserConfig());// calculate the prayer time for the next day to get fajr time for the next day
+										PrayersTimes prayersTimes = new PrayersTimes(calendar , PreferenceHandler.getSingleton().getUserConfig());// calculate the prayer time for the next day to get fajr time for the next day
 
 										isFajrForNextDay = true;
-										AthanService.prayerTimesInMinutes = new int[6];
-										AthanService.prayerTimesInMinutes = AthanService.prayerTimes.getAllPrayrTimesInMinutes();//get all prayer times in minutes
-										AthanService.nextPrayerTimeInMinutes = AthanService.prayerTimesInMinutes[0];
+										int[] nextDayPrayerTimesInMinutes = prayersTimes.getAllPrayrTimesInMinutes();//get all prayer times in minutes
+										AthanService.nextPrayerTimeInMinutes = nextDayPrayerTimesInMinutes[0];
 	                                }
 	                            }
 	                        }

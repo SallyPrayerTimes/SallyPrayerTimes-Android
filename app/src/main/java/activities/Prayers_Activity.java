@@ -424,21 +424,21 @@ public class Prayers_Activity extends Activity {
 									if(language.equalsIgnoreCase("ar")){
 										if(value.equalsIgnoreCase(ArabicReshape.reshape(getResources().getString(R.string.athan)))){
 											value ="athan";
-											athanButton.setBackgroundDrawable(getResources().getDrawable(R.drawable.athan_on));
+											athanButton.setBackground(getResources().getDrawable(R.drawable.athan_on));
 										}
 										else{
 											if(value.equalsIgnoreCase(ArabicReshape.reshape(getResources().getString(R.string.vibration)))){
 												value ="vibration";
-												athanButton.setBackgroundDrawable(getResources().getDrawable(R.drawable.athan_vibration));
+												athanButton.setBackground(getResources().getDrawable(R.drawable.athan_vibration));
 											}
 											else{
 												if(value.equalsIgnoreCase(ArabicReshape.reshape(getResources().getString(R.string.notification)))){
 													value ="notification";
-													athanButton.setBackgroundDrawable(getResources().getDrawable(R.drawable.athan_notifications));
+													athanButton.setBackground(getResources().getDrawable(R.drawable.athan_notifications));
 												}
 												else{
 													value ="none";
-													athanButton.setBackgroundDrawable(getResources().getDrawable(R.drawable.athan_off));
+													athanButton.setBackground(getResources().getDrawable(R.drawable.athan_off));
 												}
 											}
 										}
@@ -446,21 +446,21 @@ public class Prayers_Activity extends Activity {
 									else{
 										if(value.equalsIgnoreCase(getResources().getString(R.string.athan))){
 											value ="athan";
-											athanButton.setBackgroundDrawable(getResources().getDrawable(R.drawable.athan_on));
+											athanButton.setBackground(getResources().getDrawable(R.drawable.athan_on));
 										}
 										else{
 											if(value.equalsIgnoreCase(getResources().getString(R.string.vibration))){
 												value ="vibration";
-												athanButton.setBackgroundDrawable(getResources().getDrawable(R.drawable.athan_vibration));
+												athanButton.setBackground(getResources().getDrawable(R.drawable.athan_vibration));
 											}
 											else{
 												if(value.equalsIgnoreCase(getResources().getString(R.string.notification))){
 													value ="notification";
-													athanButton.setBackgroundDrawable(getResources().getDrawable(R.drawable.athan_notifications));
+													athanButton.setBackground(getResources().getDrawable(R.drawable.athan_notifications));
 												}
 												else{
 													value ="none";
-													athanButton.setBackgroundDrawable(getResources().getDrawable(R.drawable.athan_off));
+													athanButton.setBackground(getResources().getDrawable(R.drawable.athan_off));
 												}
 											}
 										}
@@ -507,18 +507,18 @@ public class Prayers_Activity extends Activity {
 		   
 		   public void setAthanButton(final Button button , final String value){
 					if(value.equalsIgnoreCase("athan")){
-						button.setBackgroundDrawable(getResources().getDrawable(R.drawable.athan_on));
+						button.setBackground(getResources().getDrawable(R.drawable.athan_on));
 					}
 					else{
 						if(value.equalsIgnoreCase("vibration")){
-							button.setBackgroundDrawable(getResources().getDrawable(R.drawable.athan_vibration));
+							button.setBackground(getResources().getDrawable(R.drawable.athan_vibration));
 						}
 						else{
 							if(value.equalsIgnoreCase("notification")){
-								button.setBackgroundDrawable(getResources().getDrawable(R.drawable.athan_notifications));
+								button.setBackground(getResources().getDrawable(R.drawable.athan_notifications));
 							}
 							else{
-								button.setBackgroundDrawable(getResources().getDrawable(R.drawable.athan_off));
+								button.setBackground(getResources().getDrawable(R.drawable.athan_off));
 							}
 						}
 					}
@@ -825,26 +825,26 @@ public class Prayers_Activity extends Activity {
 		}
 		
 		private void setActualPrayerBackground(int actualPrayerCode){
-			findViewById(R.id.row_fajr).setBackgroundDrawable(getResources().getDrawable(R.drawable.tab_menu_active));
-	  		findViewById(R.id.row_shorouk).setBackgroundDrawable(getResources().getDrawable(R.drawable.tab_menu_active));
-	  		findViewById(R.id.row_duhr).setBackgroundDrawable(getResources().getDrawable(R.drawable.tab_menu_active));
-	  		findViewById(R.id.row_asr).setBackgroundDrawable(getResources().getDrawable(R.drawable.tab_menu_active));
-	  		findViewById(R.id.row_maghreb).setBackgroundDrawable(getResources().getDrawable(R.drawable.tab_menu_active));
-	  		findViewById(R.id.row_ishaa).setBackgroundDrawable(getResources().getDrawable(R.drawable.tab_menu_active));
+			findViewById(R.id.row_fajr).setBackground(getResources().getDrawable(R.drawable.tab_menu_active));
+	  		findViewById(R.id.row_shorouk).setBackground(getResources().getDrawable(R.drawable.tab_menu_active));
+	  		findViewById(R.id.row_duhr).setBackground(getResources().getDrawable(R.drawable.tab_menu_active));
+	  		findViewById(R.id.row_asr).setBackground(getResources().getDrawable(R.drawable.tab_menu_active));
+	  		findViewById(R.id.row_maghreb).setBackground(getResources().getDrawable(R.drawable.tab_menu_active));
+	  		findViewById(R.id.row_ishaa).setBackground(getResources().getDrawable(R.drawable.tab_menu_active));
 
 	    	switch (actualPrayerCode) {
 	   		case 1020:
-	   		findViewById(R.id.row_fajr).setBackgroundDrawable(getResources().getDrawable(R.drawable.btn_blue_matte)); break;
+	   		findViewById(R.id.row_fajr).setBackground(getResources().getDrawable(R.drawable.btn_blue_matte)); break;
 	   		case 1021:
-	   		findViewById(R.id.row_shorouk).setBackgroundDrawable(getResources().getDrawable(R.drawable.btn_blue_matte)); break;
+	   		findViewById(R.id.row_shorouk).setBackground(getResources().getDrawable(R.drawable.btn_blue_matte)); break;
 	   		case 1022:
-	   		findViewById(R.id.row_duhr).setBackgroundDrawable(getResources().getDrawable(R.drawable.btn_blue_matte)); break;
+	   		findViewById(R.id.row_duhr).setBackground(getResources().getDrawable(R.drawable.btn_blue_matte)); break;
 	   		case 1023:
-	   		findViewById(R.id.row_asr).setBackgroundDrawable(getResources().getDrawable(R.drawable.btn_blue_matte)); break;
+	   		findViewById(R.id.row_asr).setBackground(getResources().getDrawable(R.drawable.btn_blue_matte)); break;
 	   		case 1024:
-	   		findViewById(R.id.row_maghreb).setBackgroundDrawable(getResources().getDrawable(R.drawable.btn_blue_matte)); break;
+	   		findViewById(R.id.row_maghreb).setBackground(getResources().getDrawable(R.drawable.btn_blue_matte)); break;
 	   		case 1025:
-	   		findViewById(R.id.row_ishaa).setBackgroundDrawable(getResources().getDrawable(R.drawable.btn_blue_matte)); break;
+	   		findViewById(R.id.row_ishaa).setBackground(getResources().getDrawable(R.drawable.btn_blue_matte)); break;
 	   		default:break;
 	   		}
 		}
@@ -902,10 +902,6 @@ public class Prayers_Activity extends Activity {
 		protected void onResume()
         {
             super.onResume();
-
-            //stopService(new Intent(this,AthanService.class));
-            //startService(new Intent(this,AthanService.class));
-
             this.startService(new Intent(this, MyWidgetProviderService.class));
             this.startService(new Intent(this, MyWidgetProviderService2.class));
         }
