@@ -42,6 +42,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.os.PowerManager;
 import android.support.v4.app.NotificationCompat;
 import android.widget.Toast;
 
@@ -287,8 +288,12 @@ public class AthanServiceBroasdcastReceiver extends BroadcastReceiver{
            {
                note.sound = alarmSound;
                note.defaults |= Notification.DEFAULT_VIBRATE;
-               note.flags |= Notification.FLAG_AUTO_CANCEL;
+               note.flags |= Notification.FLAG_INSISTENT;
            }
+
+           PowerManager powerManager = (PowerManager) context.getSystemService(Context.POWER_SERVICE);
+           PowerManager.WakeLock wakeLock = powerManager.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, "MyApp::MyWakelockTag");
+           wakeLock.acquire();
 
            notificationManager.notify(1 , note);
        }
