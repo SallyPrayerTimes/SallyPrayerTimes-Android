@@ -28,29 +28,6 @@
     android:scaleType="centerCrop"
     tools:context="activities.Prayers_Activity" >
 
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:background="@android:color/transparent"
-        android:gravity="center"
-        android:paddingTop="5dp" >
-
-        <TextView
-            android:id="@+id/location_country"
-            style="@style/locationStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:singleLine="true" />
-
-        <TextView
-            android:id="@+id/location_city"
-            style="@style/locationStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:singleLine="true" />
-    </LinearLayout>
-
     <FrameLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -76,57 +53,98 @@
             android:paddingRight="5dp" />
     </FrameLayout>
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/tab_menu_active"
-        android:gravity="center" >
+        android:layout_margin="5dp"
+        android:background="@drawable/tab_menu_active">
 
-        <TextView
-            android:id="@+id/missing_to"
-            style="@style/missing_time_Style_label_time"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            android:singleLine="true"
-            android:text="@string/missing_to" />
+            android:orientation="vertical" >
 
-        <TextView
-            android:id="@+id/missing_salat"
-            style="@style/missing_time_Style_label_time"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:singleLine="true"
-            android:text="@string/not_set" />
-    </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center" >
 
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginBottom="0dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:background="@drawable/tab_menu_active"
-        android:gravity="center"
-        android:paddingBottom="7dp"
-        android:paddingTop="7dp" >
+                <TextView
+                    android:id="@+id/missing_to"
+                    style="@style/missing_time_Style_label_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:singleLine="true"
+                    android:text="@string/missing_to" />
 
-        <TextView
-            android:id="@+id/missing_time"
-            style="@style/missing_time_Style"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:marqueeRepeatLimit="marquee_forever"
-            android:maxLines="1"
-            android:scrollHorizontally="true"
-            android:text="@string/not_set" />
-    </LinearLayout>
+                <TextView
+                    android:id="@+id/missing_salat"
+                    style="@style/missing_time_Style_label_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/not_set" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="0dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="center"
+                android:paddingBottom="7dp"
+                android:paddingTop="7dp"  >
+
+                <TextView
+                    android:id="@+id/missing_time"
+                    style="@style/missing_time_Style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:maxLines="1"
+                    android:scrollHorizontally="true"
+                    android:text="@string/not_set" />
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/location_country"
+                    style="@style/locationStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:layout_gravity="left"
+                    android:gravity="left"/>
+
+                <TextView
+                    android:id="@+id/location_city"
+                    style="@style/locationStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:layout_gravity="right"
+                    android:gravity="right"/>
+
+            </FrameLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -183,435 +201,388 @@
         </LinearLayout>
     </LinearLayout>
 
-    <ScrollView
-        android:id="@+id/scrollView1"
+    <RelativeLayout
         android:layout_width="fill_parent"
-        android:layout_height="0dip"
+        android:layout_height="fill_parent"
         android:layout_gravity="center"
         android:layout_weight="1.0"
-        android:paddingLeft="5dp"
-        android:paddingRight="5dp" >
+        android:padding="5dp" >
 
         <LinearLayout
             android:id="@+id/linearLayout1"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="fill_parent"
             android:orientation="vertical" >
 
-            <TableLayout
+            <LinearLayout
+                android:id="@+id/row_fajr"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:fadingEdge="horizontal"
-                android:orientation="horizontal"
-                android:paddingBottom="5dp"
-                android:paddingTop="0dp"
-                android:scrollbars="horizontal" >
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
 
-                <TableRow
-                    android:layout_width="fill_parent"
+                <LinearLayout
+                    android:layout_width="0dip"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal" >
+                    android:layout_gravity="center"
+                    android:layout_weight="1.0"
+                    android:orientation="vertical" >
 
-                    <LinearLayout
-                        android:id="@+id/row_fajr"
-                        android:layout_width="fill_parent"
+                    <TextView
+                        android:id="@+id/fajr_label"
+                        style="@style/time_label"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="1"
-                        android:orientation="horizontal" >
+                        android:ellipsize="marquee"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:text="@string/fajr"
+                        android:layout_gravity="left"/>
+                </LinearLayout>
 
-                        <LinearLayout
-                            android:layout_width="0dip"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_weight="1.0"
-                            android:orientation="vertical" >
-
-                            <TextView
-                                android:id="@+id/fajr_label"
-                                style="@style/time_label"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:ellipsize="marquee"
-                                android:scrollHorizontally="true"
-                                android:singleLine="true"
-                                android:text="@string/fajr"
-                                android:layout_gravity="left"/>
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="0dip"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_weight="1.0"
-                            android:orientation="vertical" >
-
-                            <Button
-                                android:id="@+id/fajr_athan_button"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:background="@drawable/athan_on" />
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="0dip"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_weight="1.0"
-                            android:orientation="vertical" >
-
-                            <TextView
-                                android:id="@+id/fajrTime"
-                                style="@style/time_value"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:maxLines="1"
-                                android:scrollHorizontally="true"
-                                android:layout_gravity="right"/>
-                        </LinearLayout>
-
-                    </LinearLayout>
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="fill_parent"
+                <LinearLayout
+                    android:layout_width="0dip"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal" >
+                    android:layout_gravity="center"
+                    android:layout_weight="1.0"
+                    android:orientation="vertical" >
 
-                    <LinearLayout
-                        android:id="@+id/row_shorouk"
-                        android:layout_width="fill_parent"
+                    <Button
+                        android:id="@+id/fajr_athan_button"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="1"
-                        android:orientation="horizontal" >
+                        android:layout_gravity="center"
+                        android:background="@drawable/athan_on" />
 
-                        <LinearLayout
-                            android:layout_width="0dip"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_weight="1.0"
-                            android:orientation="vertical" >
+                </LinearLayout>
 
-                            <TextView
-                                android:id="@+id/shorouk_label"
-                                style="@style/time_label"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:ellipsize="marquee"
-                                android:scrollHorizontally="true"
-                                android:singleLine="true"
-                                android:text="@string/shorouk"
-                                android:layout_gravity="left"/>
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="0dip"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_weight="1.0"
-                            android:orientation="vertical" >
-
-                            <Button
-                                android:id="@+id/shorouk_athan_button"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:background="@drawable/athan_on" />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="0dip"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_weight="1.0"
-                            android:orientation="vertical" >
-
-                            <TextView
-                                android:id="@+id/shoroukTime"
-                                style="@style/time_value"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:maxLines="1"
-                                android:layout_gravity="right"/>
-                        </LinearLayout>
-
-                    </LinearLayout>
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="fill_parent"
+                <LinearLayout
+                    android:layout_width="0dip"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal" >
+                    android:layout_gravity="center"
+                    android:layout_weight="1.0"
+                    android:orientation="vertical" >
 
-                    <LinearLayout
-                        android:id="@+id/row_duhr"
-                        android:layout_width="fill_parent"
+                    <TextView
+                        android:id="@+id/fajrTime"
+                        style="@style/time_value"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="1"
-                        android:orientation="horizontal" >
+                        android:maxLines="1"
+                        android:scrollHorizontally="true"
+                        android:layout_gravity="right"/>
+                </LinearLayout>
 
-                        <LinearLayout
-                            android:layout_width="0dip"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_weight="1.0"
-                            android:orientation="vertical" >
+            </LinearLayout>
 
-                            <TextView
-                                android:id="@+id/duhr_label"
-                                style="@style/time_label"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:ellipsize="marquee"
-                                android:scrollHorizontally="true"
-                                android:singleLine="true"
-                                android:text="@string/duhr"
-                                android:layout_gravity="left"/>
-                        </LinearLayout>
+            <LinearLayout
+                android:id="@+id/row_shorouk"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
 
-                        <LinearLayout
-                            android:layout_width="0dip"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_weight="1.0"
-                            android:orientation="vertical" >
-
-                            <Button
-                                android:id="@+id/duhr_athan_button"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:background="@drawable/athan_on" />
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="0dip"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_weight="1.0"
-                            android:orientation="vertical" >
-
-                            <TextView
-                                android:id="@+id/duhrTime"
-                                style="@style/time_value"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:maxLines="1"
-                                android:layout_gravity="right"/>
-                        </LinearLayout>
-
-                    </LinearLayout>
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="fill_parent"
+                <LinearLayout
+                    android:layout_width="0dip"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal" >
+                    android:layout_gravity="center"
+                    android:layout_weight="1.0"
+                    android:orientation="vertical" >
 
-                    <LinearLayout
-                        android:id="@+id/row_asr"
-                        android:layout_width="fill_parent"
+                    <TextView
+                        android:id="@+id/shorouk_label"
+                        style="@style/time_label"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="1"
-                        android:orientation="horizontal" >
+                        android:ellipsize="marquee"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:text="@string/shorouk"
+                        android:layout_gravity="left"/>
+                </LinearLayout>
 
-                        <LinearLayout
-                            android:layout_width="0dip"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_weight="1.0"
-                            android:orientation="vertical" >
-
-                            <TextView
-                                android:id="@+id/asr_label"
-                                style="@style/time_label"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:ellipsize="marquee"
-                                android:scrollHorizontally="true"
-                                android:singleLine="true"
-                                android:text="@string/asr"
-                                android:layout_gravity="left"/>
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="0dip"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_weight="1.0"
-                            android:orientation="vertical" >
-
-                            <Button
-                                android:id="@+id/asr_athan_button"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:background="@drawable/athan_on" />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="0dip"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_weight="1.0"
-                            android:orientation="vertical" >
-
-                            <TextView
-                                android:id="@+id/asrTime"
-                                style="@style/time_value"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:maxLines="1"
-                                android:layout_gravity="right"/>
-                        </LinearLayout>
-
-                    </LinearLayout>
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="fill_parent"
+                <LinearLayout
+                    android:layout_width="0dip"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal" >
+                    android:layout_gravity="center"
+                    android:layout_weight="1.0"
+                    android:orientation="vertical" >
 
-                    <LinearLayout
-                        android:id="@+id/row_maghreb"
-                        android:layout_width="fill_parent"
+                    <Button
+                        android:id="@+id/shorouk_athan_button"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="1"
-                        android:orientation="horizontal" >
+                        android:layout_gravity="center"
+                        android:background="@drawable/athan_on" />
+                </LinearLayout>
 
-                        <LinearLayout
-                            android:layout_width="0dip"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_weight="1.0"
-                            android:orientation="vertical" >
-
-                            <TextView
-                                android:id="@+id/maghrib_label"
-                                style="@style/time_label"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:ellipsize="marquee"
-                                android:scrollHorizontally="true"
-                                android:singleLine="true"
-                                android:text="@string/maghrib"
-                                android:layout_gravity="left"/>
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="0dip"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_weight="1.0"
-                            android:orientation="vertical" >
-
-                            <Button
-                                android:id="@+id/maghrib_athan_button"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:background="@drawable/athan_on" />
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="0dip"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_weight="1.0"
-                            android:orientation="vertical" >
-
-                            <TextView
-                                android:id="@+id/maghribTime"
-                                style="@style/time_value"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:maxLines="1"
-                                android:layout_gravity="right"/>
-
-                        </LinearLayout>
-
-
-                    </LinearLayout>
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="fill_parent"
+                <LinearLayout
+                    android:layout_width="0dip"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal" >
+                    android:layout_gravity="center"
+                    android:layout_weight="1.0"
+                    android:orientation="vertical" >
 
-                    <LinearLayout
-                        android:id="@+id/row_ishaa"
-                        android:layout_width="fill_parent"
+                    <TextView
+                        android:id="@+id/shoroukTime"
+                        style="@style/time_value"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="1"
-                        android:orientation="horizontal" >
+                        android:maxLines="1"
+                        android:layout_gravity="right"/>
+                </LinearLayout>
 
-                        <LinearLayout
-                            android:layout_width="0dip"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_weight="1.0"
-                            android:orientation="vertical" >
+            </LinearLayout>
 
-                            <TextView
-                                android:id="@+id/ishaa_label"
-                                style="@style/time_label"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:ellipsize="marquee"
-                                android:scrollHorizontally="true"
-                                android:singleLine="true"
-                                android:text="@string/ishaa"
-                                android:layout_gravity="left"/>
-                        </LinearLayout>
+            <LinearLayout
+                android:id="@+id/row_duhr"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
 
-                        <LinearLayout
-                            android:layout_width="0dip"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_weight="1.0"
-                            android:orientation="vertical" >
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1.0"
+                    android:orientation="vertical" >
 
-                            <Button
-                                android:id="@+id/ishaa_athan_button"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:background="@drawable/athan_on"/>
+                    <TextView
+                        android:id="@+id/duhr_label"
+                        style="@style/time_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="marquee"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:text="@string/duhr"
+                        android:layout_gravity="left"/>
+                </LinearLayout>
 
-                        </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1.0"
+                    android:orientation="vertical" >
 
-                        <LinearLayout
-                            android:layout_width="0dip"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_weight="1.0"
-                            android:orientation="vertical" >
+                    <Button
+                        android:id="@+id/duhr_athan_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/athan_on" />
 
-                            <TextView
-                                android:id="@+id/ishaaTime"
-                                style="@style/time_value"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:maxLines="1"
-                                android:layout_gravity="right"/>
-                        </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1.0"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/duhrTime"
+                        style="@style/time_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:layout_gravity="right"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/row_asr"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1.0"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/asr_label"
+                        style="@style/time_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="marquee"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:text="@string/asr"
+                        android:layout_gravity="left"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1.0"
+                    android:orientation="vertical" >
+
+                    <Button
+                        android:id="@+id/asr_athan_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/athan_on" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1.0"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/asrTime"
+                        style="@style/time_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:layout_gravity="right"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/row_maghreb"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1.0"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/maghrib_label"
+                        style="@style/time_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="marquee"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:text="@string/maghrib"
+                        android:layout_gravity="left"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1.0"
+                    android:orientation="vertical" >
+
+                    <Button
+                        android:id="@+id/maghrib_athan_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/athan_on" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1.0"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/maghribTime"
+                        style="@style/time_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:layout_gravity="right"/>
+
+                </LinearLayout>
 
 
-                    </LinearLayout>
-                </TableRow>
-            </TableLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/row_ishaa"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1.0"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/ishaa_label"
+                        style="@style/time_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="marquee"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:text="@string/ishaa"
+                        android:layout_gravity="left"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1.0"
+                    android:orientation="vertical" >
+
+                    <Button
+                        android:id="@+id/ishaa_athan_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/athan_on"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1.0"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/ishaaTime"
+                        style="@style/time_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:layout_gravity="right"/>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
         </LinearLayout>
-    </ScrollView>
+    </RelativeLayout>
 
 </LinearLayout>

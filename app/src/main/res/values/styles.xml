@@ -22,12 +22,12 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
 
     <style name="missing_time_Style_label_time">
-        <item name="android:textSize">30.0dip</item>
+        <item name="android:textSize">20.0dip</item>
         <item name="android:textColor">#FFFFFF</item>
     </style>
 
     <style name="missing_time_Style_label">
-        <item name="android:textSize">30.0dip</item>
+        <item name="android:textSize">20.0dip</item>
         <item name="android:textColor">#FFFFFF</item>
     </style>
 
@@ -37,7 +37,7 @@
     </style>
 
     <style name="missing_time_Style">
-        <item name="android:textSize">50.0dip</item>
+        <item name="android:textSize">60.0dip</item>
         <item name="android:textColor">#FFFFFF</item>
     </style>
 

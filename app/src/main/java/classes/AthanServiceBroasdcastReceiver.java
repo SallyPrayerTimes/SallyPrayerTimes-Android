@@ -20,6 +20,7 @@
 package classes;
 
 import java.util.Calendar;
+import java.util.List;
 import java.util.Random;
 
 import activities.Home_Programe_Activity;
@@ -35,6 +36,7 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.SurfaceTexture;
 import android.graphics.Typeface;
 import android.media.AudioAttributes;
 import android.media.RingtoneManager;
@@ -172,8 +174,18 @@ public class AthanServiceBroasdcastReceiver extends BroadcastReceiver{
 
 	   static void startNotification(int nextPrayerCode , Context context , String notificationType)
        {
+           String notification_channel_id = "sally_channel_id";
+           //String notification_channel_id = "sally_channel_id_" + new Random().nextInt(1000000);
            NotificationManager notificationManager = (NotificationManager)context.getSystemService(Context.NOTIFICATION_SERVICE);
-
+           /*
+           notificationManager.cancelAll();
+           if (notificationManager != null) {
+               List<NotificationChannel> channelList = notificationManager.getNotificationChannels();
+               for (int i = 0; channelList != null && i < channelList.size(); i++) {
+                   notificationManager.deleteNotificationChannel(channelList.get(i).getId());
+               }
+           }
+           */
            //when click on widget let' go to home activity
            Intent intent = new Intent(context, Home_Programe_Activity.class);
            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
@@ -211,12 +223,13 @@ public class AthanServiceBroasdcastReceiver extends BroadcastReceiver{
            if(notificationType.equalsIgnoreCase("notification"))
            {
                builder.setSound(RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION));
+               notification_channel_id = "sally_channel_id_notification";
            }
 
            if(notificationType.equalsIgnoreCase("vibration"))
            {
                builder.setVibrate(new long[] {1000 ,1000 ,1000 ,1000 ,1000 ,1000 ,1000 ,1000 ,1000 ,1000});
-               //builder.setDefaults(Notification.DEFAULT_VIBRATE);
+               notification_channel_id = "sally_channel_id_vibration";
            }
 
            Uri alarmSound = Uri.parse("android.resource://"+context.getPackageName()+"/" + R.raw.ali_ben_ahmed_mala);
@@ -225,18 +238,23 @@ public class AthanServiceBroasdcastReceiver extends BroadcastReceiver{
                String athanName = UserConfig.getSingleton().getAthan();
                if(athanName.equalsIgnoreCase("ali_ben_ahmed_mala")){
                    alarmSound = Uri.parse("android.resource://"+context.getPackageName()+"/" + R.raw.ali_ben_ahmed_mala);
+                   notification_channel_id = "sally_channel_id_athan_ali_ben_ahmed_mala";
                }else{
                    if(athanName.equalsIgnoreCase("abd_el_basset_abd_essamad")){
                        alarmSound = Uri.parse("android.resource://"+context.getPackageName()+"/" + R.raw.abd_el_basset_abd_essamad);
+                       notification_channel_id = "sally_channel_id_athan_abd_el_basset_abd_essamad";
                    }else{
                        if(athanName.equalsIgnoreCase("farou9_abd_errehmane_hadraoui")){
                            alarmSound = Uri.parse("android.resource://"+context.getPackageName()+"/" + R.raw.farou9_abd_errehmane_hadraoui);
+                           notification_channel_id = "sally_channel_id_athan_farou9_abd_errehmane_hadraoui";
                        }else{
                            if(athanName.equalsIgnoreCase("mohammad_ali_el_banna")){
                                alarmSound = Uri.parse("android.resource://"+context.getPackageName()+"/" + R.raw.mohammad_ali_el_banna);
+                               notification_channel_id = "sally_channel_id_athan_mohammad_ali_el_banna";
                            }else{
                                if(athanName.equalsIgnoreCase("mohammad_khalil_raml")){
                                    alarmSound = Uri.parse("android.resource://"+context.getPackageName()+"/" + R.raw.mohammad_khalil_raml);
+                                   notification_channel_id = "sally_channel_id_athan_mohammad_khalil_raml";
                                }
                            }
                        }
@@ -245,6 +263,7 @@ public class AthanServiceBroasdcastReceiver extends BroadcastReceiver{
 
                if(alarmSound == null)
                {
+                   notification_channel_id = "sally_channel_id_athan";
                    alarmSound = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_ALARM);
                    if(alarmSound == null){
                        alarmSound = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_RINGTONE);
@@ -258,9 +277,8 @@ public class AthanServiceBroasdcastReceiver extends BroadcastReceiver{
 
            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O)
            {
-               String channelId = "Sally_channel_id"+ new Random().nextInt(1000);
                NotificationChannel channel = new NotificationChannel(
-                       channelId,
+                       notification_channel_id,
                        "Sally Prayer Times",
                        NotificationManager.IMPORTANCE_HIGH);
 
@@ -279,7 +297,7 @@ public class AthanServiceBroasdcastReceiver extends BroadcastReceiver{
                }
 
                notificationManager.createNotificationChannel(channel);
-               builder.setChannelId(channelId);
+               builder.setChannelId(notification_channel_id);
            }
 
            Notification note = builder.build();

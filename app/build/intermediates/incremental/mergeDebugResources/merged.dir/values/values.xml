@@ -417,11 +417,11 @@
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
     <style name="AlertDialogCustom" parent="Theme.AppCompat.Light.Dialog.Alert">
-        
+        <!-- Used for the buttons -->
         <item name="colorAccent">@android:color/holo_blue_bright</item>
-        
+        <!-- Used for the title and text -->
         <item name="android:textColorPrimary">@android:color/darker_gray</item>
-        
+        <!-- Used for the background -->
         <item name="android:background">@android:color/white</item>
     </style>
     <style name="AlertProgressCustom" parent="Theme.AppCompat.Light.Dialog.Alert">
@@ -430,10 +430,15 @@
     <style name="Animation.AppCompat.Dialog" parent="Base.Animation.AppCompat.Dialog"/>
     <style name="Animation.AppCompat.DropDownUp" parent="Base.Animation.AppCompat.DropDownUp"/>
     <style name="AppBaseTheme" parent="android:Theme.Light">
-        
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+
+        -->
     </style>
     <style name="AppTheme" parent="AppBaseTheme">
-        
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
     <style name="Base.AlertDialog.AppCompat" parent="android:Widget">
         <item name="android:layout">@layout/abc_alert_dialog_material</item>
@@ -1824,15 +1829,15 @@
         <item name="android:textColor">#FFFFFF</item>
     </style>
     <style name="missing_time_Style">
-        <item name="android:textSize">50.0dip</item>
+        <item name="android:textSize">60.0dip</item>
         <item name="android:textColor">#FFFFFF</item>
     </style>
     <style name="missing_time_Style_label">
-        <item name="android:textSize">30.0dip</item>
+        <item name="android:textSize">20.0dip</item>
         <item name="android:textColor">#FFFFFF</item>
     </style>
     <style name="missing_time_Style_label_time">
-        <item name="android:textSize">30.0dip</item>
+        <item name="android:textSize">20.0dip</item>
         <item name="android:textColor">#FFFFFF</item>
     </style>
     <style name="missing_time_Style_name">

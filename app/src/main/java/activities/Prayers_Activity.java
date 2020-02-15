@@ -270,17 +270,17 @@ public class Prayers_Activity extends Activity {
 		this.ishaa.setText(AthanService.prayerTimes.getIshaaFinalTime());
 		
 		if(this.country.equalsIgnoreCase("none") || this.city.equalsIgnoreCase("none")){
-		this.location_country.setText(longitude+" - ");
+		this.location_country.setText(longitude);
 		this.location_city.setText(latitude);
 		}
 		else{
 			if(isProbablyArabic(city))
 			{
 				this.location_country.setText(ArabicReshape.reshape(city));
-				this.location_city.setText(ArabicReshape.reshape(country)+" - ");
+				this.location_city.setText(ArabicReshape.reshape(country));
 			}else
 			{
-				this.location_country.setText(ArabicReshape.reshape(city)+" - ");
+				this.location_country.setText(ArabicReshape.reshape(city));
 				this.location_city.setText(ArabicReshape.reshape(country));
 			}
 		}
@@ -300,17 +300,17 @@ public class Prayers_Activity extends Activity {
 			this.maghrib.setText(AthanService.prayerTimes.getMaghribFinalTime());
 			this.ishaa.setText(AthanService.prayerTimes.getIshaaFinalTime());
 			if(this.country.equalsIgnoreCase("none") || this.city.equalsIgnoreCase("none")){
-				this.location_country.setText(longitude+" - ");
+				this.location_country.setText(longitude);
 				this.location_city.setText(latitude);
 				}
 				else{
 					if(isProbablyArabic(city))
 					{
 						this.location_country.setText(ArabicReshape.reshape(city));
-						this.location_city.setText(ArabicReshape.reshape(country)+" - ");
+						this.location_city.setText(ArabicReshape.reshape(country));
 					}else
 					{
-						this.location_country.setText(ArabicReshape.reshape(city)+" - ");
+						this.location_country.setText(ArabicReshape.reshape(city));
 						this.location_city.setText(ArabicReshape.reshape(country));
 					}
 				}
