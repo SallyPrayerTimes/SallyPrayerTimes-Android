@@ -145,6 +145,10 @@
                 <action android:name="android.intent.action.TIME_SET" />
             </intent-filter>
         </receiver>
+        <receiver
+            android:name="Athan.AthanStopReceiver"
+            android:exported="false" >
+        </receiver>
     </application>
 
 </manifest>

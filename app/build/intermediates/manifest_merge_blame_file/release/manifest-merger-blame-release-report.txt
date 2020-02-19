@@ -57,7 +57,7 @@
 39-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:32:22-92
 40
 41    <application
-41-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:34:5-140:19
+41-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:34:5-143:19
 42        android:allowBackup="true"
 42-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:35:9-35
 43        android:icon="@drawable/ic_launcher"
@@ -252,6 +252,13 @@
 143-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:136:25-70
 144            </intent-filter>
 145        </receiver>
-146    </application>
-147
-148</manifest>
+146        <receiver
+146-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:140:9-141:20
+147            android:name="Athan.AthanStopReceiver"
+147-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:140:19-57
+148            android:exported="false" >
+148-->C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:140:58-82
+149        </receiver>
+150    </application>
+151
+152</manifest>

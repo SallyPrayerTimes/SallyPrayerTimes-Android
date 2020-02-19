@@ -137,6 +137,9 @@
             </intent-filter>
         </receiver>
 
+        <receiver android:name="Athan.AthanStopReceiver" android:exported="false" >
+        </receiver>
+
     </application>
 
 

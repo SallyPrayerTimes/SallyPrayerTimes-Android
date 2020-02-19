@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:22:1-143:12
-INJECTED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:22:1-143:12
-INJECTED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:22:1-143:12
-INJECTED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:22:1-143:12
+ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:22:1-146:12
+INJECTED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:22:1-146:12
+INJECTED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:22:1-146:12
+INJECTED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:22:1-146:12
 MERGED from [com.android.support:appcompat-v7:25.1.0] C:\Users\ALI\.gradle\caches\transforms-2\files-2.1\45e09eb23339a1ec5cee281482022afc\appcompat-v7-25.1.0\AndroidManifest.xml:17:1-27:12
 MERGED from [com.android.support:animated-vector-drawable:25.1.0] C:\Users\ALI\.gradle\caches\transforms-2\files-2.1\9187de4d0a3ac6b54435ddfa50e6a593\animated-vector-drawable-25.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.android.support:support-vector-drawable:25.1.0] C:\Users\ALI\.gradle\caches\transforms-2\files-2.1\c260a47e4ee18cc4faeb1ce4d2401c22\support-vector-drawable-25.1.0\AndroidManifest.xml:17:1-25:12
@@ -13,20 +13,20 @@ MERGED from [com.android.support:support-media-compat:25.1.0] C:\Users\ALI\.grad
 MERGED from [com.android.support:support-core-utils:25.1.0] C:\Users\ALI\.gradle\caches\transforms-2\files-2.1\f43f2e6e2761bc670c0947883345110e\support-core-utils-25.1.0\AndroidManifest.xml:17:1-27:12
 MERGED from [com.android.support:support-core-ui:25.1.0] C:\Users\ALI\.gradle\caches\transforms-2\files-2.1\b53e61c2dc294ae34e130a83231dbb8a\support-core-ui-25.1.0\AndroidManifest.xml:17:1-27:12
 MERGED from [com.android.support:support-compat:25.1.0] C:\Users\ALI\.gradle\caches\transforms-2\files-2.1\bfdc09e0af2a7f366cf36b4039c196ad\support-compat-25.1.0\AndroidManifest.xml:17:1-27:12
-INJECTED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:22:1-143:12
-INJECTED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:22:1-143:12
-INJECTED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:22:1-143:12
+INJECTED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:22:1-146:12
+INJECTED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:22:1-146:12
+INJECTED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:22:1-146:12
 	package
 		ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:23:5-24
 		INJECTED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:22:1-143:12
+		ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:22:1-146:12
 		INJECTED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:22:1-143:12
+		ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:22:1-146:12
 		INJECTED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:22:11-69
@@ -63,7 +63,7 @@ ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifes
 	android:name
 		ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:32:22-92
 application
-ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:34:5-140:19
+ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:34:5-143:19
 MERGED from [com.android.support:appcompat-v7:25.1.0] C:\Users\ALI\.gradle\caches\transforms-2\files-2.1\45e09eb23339a1ec5cee281482022afc\appcompat-v7-25.1.0\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:appcompat-v7:25.1.0] C:\Users\ALI\.gradle\caches\transforms-2\files-2.1\45e09eb23339a1ec5cee281482022afc\appcompat-v7-25.1.0\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:animated-vector-drawable:25.1.0] C:\Users\ALI\.gradle\caches\transforms-2\files-2.1\9187de4d0a3ac6b54435ddfa50e6a593\animated-vector-drawable-25.1.0\AndroidManifest.xml:22:5-20
@@ -242,6 +242,12 @@ action#android.intent.action.TIME_SET
 ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:136:17-73
 	android:name
 		ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:136:25-70
+receiver#Athan.AthanStopReceiver
+ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:140:9-141:20
+	android:exported
+		ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:140:58-82
+	android:name
+		ADDED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml:140:19-57
 uses-sdk
 INJECTED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\ALI\Desktop\Sally Android Studio\app\src\main\AndroidManifest.xml
