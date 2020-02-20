@@ -172,4 +172,6 @@
 
     <string name="gps_permission_error">Please give the app permission to have access to your location</string>
 
+    <string name="minute">1 Minute</string>
+
 </resources>

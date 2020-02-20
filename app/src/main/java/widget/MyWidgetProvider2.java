@@ -42,20 +42,17 @@ public class MyWidgetProvider2 extends AppWidgetProvider {
 
 	@Override
 	public void onUpdate(final Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
-
-		AlarmManager am = (AlarmManager)context.getSystemService(Context.ALARM_SERVICE);
-		Intent intent = new Intent(context, MyWidgetProviderBroadcastReceiver2.class);
-		PendingIntent pi = PendingIntent.getBroadcast(context, 0 , intent, 0);
-
-		am.cancel(pi);
-
-		//After 1 minute
-		am.setRepeating(AlarmManager.RTC, System.currentTimeMillis() , 60 * 1000 , pi); // update widget every minute
+		context.startService(new Intent(context, MyWidgetProviderService2.class));
 	}
 
 	@Override
 	public void onEnabled(Context context) {
-		context.startService(new Intent(context, MyWidgetProviderService2.class));
+
+	}
+
+	@Override
+	public void onDeleted(Context context, int[] appWidgetIds){
+
 	}
        
 }

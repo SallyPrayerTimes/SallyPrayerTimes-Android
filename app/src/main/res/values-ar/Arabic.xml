@@ -169,5 +169,7 @@
 
     <string name="gps_permission_error">يرجى إعطاء التطبيق إذن الوصول إلى موقعك</string>
 
+    <string name="minute">1 دقيقة</string>
+
     
 </resources>

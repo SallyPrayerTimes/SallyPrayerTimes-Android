@@ -44,6 +44,8 @@ import android.os.PowerManager;
 import com.sally.R;
 
 import activities.SplashScreen_Activity;
+import widget.MyWidgetProvider;
+import widget.MyWidgetProvider2;
 import widget.MyWidgetProviderService;
 import widget.MyWidgetProviderService2;
 
@@ -69,7 +71,7 @@ public class AthanServiceBroasdcastReceiver extends BroadcastReceiver{
             int minutes = calendar.get(Calendar.MINUTE);
             AthanService.actualSalatTimeMinutes = (hour * 60) + minutes;
 
-            startAthanActivity(AthanService.nextPrayerCode , context);
+            startAthanNotification(AthanService.nextPrayerCode , context);
 
             AthanService.getNextPrayer(true);
 
@@ -140,11 +142,12 @@ public class AthanServiceBroasdcastReceiver extends BroadcastReceiver{
                 am.set(AlarmManager.RTC, calendar.getTimeInMillis()  , pi);
             }
         }
+
         context.startService(new Intent(context, MyWidgetProviderService.class));
         context.startService(new Intent(context, MyWidgetProviderService2.class));
     }
 
-    public static void startAthanActivity(int nextPrayerCode , Context context){
+    public static void startAthanNotification(int nextPrayerCode , Context context){
         try{
             String athanType = getAthanAlertType(nextPrayerCode);
             if(athanType.equalsIgnoreCase("athan")){

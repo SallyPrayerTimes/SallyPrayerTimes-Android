@@ -29,9 +29,12 @@ import android.content.Intent;
 import android.os.Handler;
 import android.os.IBinder;
 import android.os.PowerManager;
+import android.widget.Toast;
 
 import com.sally.R;
 
+import widget.MyWidgetProvider;
+import widget.MyWidgetProvider2;
 import widget.MyWidgetProviderService;
 import widget.MyWidgetProviderService2;
 
@@ -130,7 +133,7 @@ public class AthanService extends Service{
             }
 			else
 			    {
-			        if(totalMinutes == (actualSalatTimeMinutes + 15))//fix actual prayer bame for 15 minutes
+			        if(totalMinutes == (actualSalatTimeMinutes + 15))//fix actual prayer name for 15 minutes
 			        {
 						PowerManager powerManager = (PowerManager) getApplicationContext().getSystemService(Context.POWER_SERVICE);
 						PowerManager.WakeLock wakeLock = powerManager.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, "MyApp::MyWakelockTag1");
@@ -138,6 +141,7 @@ public class AthanService extends Service{
 
 						actualPrayerCode = AthanService.nextPrayerCode;
                         ifActualSalatTime = false;
+
 						this.startService(new Intent(this, MyWidgetProviderService.class));
 						this.startService(new Intent(this, MyWidgetProviderService2.class));
                     }

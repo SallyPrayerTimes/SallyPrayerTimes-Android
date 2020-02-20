@@ -2154,8 +2154,8 @@ public class Settings_Activity extends Activity implements LocationListener{
 	}
 	
 	public void updateWidget(){
-		context.startService(new Intent(context, MyWidgetProviderService.class));
-		context.startService(new Intent(context, MyWidgetProviderService2.class));
+		this.startService(new Intent(this, MyWidgetProviderService.class));
+		this.startService(new Intent(this, MyWidgetProviderService2.class));
 	}
 	
 	private void setDefaultLanguage(String language){

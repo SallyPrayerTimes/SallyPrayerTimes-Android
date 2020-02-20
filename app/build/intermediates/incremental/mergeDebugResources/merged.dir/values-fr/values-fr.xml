@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="April">Avril</string>
+    <string name="August">Août</string>
+    <string name="December">Décembre</string>
+    <string name="EgytionGeneralAuthorityofSurvey">Autorite egyptienne general de lenquête</string>
+    <string name="FRIDAY">Vendredi</string>
+    <string name="February">Février</string>
+    <string name="IslamicSocietyOfNorthAmerica">Societe islamique dAmerique du Nord</string>
+    <string name="January">Janvier</string>
+    <string name="July">Juillet</string>
+    <string name="June">Juin</string>
+    <string name="Language">Langue</string>
+    <string name="MONDAY">Lundi</string>
+    <string name="March">Mars</string>
+    <string name="May">Mai</string>
+    <string name="MuslimWorldLeague">Ligue musulmane mondiale</string>
+    <string name="November">Novembre</string>
+    <string name="October">Octobre</string>
+    <string name="SATURDAY">Samedi</string>
+    <string name="SUNDAY">Dimanche</string>
+    <string name="September">Septembre</string>
+    <string name="THURSDAY">Jeudi</string>
+    <string name="TUESDAY">Mardi</string>
+    <string name="UmmAlQuraUniv">Umm Al Qura University</string>
+    <string name="UnivOfIslamicScincesKarachi">Univ des Sciences Islamiques Karachi</string>
+    <string name="WEDNESDAY">Mercredi</string>
+    <string msgid="4600421777120114993" name="abc_action_bar_home_description">"Revenir à l\'accueil"</string>
+    <string msgid="1397052879051804371" name="abc_action_bar_home_description_format">"%1$s, %2$s"</string>
+    <string msgid="6623331958280229229" name="abc_action_bar_home_subtitle_description_format">"%1$s, %2$s, %3$s"</string>
+    <string msgid="1594238315039666878" name="abc_action_bar_up_description">"Revenir en haut de la page"</string>
+    <string msgid="3588849162933574182" name="abc_action_menu_overflow_description">"Plus d\'options"</string>
+    <string msgid="4076576682505996667" name="abc_action_mode_done">"OK"</string>
+    <string msgid="7468859129482906941" name="abc_activity_chooser_view_see_all">"Tout afficher"</string>
+    <string msgid="2031811694353399454" name="abc_activitychooserview_choose_application">"Sélectionner une application"</string>
+    <string msgid="121134116657445385" name="abc_capital_off">"DÉSACTIVÉ"</string>
+    <string msgid="3405795526292276155" name="abc_capital_on">"ACTIVÉ"</string>
+    <string msgid="7723749260725869598" name="abc_search_hint">"Rechercher…"</string>
+    <string msgid="3691816814315814921" name="abc_searchview_description_clear">"Effacer la requête"</string>
+    <string msgid="2550479030709304392" name="abc_searchview_description_query">"Requête de recherche"</string>
+    <string msgid="8264924765203268293" name="abc_searchview_description_search">"Rechercher"</string>
+    <string msgid="8928215447528550784" name="abc_searchview_description_submit">"Envoyer la requête"</string>
+    <string msgid="893419373245838918" name="abc_searchview_description_voice">"Recherche vocale"</string>
+    <string msgid="3421042268587513524" name="abc_shareactionprovider_share_with">"Partager avec"</string>
+    <string msgid="7165123711973476752" name="abc_shareactionprovider_share_with_application">"Partager avec %s"</string>
+    <string msgid="1603543279005712093" name="abc_toolbar_collapse_description">"Réduire"</string>
+    <string name="abd_el_basset_abd_essamad">abd el basset abd essamad</string>
+    <string name="al_ahad">Al Ahad</string>
+    <string name="al_arbiaa">Al Arbiaa</string>
+    <string name="al_ithnin">Al Ithnin</string>
+    <string name="al_jomoa">Al Jomoa</string>
+    <string name="al_khamis">Al Khamis</string>
+    <string name="ali_ben_ahmed_mala">ali ben ahmed mala</string>
+    <string name="app_contact">Pour plus dinformations contactez-moi ici:</string>
+    <string name="app_footer">Sally est libre et open source, et tout le monde a le droit utilisation et la publication, il suffit de nous pas oublier pour les prières sincères</string>
+    <string name="app_info">Sally est une application gratuite et open source pour calculer les temps de prière islamique pour la plupart du monde</string>
+    <string name="app_name">Sally</string>
+    <string name="app_site">http://www.sallyprayertimes.com</string>
+    <string name="app_version">Version : Final 24.1.20</string>
+    <string name="applay">Appliquer</string>
+    <string name="application_already_optimized">application déjà exclue de le optimisation de la batterie</string>
+    <string name="arabic">Arabe</string>
+    <string name="asr">ASR</string>
+    <string name="asr_widget">Asr</string>
+    <string name="assabt">Assabt</string>
+    <string name="athan">Athan</string>
+    <string name="attolathaa">Attolathaa</string>
+    <string name="battery">Batterie</string>
+    <string name="battery_optimization">Optimisation de la batterie</string>
+    <string name="calculationMethod">Méthodes de calcul</string>
+    <string name="cancel">Annuler</string>
+    <string name="city">Ville</string>
+    <string name="color">Couleur</string>
+    <string name="confirm">Confirmer</string>
+    <string name="country">Pays</string>
+    <string name="dhul_hijja">Dhul Hijja</string>
+    <string name="dhul_qi_ada">Dhul Qiada</string>
+    <string name="duhr">DUHR</string>
+    <string name="duhr_widget">Duhr</string>
+    <string name="english">Anglais</string>
+    <string name="error_corrupt_user_file_config">Fichier sallyUserConfig.xml corrompu, supprimer si elle existe et redémarrez ou vérifier votre permission</string>
+    <string name="error_read_user_config">ERREUR de lecture Utilisateur config</string>
+    <string name="error_try_again_later">ERREUR reessayer plus tard</string>
+    <string name="fajr">FAJR</string>
+    <string name="fajr_widget">Fajr</string>
+    <string name="farou9_abd_errehmane_hadraoui">farou9 abd errehmane hadraoui</string>
+    <string name="french">Français</string>
+    <string name="gps_is_not_on">GPS nest pas sur …</string>
+    <string name="gps_permission_error">Veuillez autoriser la application à accéder à votre position</string>
+    <string name="hanafi">Hanafi</string>
+    <string name="hijri_adjustment">Hijri Réglage</string>
+    <string name="info">Info</string>
+    <string name="ishaa">ISHAA</string>
+    <string name="ishaa_widget">Isha</string>
+    <string name="italiano">Italien</string>
+    <string name="its_the_hour_of">CEST LHEURE DE LA</string>
+    <string name="jumadal_attani">Jumadal Attani</string>
+    <string name="jumadal_ula">Jumadal Ula</string>
+    <string name="kibla">Kibla</string>
+    <string name="kibla_warning">Le téléphone peut être affectée par les minéraux environnants ne comptez pas sur elle, seulement au cas où vous ne savez pas le sens de Kibla</string>
+    <string name="latitude">Latitude</string>
+    <string name="loading">Chargement …</string>
+    <string name="location">Emplacement</string>
+    <string name="locationgps">Emplacement GPS</string>
+    <string name="longitude">Longitude</string>
+    <string name="maghrib">MAGHRIB</string>
+    <string name="maghrib_widget">Magrib</string>
+    <string name="mazhab">Mazhab</string>
+    <string name="minute">1 Minute</string>
+    <string name="missing_to">Reste a</string>
+    <string name="mohammad_ali_el_banna">mohammad ali el_banna</string>
+    <string name="mohammad_khalil_raml">mohammad khalil raml</string>
+    <string name="muharram">Muharram</string>
+    <string name="must_first_select_a_country">Il faut dabord sélectionner un pays</string>
+    <string name="no_network_provider_is_enabled">Aucun fournisseur de réseau nest activé, veuillez activer loption Position</string>
+    <string name="not_optimized">pas exclu de le optimisation de la batterie</string>
+    <string name="not_set">......</string>
+    <string name="nothing">Rien</string>
+    <string name="notification">Notification</string>
+    <string name="notificationMessage">Il est maintenant temps de prier</string>
+    <string name="notificationTitle">Il est temps de</string>
+    <string name="optimized">exclus de le optimisation de la batterie</string>
+    <string name="prayers">Prières</string>
+    <string name="rabi_ul_attani">Rabiul Attani</string>
+    <string name="rabi_ul_awwal">Rabiul Awwal</string>
+    <string name="rajab">Rajab</string>
+    <string name="ramadan">Ramadan</string>
+    <string name="safar">Safar</string>
+    <string name="sayfi">Résumé-Dété</string>
+    <string msgid="146198913615257606" name="search_menu_title">"Rechercher"</string>
+    <string name="sensor_is_not_exist">Le capteur , Nexiste pas </string>
+    <string name="settings">Paramètres</string>
+    <string name="shaban">Shaaban</string>
+    <string name="shafi3i">Shafi3i</string>
+    <string name="shawwal">Shawwal</string>
+    <string name="shorouk">SHOROUK</string>
+    <string name="shorouk_widget">Shorouk</string>
+    <string name="standard">Standard</string>
+    <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">">999"</string>
+    <string name="stopathan">Arreter Athan</string>
+    <string name="time">Temps</string>
+    <string name="time12or24">12h / 24H</string>
+    <string name="time12or24_12">12 h</string>
+    <string name="time12or24_24">24 H</string>
+    <string name="time_adjustment">Temps Réglage</string>
+    <string name="time_zone">temps Zone</string>
+    <string name="type_time">Type de temps</string>
+    <string name="vibration">Vibration</string>
+    <string name="widget">Widget</string>
+    <string name="widget_background_color">Couleur de arrière-plan du widget</string>
+</resources>

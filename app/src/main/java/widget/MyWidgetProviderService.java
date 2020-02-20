@@ -104,7 +104,18 @@ public class MyWidgetProviderService extends Service {
                 remoteViews.setTextViewText(R.id.missing_salat, getNextPrayerName(context));
             }
 
-            remoteViews.setTextViewText(R.id.missing_time, formatter.format(AthanService.missing_hours_to_nextPrayer)+":"+formatter.format(AthanService.missing_minutes_to_nextPrayer));//+":"+formatter.format(AthanService.missing_seconds_to_nextPrayer)
+            if(AthanService.missing_hours_to_nextPrayer == 0 && AthanService.missing_minutes_to_nextPrayer == 0)
+            {
+                if(UserConfig.getSingleton().getLanguage().equalsIgnoreCase("ar")){
+                    remoteViews.setTextViewText(R.id.missing_time, ArabicReshape.reshape(context.getResources().getString(R.string.minute)));
+                }else{
+                    remoteViews.setTextViewText(R.id.missing_time, context.getResources().getString(R.string.minute));
+                }
+            }
+            else
+            {
+                remoteViews.setTextViewText(R.id.missing_time, formatter.format(AthanService.missing_hours_to_nextPrayer)+":"+formatter.format(AthanService.missing_minutes_to_nextPrayer));//+":"+formatter.format(AthanService.missing_seconds_to_nextPrayer)
+            }
 
             remoteViews.setTextViewText(R.id.fajrTime, AthanService.prayerTimes.getFajrFinalTime());
             remoteViews.setTextViewText(R.id.shoroukTime, AthanService.prayerTimes.getShorou9FinalTime());
@@ -112,6 +123,7 @@ public class MyWidgetProviderService extends Service {
             remoteViews.setTextViewText(R.id.asrTime, AthanService.prayerTimes.getAsrFinalTime());
             remoteViews.setTextViewText(R.id.maghribTime, AthanService.prayerTimes.getMaghribFinalTime());
             remoteViews.setTextViewText(R.id.ishaaTime, AthanService.prayerTimes.getIshaaFinalTime());
+
 
             if(AthanService.ifActualSalatTime == true)
             {

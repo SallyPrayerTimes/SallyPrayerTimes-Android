@@ -1038,6 +1038,7 @@ string longitude
 string maghrib
 string maghrib_widget
 string mazhab
+string minute
 string missing_to
 string mohammad_ali_el_banna
 string mohammad_khalil_raml

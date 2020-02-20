@@ -1,4 +1,4 @@
-#Wed Feb 19 13:06:27 CET 2020
+#Wed Feb 19 21:51:15 CET 2020
 base.0=C\:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\build\\intermediates\\dex\\release\\mergeDexRelease\\out\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

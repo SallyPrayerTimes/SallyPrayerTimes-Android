@@ -168,4 +168,6 @@
 
     <string name="gps_permission_error">Si prega di autorizzare il app ad avere accesso alla sua posizione</string>
 
+    <string name="minute">1 Minuto</string>
+
 </resources>
