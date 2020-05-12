@@ -1388,7 +1388,11 @@ public class Settings_Activity extends Activity implements LocationListener{
 		try {
 	    	TimeZone timezone = TimeZone.getDefault();
 	        String TimeZoneName = timezone.getDisplayName();
-			int timeZoneOffset = timezone.getRawOffset()/(60 * 60 * 1000);
+			//double timeZoneOffset = timezone.getOffset(System.currentTimeMillis()) / (60 * 60 * 1000D);
+
+			int offsetInMillis = timezone.getOffset(System.currentTimeMillis());
+			String offset = String.format("%02d.%02d", Math.abs(offsetInMillis / 3600000), Math.abs((offsetInMillis / 60000) % 60));
+			String timeZoneOffset = (offsetInMillis >= 0 ? "" : "-") + offset;
 
 			this.time_zone_calcolated = (TextView) view.findViewById(R.id.time_zone_calcolated);
 			if(UserConfig.getSingleton().getLanguage().equalsIgnoreCase("ar")){
@@ -1398,7 +1402,7 @@ public class Settings_Activity extends Activity implements LocationListener{
 		    		this.time_zone_calcolated.setText(TimeZoneName+" : "+timeZoneOffset);
 		    	}
 			this.time_zone_calcolated.setVisibility(View.VISIBLE);
-			this.timeZoneHijriTimeValue = timeZoneOffset;
+			this.timeZoneHijriTimeValue = Double.valueOf(timeZoneOffset);
 		} catch (Exception e) {}
 		
 		this.editText.setText(String.valueOf(timeZoneHijriTimeValue));
@@ -1800,11 +1804,16 @@ public class Settings_Activity extends Activity implements LocationListener{
 									UserConfig.getSingleton().setLongitude(String.valueOf(formatter.format(longitude)));
 									UserConfig.getSingleton().setLatitude(String.valueOf(formatter.format(latitude)));
 									try {
-								    	TimeZone timezone = TimeZone.getDefault();
-										int timeZoneOffset = timezone.getRawOffset()/(60 * 60 * 1000);
-										UserConfig.getSingleton().setTimezone(String.valueOf(timeZoneOffset));
+										TimeZone timezone = TimeZone.getDefault();
+										//double timeZoneOffset = timezone.getOffset(System.currentTimeMillis()) / (60 * 60 * 1000D);
+
+										int offsetInMillis = timezone.getOffset(System.currentTimeMillis());
+										String offset = String.format("%02d.%02d", Math.abs(offsetInMillis / 3600000), Math.abs((offsetInMillis / 60000) % 60));
+										String timeZoneOffset = (offsetInMillis >= 0 ? "" : "-") + offset;
+
+										UserConfig.getSingleton().setTimezone(timeZoneOffset);
 										time_zone_calcolated.setText(timeZoneOffset);
-                                        timeZone_value.setText(finalTimeZone);
+										timeZone_value.setText(timeZoneOffset);
 									} catch (Exception e) {}
 									setDefaultLanguage(UserConfig.getSingleton().getLanguage());
 								}
@@ -1856,11 +1865,11 @@ public class Settings_Activity extends Activity implements LocationListener{
 					
 					latitude_value.setText(String.valueOf(latitude));
 					longitude_value.setText(String.valueOf(longitude));
-					
 			    	}
 			    	else{
 			    		latitude_value.setText(String.valueOf(latitude));
 						longitude_value.setText(String.valueOf(longitude));
+
 						country_edittext.setText(String.valueOf(country));
 						city_edittext.setText(String.valueOf(city));
 			    	}

@@ -1,4 +1,4 @@
-#Thu Feb 20 19:28:16 CET 2020
+#Tue May 12 23:14:28 CEST 2020
 base.0=C\:\\Users\\ALI\\Desktop\\Sally Android Studio\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out\\classes.dex
 path.1=classes.dex
 renamed.1=classes2.dex
