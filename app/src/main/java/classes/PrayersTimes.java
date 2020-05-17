@@ -128,7 +128,7 @@ public class PrayersTimes{
         this.shorou9 = localNoon - equation(-0.8333) / 15;
 
         if (this.calculationMethod.equalsIgnoreCase("UmmAlQuraUniv")) {
-            this.fajrAlt = -19;
+            this.fajrAlt = -18.5;// fajr was 19 degrees before 1430 hijri
         } else if (this.calculationMethod.equalsIgnoreCase("EgytionGeneralAuthorityofSurvey")) {
             this.fajrAlt = -19.5;
             this.ishaAlt = -17.5;
@@ -139,6 +139,11 @@ public class PrayersTimes{
             this.fajrAlt = ishaAlt = -15;
         } else if (this.calculationMethod.equalsIgnoreCase("UnivOfIslamicScincesKarachi")) {
             this.fajrAlt = ishaAlt = -18;
+        } else if (this.calculationMethod.equalsIgnoreCase("FederationofIslamicOrganizationsinFrance")) {
+            this.fajrAlt = ishaAlt = -12;
+        } else if (this.calculationMethod.equalsIgnoreCase("TheMinistryofAwqafandIslamicAffairsinKuwait")) {
+            this.fajrAlt = -18;
+            this.ishaAlt = -17.5;
         }
 
         this.fajr = localNoon - equation(fajrAlt) / 15;
@@ -146,7 +151,19 @@ public class PrayersTimes{
         this.ishaa = localNoon + equation(ishaAlt) / 15;
 
         if (this.calculationMethod.equalsIgnoreCase("UmmAlQuraUniv")) {
-            this.ishaa = maghrib + 1.5;
+            try {
+                HijriTime hijriTime = new HijriTime(Calendar.getInstance());
+                if(hijriTime.isRamadan())
+                {
+                    this.ishaa = maghrib + 2;
+                }
+                else
+                {
+                    this.ishaa = maghrib + 1.5;
+                }
+            } catch (IOException e) {
+                this.ishaa = maghrib + 1.5;
+            }
         }
         double asrAlt;
 

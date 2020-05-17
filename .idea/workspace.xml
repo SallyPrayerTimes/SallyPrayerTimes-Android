@@ -39,33 +39,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/classes/AthanService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="197" column="110" selection-start-line="197" selection-start-column="110" selection-end-line="197" selection-end-column="110" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/activities/Settings_Activity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="1405" column="32" selection-start-line="1405" selection-start-column="32" selection-end-line="1405" selection-end-column="32" />
+            <state relative-caret-position="1141">
+              <caret line="1084" column="115" selection-start-line="1084" selection-start-column="102" selection-end-line="1084" selection-end-column="115" />
               <folding>
-                <element signature="e#83824#83825#0" expanded="true" />
-                <element signature="e#84082#84083#0" expanded="true" />
+                <element signature="e#17674#17726#0" expanded="true" />
+                <element signature="e#17794#17842#0" expanded="true" />
+                <element signature="e#18154#18220#0" expanded="true" />
+                <element signature="e#19204#19256#0" expanded="true" />
+                <element signature="e#19355#19407#0" expanded="true" />
+                <element signature="e#19730#19782#0" expanded="true" />
+                <element signature="e#19889#19964#0" expanded="true" />
+                <element signature="e#20378#20430#0" expanded="true" />
+                <element signature="e#20545#20623#0" expanded="true" />
+                <element signature="e#20842#20894#0" expanded="true" />
+                <element signature="e#21009#21061#0" expanded="true" />
+                <element signature="e#30449#30501#0" expanded="true" />
+                <element signature="e#30867#30919#0" expanded="true" />
+                <element signature="e#30995#31047#0" expanded="true" />
+                <element signature="e#31383#31435#0" expanded="true" />
+                <element signature="e#31515#31590#0" expanded="true" />
+                <element signature="e#31949#32001#0" expanded="true" />
+                <element signature="e#32085#32163#0" expanded="true" />
+                <element signature="e#32335#32387#0" expanded="true" />
+                <element signature="e#32471#32523#0" expanded="true" />
+                <element signature="e#50625#50700#0" expanded="true" />
+                <element signature="e#51010#51088#0" expanded="true" />
+                <element signature="e#52569#52644#0" expanded="true" />
+                <element signature="e#52960#53038#0" expanded="true" />
+                <element signature="e#85443#85589#0" expanded="true" />
+                <element signature="e#85588#85589#0" expanded="true" />
+                <element signature="e#89422#89423#0" expanded="true" />
+                <element signature="e#89680#89681#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/classes/AthanServiceBroasdcastReceiver.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
-              <caret line="173" column="32" selection-start-line="173" selection-start-column="32" selection-end-line="173" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -93,6 +101,12 @@
       <find>refreshService</find>
       <find>timeZone_value</find>
       <find>timeZoneOffset</find>
+      <find>long</find>
+      <find>prayer</find>
+      <find>calen</find>
+      <find>calendar</find>
+      <find>muslim</find>
+      <find>UmmAlQuraUniv</find>
     </findStrings>
   </component>
   <component name="GenerateSignedApkSettings">
@@ -124,13 +138,16 @@
         <option value="$PROJECT_DIR$/app/src/main/java/widget/MyWidgetProvider.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/widget/MyWidgetProviderService.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/classes/AthanService.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/classes/AthanServiceBroasdcastReceiver.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values-ar/Arabic.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values-fr/french.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values-it/Italiano.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values-en/English.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values-ar/Arabic.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/classes/AthanServiceBroasdcastReceiver.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/classes/HijriTime.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/classes/PrayersTimes.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/activities/Settings_Activity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/arrays.xml" />
       </list>
     </option>
   </component>
@@ -145,9 +162,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="ProjectPane" />
       <pane id="AndroidView">
         <subPane>
           <expand>
@@ -159,6 +173,9 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -274,7 +291,7 @@
       <window_info anchor="bottom" id="Terminal" order="2" />
       <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="4" />
-      <window_info anchor="bottom" id="Build" order="5" visible="true" weight="0.20949264" />
+      <window_info anchor="bottom" id="Build" order="5" visible="true" weight="0.12438625" />
       <window_info anchor="bottom" id="Android Profiler" order="6" />
       <window_info anchor="bottom" id="Run" order="7" weight="0.3289689" />
       <window_info anchor="bottom" id="Debug" order="8" />
@@ -288,13 +305,6 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/classes/PrayersTimes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="377" column="35" selection-start-line="377" selection-start-column="15" selection-end-line="377" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="208">
@@ -303,12 +313,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/prayers_activity.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2142">
           <caret line="126" column="53" selection-start-line="126" selection-start-column="37" selection-end-line="126" selection-end-column="53" />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/Athan/AthanStart.java" />
     <entry file="file://$PROJECT_DIR$/app/src/main/java/Athan/AthanPlayer.java">
@@ -345,13 +355,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/activities/Prayers_Activity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="65" column="26" selection-start-line="65" selection-start-column="26" selection-end-line="65" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/widget/MyWidgetProviderService2.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
@@ -374,12 +377,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="138" selection-start-line="138" selection-end-line="138" />
         </state>
       </provider>
-      <provider editor-type-id="android-manifest" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/classes/RefreshDayServiceManager.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -402,41 +405,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="174" column="28" selection-start-line="174" selection-start-column="28" selection-end-line="174" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values-fr/french.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="169" column="28" selection-start-line="169" selection-start-column="28" selection-end-line="169" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values-it/Italiano.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="170" column="28" selection-start-line="170" selection-start-column="28" selection-end-line="170" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values-en/English.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="169" column="28" selection-start-line="169" selection-start-column="28" selection-end-line="169" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values-ar/Arabic.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="171" column="28" selection-start-line="171" selection-start-column="28" selection-end-line="171" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/widget/MyWidgetProviderService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="776">
@@ -455,10 +423,66 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="114" column="123" selection-start-line="114" selection-start-column="123" selection-end-line="114" selection-end-column="123" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values-en/English.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="109" selection-start-line="109" selection-end-line="110" selection-end-column="123" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values-ar/Arabic.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="110" selection-start-line="110" selection-end-line="111" selection-end-column="113" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/classes/PreferenceHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/classes/UserConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2186">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/activities/Prayers_Activity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="319" column="53" lean-forward="true" selection-start-line="319" selection-start-column="53" selection-end-line="319" selection-end-column="99" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/classes/AthanService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
           <caret line="197" column="110" selection-start-line="197" selection-start-column="110" selection-end-line="197" selection-end-column="110" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/classes/PrayersTimes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="154" column="74" selection-start-line="154" selection-start-column="74" selection-end-line="154" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/classes/HijriTime.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
         </state>
       </provider>
     </entry>
@@ -469,13 +493,60 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values-fr/french.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="109" column="61" selection-start-line="109" selection-start-column="18" selection-end-line="109" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values-it/Italiano.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="110" column="61" selection-start-line="110" selection-start-column="18" selection-end-line="110" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/arrays.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="334">
+          <caret line="33" column="36" lean-forward="true" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/activities/Settings_Activity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="1405" column="32" selection-start-line="1405" selection-start-column="32" selection-end-line="1405" selection-end-column="32" />
+        <state relative-caret-position="1141">
+          <caret line="1084" column="115" selection-start-line="1084" selection-start-column="102" selection-end-line="1084" selection-end-column="115" />
           <folding>
-            <element signature="e#83824#83825#0" expanded="true" />
-            <element signature="e#84082#84083#0" expanded="true" />
+            <element signature="e#17674#17726#0" expanded="true" />
+            <element signature="e#17794#17842#0" expanded="true" />
+            <element signature="e#18154#18220#0" expanded="true" />
+            <element signature="e#19204#19256#0" expanded="true" />
+            <element signature="e#19355#19407#0" expanded="true" />
+            <element signature="e#19730#19782#0" expanded="true" />
+            <element signature="e#19889#19964#0" expanded="true" />
+            <element signature="e#20378#20430#0" expanded="true" />
+            <element signature="e#20545#20623#0" expanded="true" />
+            <element signature="e#20842#20894#0" expanded="true" />
+            <element signature="e#21009#21061#0" expanded="true" />
+            <element signature="e#30449#30501#0" expanded="true" />
+            <element signature="e#30867#30919#0" expanded="true" />
+            <element signature="e#30995#31047#0" expanded="true" />
+            <element signature="e#31383#31435#0" expanded="true" />
+            <element signature="e#31515#31590#0" expanded="true" />
+            <element signature="e#31949#32001#0" expanded="true" />
+            <element signature="e#32085#32163#0" expanded="true" />
+            <element signature="e#32335#32387#0" expanded="true" />
+            <element signature="e#32471#32523#0" expanded="true" />
+            <element signature="e#50625#50700#0" expanded="true" />
+            <element signature="e#51010#51088#0" expanded="true" />
+            <element signature="e#52569#52644#0" expanded="true" />
+            <element signature="e#52960#53038#0" expanded="true" />
+            <element signature="e#85443#85589#0" expanded="true" />
+            <element signature="e#85588#85589#0" expanded="true" />
+            <element signature="e#89422#89423#0" expanded="true" />
+            <element signature="e#89680#89681#0" expanded="true" />
           </folding>
         </state>
       </provider>

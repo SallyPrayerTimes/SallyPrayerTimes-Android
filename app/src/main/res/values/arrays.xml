@@ -26,6 +26,8 @@
         <item>@string/UnivOfIslamicScincesKarachi</item>
         <item>@string/IslamicSocietyOfNorthAmerica</item>
         <item>@string/MuslimWorldLeague</item>
+        <item>@string/FederationofIslamicOrganizationsinFrance</item>
+        <item>@string/TheMinistryofAwqafandIslamicAffairsinKuwait</item>
     </string-array> 
     
     <string-array name="mazhab_array">

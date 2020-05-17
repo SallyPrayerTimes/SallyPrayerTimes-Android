@@ -56,6 +56,20 @@ public class HijriTime {
     	this.month = calendar.get(Calendar.MONTH) + 1;
         this.year = calendar.get(Calendar.YEAR);
     }
+
+    public HijriTime(Calendar cal) throws IOException{
+        this.calendar = cal;
+
+        try{
+            this.calendar.add(Calendar.DAY_OF_MONTH, (int)Double.parseDouble(UserConfig.getSingleton().getHijri()));
+        }catch(Exception e){
+            this.calendar = cal;
+        }
+
+        this.day = calendar.get(Calendar.DAY_OF_MONTH);
+        this.month = calendar.get(Calendar.MONTH) + 1;
+        this.year = calendar.get(Calendar.YEAR);
+    }
     
     public String getMonth(int i){//get translated month name
         String month1;
@@ -149,6 +163,27 @@ public class HijriTime {
         	return dayFormatter.format(HijriDate.getDayOfMonth()) + " " + getMonth(HijriDate.getMonthOfYear()) + " " + yearFormatter.format(HijriDate.getYear());
         }
         
+    }
+
+    public boolean isRamadan()
+    {
+        this.dayFormatter = new DecimalFormat("00");
+        this.yearFormatter = new DecimalFormat("0000");
+
+        Chronology iSOChronology = ISOChronology.getInstanceUTC();//get ISOChronology instance
+        Chronology islamicChronology = IslamicChronology.getInstanceUTC();//get IslamicChronology instance
+
+        LocalDate localDateISOChronology = new LocalDate(year, month, day, iSOChronology);//get local date
+        LocalDate HijriDate = new LocalDate(localDateISOChronology.toDate(), islamicChronology);//get hijri date
+
+        if(HijriDate.getMonthOfYear() == 9)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
 }
