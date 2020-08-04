@@ -76,7 +76,7 @@ public class HijriTime {
         month1 = "";
         int j = i;
         switch (j) {
-        case 0:
+        case 12:
             month1 = context.getResources().getString(R.string.dhul_hijja);
             break;
         case 1:
