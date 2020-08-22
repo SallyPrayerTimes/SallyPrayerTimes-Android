@@ -113,6 +113,13 @@
     <string name="MuslimWorldLeague">Muslim World League</string>
     <string name="FederationofIslamicOrganizationsinFrance">Federation of Islamic Organizations in France</string>
     <string name="TheMinistryofAwqafandIslamicAffairsinKuwait">The Ministry of Awqaf and Islamic Affairs in Kuwait</string>
+    <string name="InstituteOfGeophysicsUniversityOfTehran">Institute of Geophysics University of Tehran</string>
+    <string name="ShiaIthnaAshariLevaInstituteQum">Shia Ithna-Ashari - Leva Institute - Qum</string>
+    <string name="GulfRegion">Gulf Region</string>
+    <string name="Qatar">Qatar</string>
+    <string name="MajlisUgamaIslamSingapuraSingapore">Majlis Ugama Islam Singapura</string>
+    <string name="DirectorateOfReligiousAffairsTurkey">Directorate of Religious Affairs - Turkey</string>
+    <string name="SpiritualAdministrationOfMuslimsOfRussia">Spiritual Administration of Muslims of Russia</string>
     
     <string name="standard">Standard</string>
     <string name="sayfi">Summery</string>
@@ -148,7 +155,7 @@
     <string name="notificationMessage">It is now time for prayer</string>
     
     <string name="app_info">Sally is a free and open source application to calculate Islamic prayer times for most of the world</string>
-    <string name="app_version">Version : Final 24.1.20</string>
+    <string name="app_version">Version : Final 21.8.20</string>
     <string name="app_contact">For more information contact me here:</string>
     <string name="app_site">http://www.sallyprayertimes.com</string>
     <string name="app_footer">Sally is a free and open source, and everyone has the right use and publication, just do not forget the sincere prayers</string>

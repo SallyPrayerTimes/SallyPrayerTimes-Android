@@ -28,6 +28,13 @@
         <item>@string/MuslimWorldLeague</item>
         <item>@string/FederationofIslamicOrganizationsinFrance</item>
         <item>@string/TheMinistryofAwqafandIslamicAffairsinKuwait</item>
+        <item>@string/InstituteOfGeophysicsUniversityOfTehran</item>
+        <item>@string/ShiaIthnaAshariLevaInstituteQum</item>
+        <item>@string/GulfRegion</item>
+        <item>@string/Qatar</item>
+        <item>@string/MajlisUgamaIslamSingapuraSingapore</item>
+        <item>@string/DirectorateOfReligiousAffairsTurkey</item>
+        <item>@string/SpiritualAdministrationOfMuslimsOfRussia</item>
     </string-array> 
     
     <string-array name="mazhab_array">

@@ -150,19 +150,8 @@ public class AthanServiceBroasdcastReceiver extends BroadcastReceiver{
     public static void startAthanNotification(int nextPrayerCode , Context context){
         try{
             String athanType = getAthanAlertType(nextPrayerCode);
-            if(athanType.equalsIgnoreCase("athan")){
+            if(athanType.equalsIgnoreCase("athan") || athanType.equalsIgnoreCase("vibration") || athanType.equalsIgnoreCase("notification")){
                 startNotification(nextPrayerCode , context , athanType);
-            }
-            else{
-                if(athanType.equalsIgnoreCase("vibration")){
-                    startNotification(nextPrayerCode , context , athanType);
-                }
-                else
-                {
-                    if(athanType.equalsIgnoreCase("notification")){
-                        startNotification(nextPrayerCode , context , athanType);
-                    }
-                }
             }
         }catch(Exception ex){}
     }

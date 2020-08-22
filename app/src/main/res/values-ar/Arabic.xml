@@ -108,8 +108,15 @@
     <string name="UnivOfIslamicScincesKarachi">جامعة العلوم الإسلامية - كراتشي</string>
     <string name="IslamicSocietyOfNorthAmerica">الجمعية الاسلامية لأميركا الشمالية</string>
     <string name="MuslimWorldLeague">رابطة العالم الإسلامي</string>
-    <string name="FederationofIslamicOrganizationsinFrance">اتحاد المنظمات الإسلامية في فرنسا</string>
-    <string name="TheMinistryofAwqafandIslamicAffairsinKuwait">وزارة الأوقاف والشؤون الإسلامية في الكويت</string>
+    <string name="FederationofIslamicOrganizationsinFrance">اتحاد المنظمات الإسلامية - فرنسا</string>
+    <string name="TheMinistryofAwqafandIslamicAffairsinKuwait">وزارة الأوقاف والشؤون الإسلامية - الكويت</string>
+    <string name="InstituteOfGeophysicsUniversityOfTehran">معهد الجيوفيزياء بجامعة طهران</string>
+    <string name="ShiaIthnaAshariLevaInstituteQum">الشيعة اثنا عشرية معهد ليفا - قم</string>
+    <string name="GulfRegion">منطقة الخليج</string>
+    <string name="Qatar">دولة قطر</string>
+    <string name="MajlisUgamaIslamSingapuraSingapore">مجلس أوجاما إسلام - سنغافورة</string>
+    <string name="DirectorateOfReligiousAffairsTurkey">مديرية الشؤون الدينية - تركيا</string>
+    <string name="SpiritualAdministrationOfMuslimsOfRussia">الإدارة الروحية لمسلمي - روسيا</string>
     
     <string name="standard">افتراضي</string>
     <string name="sayfi">صيفي</string>
@@ -145,7 +152,7 @@
     <string name="notificationMessage">قد حان موعد صلاة</string>
     
     <string name="app_info">صَلِّ هو برنامج مجاني و مفتوح المصدر لحساب اوقات الصلاة الاسلامية لمعظم دول العالم</string>
-    <string name="app_version">نسخة نهائية 24.1.20</string>
+    <string name="app_version">نسخة نهائية 21.8.20</string>
     <string name="app_contact">لمزيد من المعلومات الاتصال بي هنا:</string>
     <string name="app_site">http://www.sallyprayertimes.com</string>
     <string name="app_footer">صَلِّ هو برنامج مجاني و مفتوح المصدر و يحق لكل شخص استعماله و نشره, فقط لا تنسونا من خالص دعائكم</string>

@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Sally Android Studio.iml" filepath="$PROJECT_DIR$/Sally Android Studio.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Sally_Android_Studio.iml" filepath="$PROJECT_DIR$/.idea/modules/Sally_Android_Studio.iml" group="Sally_Android_Studio" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="Sally Android Studio/app" />
     </modules>
   </component>
 </project>

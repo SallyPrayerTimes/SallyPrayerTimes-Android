@@ -106,8 +106,15 @@
     <string name="UnivOfIslamicScincesKarachi">Univ des Sciences Islamiques Karachi</string>
     <string name="IslamicSocietyOfNorthAmerica">Societe islamique dAmerique du Nord</string>
     <string name="MuslimWorldLeague">Ligue musulmane mondiale</string>
-    <string name="FederationofIslamicOrganizationsinFrance">Fédération des organisations islamiques de France</string>
-    <string name="TheMinistryofAwqafandIslamicAffairsinKuwait">Le ministère des Awqaf et des affaires islamiques au Koweït</string>
+    <string name="FederationofIslamicOrganizationsinFrance">Federation des organisations islamiques de France</string>
+    <string name="TheMinistryofAwqafandIslamicAffairsinKuwait">Le ministere des Awqaf et des affaires islamiques au Koweit</string>
+    <string name="InstituteOfGeophysicsUniversityOfTehran">Institut de geophysique Universite de Teheran</string>
+    <string name="ShiaIthnaAshariLevaInstituteQum">Shia Ithna-Ashari - Institut Leva - Qum</string>
+    <string name="GulfRegion">Region du Golfe</string>
+    <string name="Qatar">Qatar</string>
+    <string name="MajlisUgamaIslamSingapuraSingapore">Majlis Ugama Islam Singapore</string>
+    <string name="DirectorateOfReligiousAffairsTurkey">Direction des affaires religieuses - Turquie</string>
+    <string name="SpiritualAdministrationOfMuslimsOfRussia">Administration spirituelle des musulmans de Russie</string>
     
     <string name="standard">Standard</string>
     <string name="sayfi">Résumé-Dété</string>
@@ -143,7 +150,7 @@
     <string name="notificationMessage">Il est maintenant temps de prier</string>
     
     <string name="app_info">Sally est une application gratuite et open source pour calculer les temps de prière islamique pour la plupart du monde</string>
-    <string name="app_version">Version : Final 24.1.20</string>
+    <string name="app_version">Version : Final 21.8.20</string>
     <string name="app_contact">Pour plus dinformations contactez-moi ici:</string>
     <string name="app_site">http://www.sallyprayertimes.com</string>
     <string name="app_footer">Sally est libre et open source, et tout le monde a le droit utilisation et la publication, il suffit de nous pas oublier pour les prières sincères</string>

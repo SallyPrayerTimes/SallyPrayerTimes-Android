@@ -102,13 +102,20 @@
     <string name="shafi3i">Shafi3i</string>
     <string name="hanafi">hanafi</string>
     
-    <string name="UmmAlQuraUniv">Università di Umm Al-Qura</string>
+    <string name="UmmAlQuraUniv">Universita di Umm Al-Qura</string>
     <string name="EgytionGeneralAuthorityofSurvey">Egiziano Autorità generale di indagine</string>
-    <string name="UnivOfIslamicScincesKarachi">Università di Scienze islamica Karachi</string>
-    <string name="IslamicSocietyOfNorthAmerica">Islamico società di America del Nord</string>
+    <string name="UnivOfIslamicScincesKarachi">Universita di Scienze islamica Karachi</string>
+    <string name="IslamicSocietyOfNorthAmerica">Islamico societa di America del Nord</string>
     <string name="MuslimWorldLeague">Lega musulmana mondiale</string>
     <string name="FederationofIslamicOrganizationsinFrance">Federazione delle organizzazioni islamiche in Francia</string>
     <string name="TheMinistryofAwqafandIslamicAffairsinKuwait">Il Ministero degli Awqaf e degli Affari islamici in Kuwait</string>
+    <string name="InstituteOfGeophysicsUniversityOfTehran">Istituto di geofisica Universita di Teheran</string>
+    <string name="ShiaIthnaAshariLevaInstituteQum">Shia Ithna-Ashari - Leva Institute - Qum</string>
+    <string name="GulfRegion">Regione del Golfo</string>
+    <string name="Qatar">Qatar</string>
+    <string name="MajlisUgamaIslamSingapuraSingapore">Majlis Ugama Islam Singapura</string>
+    <string name="DirectorateOfReligiousAffairsTurkey">Direzione degli affari religiosi - Turchia</string>
+    <string name="SpiritualAdministrationOfMuslimsOfRussia">Amministrazione spirituale dei musulmani della Russia</string>
     
     <string name="standard">Normale</string>
     <string name="sayfi">Summery - Estate</string>
@@ -144,7 +151,7 @@
     <string name="notificationMessage">ora è tempo di pregare</string>
     
     <string name="app_info">Sally è un programma gratuito e open source per calcolare i tempi di preghiera islamica per la maggior parte del mondo</string>
-    <string name="app_version">Versione : Final 24.1.20</string>
+    <string name="app_version">Versione : Final 21.8.20</string>
     <string name="app_contact">Per maggiori informazioni contattatemi qui:</string>
     <string name="app_site">http://www.sallyprayertimes.com</string>
     <string name="app_footer">Sally è un libero e open source, e ognuno ha il diritto di uso e pubblicazione, basta non ti dimenticare di noi nelle vostre sincere preghiere </string>

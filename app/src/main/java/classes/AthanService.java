@@ -84,7 +84,7 @@ public class AthanService extends Service{
 		PreferenceHandler.getSingleton().setContext(getApplicationContext());
 		AthanService.prayerTimes = new PrayersTimes(Calendar.getInstance() , PreferenceHandler.getSingleton().getUserConfig());
 
-		AthanService.prayerTimesInMinutes = new int[6];
+		AthanService.prayerTimesInMinutes = new int[6];//initialize
 		AthanService.prayerTimesInMinutes = AthanService.prayerTimes.getAllPrayrTimesInMinutes();//get all prayer times in minutes
 
 		AthanService.calendar = Calendar.getInstance();

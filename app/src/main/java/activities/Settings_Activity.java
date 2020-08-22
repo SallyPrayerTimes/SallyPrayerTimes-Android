@@ -383,44 +383,72 @@ public class Settings_Activity extends Activity implements LocationListener{
 					this.city_label.setText(ArabicReshape.reshape(getResources().getString(R.string.city)));
 					this.city_value.setText(ArabicReshape.reshape(UserConfig.getSingleton().getCity()));
 				}
-				
+
+				this.calculationMethod_label.setText(ArabicReshape.reshape(getResources().getString(R.string.calculationMethod)));
 				if(UserConfig.getSingleton().getCalculationMethod().equalsIgnoreCase("UmmAlQuraUniv")){
-					this.calculationMethod_label.setText(ArabicReshape.reshape(getResources().getString(R.string.calculationMethod)));
 					this.calculationMethod_value.setText(ArabicReshape.reshape(getResources().getString(R.string.UmmAlQuraUniv)));
 				}else{
 					if(UserConfig.getSingleton().getCalculationMethod().equalsIgnoreCase("EgytionGeneralAuthorityofSurvey")){
-						this.calculationMethod_label.setText(ArabicReshape.reshape(getResources().getString(R.string.calculationMethod)));
 						this.calculationMethod_value.setText(ArabicReshape.reshape(getResources().getString(R.string.EgytionGeneralAuthorityofSurvey)));
 					}else{
 						if(UserConfig.getSingleton().getCalculationMethod().equalsIgnoreCase("UnivOfIslamicScincesKarachi")){
-							this.calculationMethod_label.setText(ArabicReshape.reshape(getResources().getString(R.string.calculationMethod)));
 							this.calculationMethod_value.setText(ArabicReshape.reshape(getResources().getString(R.string.UnivOfIslamicScincesKarachi)));
 						}else{
 							if(UserConfig.getSingleton().getCalculationMethod().equalsIgnoreCase("IslamicSocietyOfNorthAmerica")){
-								this.calculationMethod_label.setText(ArabicReshape.reshape(getResources().getString(R.string.calculationMethod)));
 								this.calculationMethod_value.setText(ArabicReshape.reshape(getResources().getString(R.string.IslamicSocietyOfNorthAmerica)));
 							}
 							else{
 								if(UserConfig.getSingleton().getCalculationMethod().equalsIgnoreCase("MuslimWorldLeague"))
 								{
-                                    this.calculationMethod_label.setText(ArabicReshape.reshape(getResources().getString(R.string.calculationMethod)));
                                     this.calculationMethod_value.setText(ArabicReshape.reshape(getResources().getString(R.string.MuslimWorldLeague)));
                                 }
 								else
 								    {
                                         if(UserConfig.getSingleton().getCalculationMethod().equalsIgnoreCase("FederationofIslamicOrganizationsinFrance")){
-                                            this.calculationMethod_label.setText(ArabicReshape.reshape(getResources().getString(R.string.calculationMethod)));
                                             this.calculationMethod_value.setText(ArabicReshape.reshape(getResources().getString(R.string.FederationofIslamicOrganizationsinFrance)));
                                         }
                                         else
                                             {
                                                 if(UserConfig.getSingleton().getCalculationMethod().equalsIgnoreCase("TheMinistryofAwqafandIslamicAffairsinKuwait")){
-                                                    this.calculationMethod_label.setText(ArabicReshape.reshape(getResources().getString(R.string.calculationMethod)));
                                                     this.calculationMethod_value.setText(ArabicReshape.reshape(getResources().getString(R.string.TheMinistryofAwqafandIslamicAffairsinKuwait)));
                                                 }
                                                 else{
-                                                    this.calculationMethod_label.setText(ArabicReshape.reshape(getResources().getString(R.string.calculationMethod)));
-                                                    this.calculationMethod_value.setText(ArabicReshape.reshape(getResources().getString(R.string.MuslimWorldLeague)));
+													if(UserConfig.getSingleton().getCalculationMethod().equalsIgnoreCase("InstituteOfGeophysicsUniversityOfTehran")){
+														this.calculationMethod_value.setText(ArabicReshape.reshape(getResources().getString(R.string.InstituteOfGeophysicsUniversityOfTehran)));
+													}
+													else{
+														if(UserConfig.getSingleton().getCalculationMethod().equalsIgnoreCase("ShiaIthnaAshariLevaInstituteQum")){
+															this.calculationMethod_value.setText(ArabicReshape.reshape(getResources().getString(R.string.ShiaIthnaAshariLevaInstituteQum)));
+														}
+														else{
+															if(UserConfig.getSingleton().getCalculationMethod().equalsIgnoreCase("GulfRegion")){
+																this.calculationMethod_value.setText(ArabicReshape.reshape(getResources().getString(R.string.GulfRegion)));
+															}
+															else{
+																if(UserConfig.getSingleton().getCalculationMethod().equalsIgnoreCase("Qatar")){
+																	this.calculationMethod_value.setText(ArabicReshape.reshape(getResources().getString(R.string.Qatar)));
+																}
+																else{
+																	if(UserConfig.getSingleton().getCalculationMethod().equalsIgnoreCase("MajlisUgamaIslamSingapuraSingapore")){
+																		this.calculationMethod_value.setText(ArabicReshape.reshape(getResources().getString(R.string.MajlisUgamaIslamSingapuraSingapore)));
+																	}
+																	else{
+																		if(UserConfig.getSingleton().getCalculationMethod().equalsIgnoreCase("DirectorateOfReligiousAffairsTurkey")){
+																			this.calculationMethod_value.setText(ArabicReshape.reshape(getResources().getString(R.string.DirectorateOfReligiousAffairsTurkey)));
+																		}
+																		else{
+																			if(UserConfig.getSingleton().getCalculationMethod().equalsIgnoreCase("SpiritualAdministrationOfMuslimsOfRussia")){
+																				this.calculationMethod_value.setText(ArabicReshape.reshape(getResources().getString(R.string.SpiritualAdministrationOfMuslimsOfRussia)));
+																			}
+																			else{
+																				this.calculationMethod_value.setText(ArabicReshape.reshape(getResources().getString(R.string.MuslimWorldLeague)));
+																			}
+																		}
+																	}
+																}
+															}
+														}
+													}
                                                 }
                                             }
                                     }
@@ -554,44 +582,72 @@ public class Settings_Activity extends Activity implements LocationListener{
 						this.city_label.setText(getResources().getString(R.string.city));
 						this.city_value.setText(UserConfig.getSingleton().getCity());
 					}
-				
+
+				this.calculationMethod_label.setText(getResources().getString(R.string.calculationMethod));
 				if(UserConfig.getSingleton().getCalculationMethod().equalsIgnoreCase("UmmAlQuraUniv")){
-					this.calculationMethod_label.setText(getResources().getString(R.string.calculationMethod));
 					this.calculationMethod_value.setText(getResources().getString(R.string.UmmAlQuraUniv));
 				}else{
 					if(UserConfig.getSingleton().getCalculationMethod().equalsIgnoreCase("EgytionGeneralAuthorityofSurvey")){
-						this.calculationMethod_label.setText(getResources().getString(R.string.calculationMethod));
 						this.calculationMethod_value.setText(getResources().getString(R.string.EgytionGeneralAuthorityofSurvey));
 					}else{
 						if(UserConfig.getSingleton().getCalculationMethod().equalsIgnoreCase("UnivOfIslamicScincesKarachi")){
-							this.calculationMethod_label.setText(getResources().getString(R.string.calculationMethod));
 							this.calculationMethod_value.setText(getResources().getString(R.string.UnivOfIslamicScincesKarachi));
 						}else{
 							if(UserConfig.getSingleton().getCalculationMethod().equalsIgnoreCase("IslamicSocietyOfNorthAmerica")){
-								this.calculationMethod_label.setText(getResources().getString(R.string.calculationMethod));
 								this.calculationMethod_value.setText(getResources().getString(R.string.IslamicSocietyOfNorthAmerica));
 							}
 							else{
                                 if(UserConfig.getSingleton().getCalculationMethod().equalsIgnoreCase("MuslimWorldLeague"))
                                 {
-                                    this.calculationMethod_label.setText(getResources().getString(R.string.calculationMethod));
                                     this.calculationMethod_value.setText(getResources().getString(R.string.MuslimWorldLeague));
                                 }
                                 else
                                 {
                                     if(UserConfig.getSingleton().getCalculationMethod().equalsIgnoreCase("FederationofIslamicOrganizationsinFrance")){
-                                        this.calculationMethod_label.setText(getResources().getString(R.string.calculationMethod));
                                         this.calculationMethod_value.setText(getResources().getString(R.string.FederationofIslamicOrganizationsinFrance));
                                     }
                                     else
                                     {
                                         if(UserConfig.getSingleton().getCalculationMethod().equalsIgnoreCase("TheMinistryofAwqafandIslamicAffairsinKuwait")){
-                                            this.calculationMethod_label.setText(getResources().getString(R.string.calculationMethod));
                                             this.calculationMethod_value.setText(getResources().getString(R.string.TheMinistryofAwqafandIslamicAffairsinKuwait));
                                         }
                                         else{
-                                            this.calculationMethod_label.setText(getResources().getString(R.string.calculationMethod));
-                                            this.calculationMethod_value.setText(getResources().getString(R.string.MuslimWorldLeague));
+											if(UserConfig.getSingleton().getCalculationMethod().equalsIgnoreCase("InstituteOfGeophysicsUniversityOfTehran")){
+												this.calculationMethod_value.setText(getResources().getString(R.string.InstituteOfGeophysicsUniversityOfTehran));
+											}
+											else{
+												if(UserConfig.getSingleton().getCalculationMethod().equalsIgnoreCase("ShiaIthnaAshariLevaInstituteQum")){
+													this.calculationMethod_value.setText(getResources().getString(R.string.ShiaIthnaAshariLevaInstituteQum));
+												}
+												else{
+													if(UserConfig.getSingleton().getCalculationMethod().equalsIgnoreCase("GulfRegion")){
+														this.calculationMethod_value.setText(getResources().getString(R.string.GulfRegion));
+													}
+													else{
+														if(UserConfig.getSingleton().getCalculationMethod().equalsIgnoreCase("Qatar")){
+															this.calculationMethod_value.setText(getResources().getString(R.string.Qatar));
+														}
+														else{
+															if(UserConfig.getSingleton().getCalculationMethod().equalsIgnoreCase("MajlisUgamaIslamSingapuraSingapore")){
+																this.calculationMethod_value.setText(getResources().getString(R.string.MajlisUgamaIslamSingapuraSingapore));
+															}
+															else{
+																if(UserConfig.getSingleton().getCalculationMethod().equalsIgnoreCase("DirectorateOfReligiousAffairsTurkey")){
+																	this.calculationMethod_value.setText(getResources().getString(R.string.DirectorateOfReligiousAffairsTurkey));
+																}
+																else{
+																	if(UserConfig.getSingleton().getCalculationMethod().equalsIgnoreCase("SpiritualAdministrationOfMuslimsOfRussia")){
+																		this.calculationMethod_value.setText(getResources().getString(R.string.SpiritualAdministrationOfMuslimsOfRussia));
+																	}
+																	else{
+																		this.calculationMethod_value.setText(getResources().getString(R.string.MuslimWorldLeague));
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
                                         }
                                     }
                                 }
@@ -1073,7 +1129,35 @@ public class Settings_Activity extends Activity implements LocationListener{
                                                     UserConfig.getSingleton().setCalculationMethod("TheMinistryofAwqafandIslamicAffairsinKuwait");
                                                 }
                                                 else {
-                                                    UserConfig.getSingleton().setCalculationMethod("MuslimWorldLeague");
+													if(finalCalculationMethode.equalsIgnoreCase(ArabicReshape.reshape(getResources().getString(R.string.InstituteOfGeophysicsUniversityOfTehran)))){
+														UserConfig.getSingleton().setCalculationMethod("InstituteOfGeophysicsUniversityOfTehran");
+													}else{
+														if(finalCalculationMethode.equalsIgnoreCase(ArabicReshape.reshape(getResources().getString(R.string.ShiaIthnaAshariLevaInstituteQum)))){
+															UserConfig.getSingleton().setCalculationMethod("ShiaIthnaAshariLevaInstituteQum");
+														}else{
+															if(finalCalculationMethode.equalsIgnoreCase(ArabicReshape.reshape(getResources().getString(R.string.GulfRegion)))){
+																UserConfig.getSingleton().setCalculationMethod("GulfRegion");
+															}else{
+																if(finalCalculationMethode.equalsIgnoreCase(ArabicReshape.reshape(getResources().getString(R.string.Qatar)))){
+																	UserConfig.getSingleton().setCalculationMethod("Qatar");
+																}else{
+																	if(finalCalculationMethode.equalsIgnoreCase(ArabicReshape.reshape(getResources().getString(R.string.MajlisUgamaIslamSingapuraSingapore)))){
+																		UserConfig.getSingleton().setCalculationMethod("MajlisUgamaIslamSingapuraSingapore");
+																	}else{
+																		if(finalCalculationMethode.equalsIgnoreCase(ArabicReshape.reshape(getResources().getString(R.string.DirectorateOfReligiousAffairsTurkey)))){
+																			UserConfig.getSingleton().setCalculationMethod("DirectorateOfReligiousAffairsTurkey");
+																		}else{
+																			if(finalCalculationMethode.equalsIgnoreCase(ArabicReshape.reshape(getResources().getString(R.string.SpiritualAdministrationOfMuslimsOfRussia)))){
+																				UserConfig.getSingleton().setCalculationMethod("SpiritualAdministrationOfMuslimsOfRussia");
+																			}else{
+																				UserConfig.getSingleton().setCalculationMethod("MuslimWorldLeague");
+																			}
+																		}
+																	}
+																}
+															}
+														}
+													}
                                                 }
                                             }
 										}
@@ -1101,7 +1185,35 @@ public class Settings_Activity extends Activity implements LocationListener{
                                             if(finalCalculationMethode.equalsIgnoreCase(getResources().getString(R.string.TheMinistryofAwqafandIslamicAffairsinKuwait))){
                                                 UserConfig.getSingleton().setCalculationMethod("TheMinistryofAwqafandIslamicAffairsinKuwait");
                                             }else{
-                                                UserConfig.getSingleton().setCalculationMethod("MuslimWorldLeague");
+												if(finalCalculationMethode.equalsIgnoreCase(getResources().getString(R.string.InstituteOfGeophysicsUniversityOfTehran))){
+													UserConfig.getSingleton().setCalculationMethod("InstituteOfGeophysicsUniversityOfTehran");
+												}else{
+													if(finalCalculationMethode.equalsIgnoreCase(getResources().getString(R.string.ShiaIthnaAshariLevaInstituteQum))){
+														UserConfig.getSingleton().setCalculationMethod("ShiaIthnaAshariLevaInstituteQum");
+													}else{
+														if(finalCalculationMethode.equalsIgnoreCase(getResources().getString(R.string.GulfRegion))){
+															UserConfig.getSingleton().setCalculationMethod("GulfRegion");
+														}else{
+															if(finalCalculationMethode.equalsIgnoreCase(getResources().getString(R.string.Qatar))){
+																UserConfig.getSingleton().setCalculationMethod("Qatar");
+															}else{
+																if(finalCalculationMethode.equalsIgnoreCase(getResources().getString(R.string.MajlisUgamaIslamSingapuraSingapore))){
+																	UserConfig.getSingleton().setCalculationMethod("MajlisUgamaIslamSingapuraSingapore");
+																}else{
+																	if(finalCalculationMethode.equalsIgnoreCase(getResources().getString(R.string.DirectorateOfReligiousAffairsTurkey))){
+																		UserConfig.getSingleton().setCalculationMethod("DirectorateOfReligiousAffairsTurkey");
+																	}else{
+																		if(finalCalculationMethode.equalsIgnoreCase(getResources().getString(R.string.SpiritualAdministrationOfMuslimsOfRussia))){
+																			UserConfig.getSingleton().setCalculationMethod("SpiritualAdministrationOfMuslimsOfRussia");
+																		}else{
+																			UserConfig.getSingleton().setCalculationMethod("MuslimWorldLeague");
+																		}
+																	}
+																}
+															}
+														}
+													}
+												}
                                             }
                                         }
 									}		
