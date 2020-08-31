@@ -4,7 +4,7 @@ Sally Prayer Times is a free and open source application to calculate Islamic pr
 
 http://sallyprayertimes.com/
 
-bibali1980@gmail.com
+
 
 Sally is a free and open source, and everyone has the right use and publication
 
