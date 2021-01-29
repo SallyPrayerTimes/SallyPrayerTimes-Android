@@ -19,23 +19,11 @@
  *******************************************************************************/
 package activities;
 
-import java.io.IOException;
-import java.text.DecimalFormat;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Locale;
-import java.util.TimeZone;
-
-import classes.PreferenceHandler;
-import widget.MyWidgetProvider;
-
 import android.Manifest;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.app.TabActivity;
-import android.appwidget.AppWidgetManager;
-import android.content.ComponentName;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
@@ -53,34 +41,44 @@ import android.location.LocationListener;
 import android.location.LocationManager;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.net.Uri;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
-import android.support.v4.app.ActivityCompat;
+import android.os.PowerManager;
 import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.inputmethod.InputMethodManager;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.sallyprayertimes.R;
+
+import java.io.IOException;
+import java.text.DecimalFormat;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
+import java.util.TimeZone;
+
 import classes.ArabicReshape;
 import classes.AthanService;
 import classes.City;
 import classes.DatabaseManager;
+import classes.PreferenceHandler;
 import classes.UserConfig;
-import widget.MyWidgetProvider2;
-import widget.MyWidgetProviderService;
-import widget.MyWidgetProviderService2;
-
-import android.net.Uri;
-import android.os.Build;
-import android.os.Bundle;
-import android.os.Handler;
-import android.os.PowerManager;
-
-import com.sally.R;
+import widget.LargeWidgetProvider;
+import widget.SmallWidgetProvider;
+import widget.LargeWidgetProviderService;
+import widget.SmallWidgetProviderService;
 
 public class Settings_Activity extends Activity implements LocationListener{
 
@@ -105,6 +103,7 @@ public class Settings_Activity extends Activity implements LocationListener{
 	private Context context;
 	private AsyncTask<Void, Void, Location> findLocationAsynkTask;
 	private AsyncTask<Void, Void, String[]> getCountriesAsynkTask;
+
 	/*
 	 * Location*/
 	private TableRow gps_location_row;
@@ -175,6 +174,7 @@ public class Settings_Activity extends Activity implements LocationListener{
 	private TextView language_settings_title;
 	private TextView battery_settings_title;
 	private TextView time_adjustment_settings_title;
+	private TextView donation_settings_title;
 	
 	private AlertDialog alertDialog;
 	
@@ -227,8 +227,56 @@ public class Settings_Activity extends Activity implements LocationListener{
 	private TextView widget_background_color_settings_title;
 	private String finalColor = "blue";
 
+	/*
+	 * Donation*/
+	private TableRow donation_row;
+	private TextView donation_label;
+
     private Typeface tf;
-	
+
+	private static ArrayList<City> finalCities= new ArrayList<City>();
+
+    public ArrayList<City> getCitiesArray(){
+		if(Settings_Activity.finalCities.size() > 0)
+		{
+			return Settings_Activity.finalCities;
+		}
+		else {
+			DatabaseManager myDbHelper = new DatabaseManager(context);
+			try {
+				myDbHelper.createDataBase();
+			} catch (IOException e) {
+			}
+			try {
+				SQLiteDatabase db = myDbHelper.getReadableDatabase();
+				myDbHelper.openDataBase();
+				Cursor c = db.rawQuery("SELECT _id,city,latitude,longitude,timezone FROM sally", null);
+				while (c.moveToNext()) { //for (c.moveToFirst(); !c.isAfterLast(); c.moveToNext())
+					City city = new City(c.getString(1));
+					city.setState(c.getString(0));
+					city.setName(c.getString(1));
+					city.setLatitude(c.getString(2));
+					city.setLongitude(c.getString(3));
+					city.setTimezone(c.getString(4));
+					Settings_Activity.finalCities.add(city);
+				}
+				c.close();
+				myDbHelper.close();
+				return Settings_Activity.finalCities;
+			} catch (SQLException e) {
+				return Settings_Activity.finalCities;
+			}
+		}
+    }
+
+	public static void hideSoftKeyboard(Activity activity) {
+		InputMethodManager inputMethodManager =
+				(InputMethodManager) activity.getSystemService(
+						Activity.INPUT_METHOD_SERVICE);
+		inputMethodManager.hideSoftInputFromWindow(
+				activity.getCurrentFocus().getWindowToken(), 0);
+	}
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -237,7 +285,49 @@ public class Settings_Activity extends Activity implements LocationListener{
 		this.context=this;
 		this.locationManager =(LocationManager) getSystemService(Context.LOCATION_SERVICE);
 	    this.locationListener = new Settings_Activity();
-	    //Location Setting
+
+	    //Auto Complete Location Search
+        AutoCompleteTextView autoCompleteTextView = (AutoCompleteTextView) findViewById(R.id.autocomplete_location);
+        ArrayAdapter<City> adapter = new ArrayAdapter<City>(this, R.layout.auto_complete_item, getCitiesArray());
+        autoCompleteTextView.setAdapter(adapter);
+        autoCompleteTextView.setThreshold(1);
+        autoCompleteTextView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
+                City city = (City) arg0.getAdapter().getItem(arg2);
+                //Toast.makeText(Settings_Activity.this, "Clicked " + arg2 + " name: " + city.getName(), Toast.LENGTH_LONG).show();
+				latitude_fromList = Double.valueOf(city.getLatitude())/10000;
+				longitude_fromList = Double.valueOf(city.getLongitude())/10000;
+				finalCity = (String)city.getName();
+				finalCountry = (String)city.getState();
+
+				TimeZone timezone = TimeZone.getDefault();
+				String TimeZoneName = timezone.getDisplayName();
+				int offsetInMillis = timezone.getOffset(System.currentTimeMillis());
+				String offset = String.format("%02d.%02d", Math.abs(offsetInMillis / 3600000), Math.abs((offsetInMillis / 60000) % 60));
+				finalTimeZone = (offsetInMillis >= 0 ? "" : "-") + offset;
+
+				UserConfig.getSingleton().setCountry(finalCountry);
+				UserConfig.getSingleton().setCity(finalCity);
+				UserConfig.getSingleton().setTimezone(finalTimeZone);
+				UserConfig.getSingleton().setLongitude(String.valueOf(longitude_fromList));
+				UserConfig.getSingleton().setLatitude(String.valueOf(latitude_fromList));
+
+				try{
+					setUserConfig();
+					refreshService();
+				}
+				catch(Exception e){}
+				city_value.setText(finalCity);
+				country_value.setText(finalCountry);
+				gps_location_value.setText(finalCountry+" / "+finalCity);
+				timeZone_value.setText(finalTimeZone);
+				hideSoftKeyboard(Settings_Activity.this);
+            }
+        });
+
+
+        //Location Setting
 		this.gps_location_row = (TableRow)findViewById(R.id.row_gps_location);
 		this.gps_location_label = (TextView)findViewById(R.id.gps_location_label);
 		this.gps_location_value = (TextView)findViewById(R.id.gps_location_value);
@@ -299,6 +389,8 @@ public class Settings_Activity extends Activity implements LocationListener{
 		this.athan_settings_title = (TextView)findViewById(R.id.athan_settings_title);
 		this.language_settings_title = (TextView)findViewById(R.id.language_settings_title);
 		this.battery_settings_title = (TextView)findViewById(R.id.battery_settings_title);
+		this.battery_settings_title = (TextView)findViewById(R.id.battery_settings_title);
+		this.donation_settings_title = findViewById(R.id.donation_settings_title);
 		this.time_adjustment_settings_title = (TextView)findViewById(R.id.time_adjustment_settings_title);
 		this.widget_background_color_settings_title = (TextView)findViewById(R.id.widget_settings_title);
 		//Battery Settings
@@ -309,6 +401,10 @@ public class Settings_Activity extends Activity implements LocationListener{
 		this.widget_background_color_row = (TableRow)findViewById(R.id.row_widget_background_color);
 		this.widget_background_color_label = (TextView)findViewById(R.id.widget_background_color_label);
 		this.widget_background_color_value = (TextView)findViewById(R.id.widget_background_color_value);
+
+		// donation
+		donation_row = findViewById(R.id.row_donation);
+		donation_label = findViewById(R.id.donation_label);
 		
 		setDefaultLanguage(UserConfig.getSingleton().getLanguage());
 		
@@ -337,6 +433,7 @@ public class Settings_Activity extends Activity implements LocationListener{
 				this.widget_background_color_value.setTypeface(tf);
 				this.battery_label.setTypeface(tf);
 				this.battery_value.setTypeface(tf);
+				this.donation_label.setTypeface(tf);
 				this.athan_label.setTypeface(tf);
 				this.athan_value.setTypeface(tf);
 				this.time12or24_label.setTypeface(tf);
@@ -358,6 +455,7 @@ public class Settings_Activity extends Activity implements LocationListener{
 				this.athan_settings_title.setTypeface(tf);
 				this.language_settings_title.setTypeface(tf);
 				this.battery_settings_title.setTypeface(tf);
+				this.donation_settings_title.setTypeface(tf);
 				this.time_adjustment_settings_title.setTypeface(tf);
 				
 				this.location_settings_title.setText(ArabicReshape.reshape(getResources().getString(R.string.location)));
@@ -365,6 +463,7 @@ public class Settings_Activity extends Activity implements LocationListener{
 				this.athan_settings_title.setText(ArabicReshape.reshape(getResources().getString(R.string.athan)));
 				this.language_settings_title.setText(ArabicReshape.reshape(getResources().getString(R.string.Language)));
 				this.battery_settings_title.setText(ArabicReshape.reshape(getResources().getString(R.string.battery)));
+				this.donation_settings_title.setText(ArabicReshape.reshape(getResources().getString(R.string.donation)));
 				this.time_adjustment_settings_title.setText(ArabicReshape.reshape(getResources().getString(R.string.time_adjustment)));
 				
 				if(UserConfig.getSingleton().getCountry().equalsIgnoreCase("none") || UserConfig.getSingleton().getCity().equalsIgnoreCase("none")){
@@ -543,7 +642,9 @@ public class Settings_Activity extends Activity implements LocationListener{
 				this.widget_background_color_label.setText(ArabicReshape.reshape(getResources().getString(R.string.widget_background_color)));
 				this.widget_background_color_value.setText(ArabicReshape.reshape(UserConfig.getSingleton().getWidget_background_color()));
 				this.widget_background_color_settings_title.setText(ArabicReshape.reshape(getResources().getString(R.string.widget)));
-						
+
+				this.donation_label.setText(ArabicReshape.reshape(getResources().getString(R.string.donation_text)));
+
 				this.fajr_time_label.setText(ArabicReshape.reshape(getResources().getString(R.string.fajr)));
 				this.fajr_time_value.setText(UserConfig.getSingleton().getFajr_time());
 				this.shorouk_time_label.setText(ArabicReshape.reshape(getResources().getString(R.string.shorouk)));
@@ -564,6 +665,7 @@ public class Settings_Activity extends Activity implements LocationListener{
 				this.athan_settings_title.setText(getResources().getString(R.string.athan));
 				this.language_settings_title.setText(getResources().getString(R.string.Language));
 				this.battery_settings_title.setText(getResources().getString(R.string.battery));
+				this.donation_settings_title.setText(getResources().getString(R.string.donation));
 				this.time_adjustment_settings_title.setText(getResources().getString(R.string.time_adjustment));
 				
 				if(UserConfig.getSingleton().getCountry().equalsIgnoreCase("none") || UserConfig.getSingleton().getCity().equalsIgnoreCase("none")){
@@ -744,6 +846,8 @@ public class Settings_Activity extends Activity implements LocationListener{
 					this.battery_label.setText(getResources().getString(R.string.battery_optimization));
 					this.battery_value.setText(ArabicReshape.reshape(getResources().getString(R.string.optimized)));
 				}
+
+				this.donation_label.setText(getResources().getString(R.string.donation_text));
 			
 				this.fajr_time_label.setText(getResources().getString(R.string.fajr));
 				this.fajr_time_value.setText(UserConfig.getSingleton().getFajr_time());
@@ -864,35 +968,35 @@ public class Settings_Activity extends Activity implements LocationListener{
 				FajrTimeHandler();
 			}
 		});
-		
+
 		this.shorouk_time_row.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				ShoroukTimeHandler();
 			}
 		});
-		
+
 		this.duhr_time_row.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				DuhrTimeHandler();
 			}
 		});
-		
+
 		this.asr_time_row.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				AsrTimeHandler();
 			}
 		});
-		
+
 		this.maghrib_time_row.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				MaghribTimeHandler();
 			}
 		});
-		
+
 		this.ishaa_time_row.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -904,6 +1008,13 @@ public class Settings_Activity extends Activity implements LocationListener{
 			@Override
 			public void onClick(View v) {
 				BatteryHandler();
+			}
+		});
+
+		donation_row.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				DonationHandelr();
 			}
 		});
 
@@ -940,6 +1051,7 @@ public class Settings_Activity extends Activity implements LocationListener{
 
 					setUserConfig();
 					refreshService();
+					updateWidget();
 				}
 				catch(Exception e){}
 				widget_background_color_value.setText(finalColor);
@@ -1003,6 +1115,7 @@ public class Settings_Activity extends Activity implements LocationListener{
 	protected void onActivityResult(int requestCode, int resultCode, Intent data)
 	{
 		super.onActivityResult(requestCode, resultCode, data);
+
 		// check if the request code is same as what is passed  here it is 70
 		if(requestCode == 70)
 		{
@@ -1622,7 +1735,7 @@ public class Settings_Activity extends Activity implements LocationListener{
 		 Cursor c = db.rawQuery("SELECT city,latitude,longitude,timezone FROM sally WHERE _id='"+finalCountry+"'", null);
 		 this.cities = new ArrayList<City>();
 		 for (c.moveToFirst(); !c.isAfterLast(); c.moveToNext()){
-			 City city = new City();
+			 City city = new City(c.getString(0));
 			 city.setName(c.getString(0));
 			 city.setLatitude(c.getString(1));
 			 city.setLongitude(c.getString(2));
@@ -1780,7 +1893,7 @@ public class Settings_Activity extends Activity implements LocationListener{
 			 Cursor c = db.rawQuery("SELECT city,latitude,longitude,timezone FROM sally WHERE _id='"+finalCountry+"'", null);
 			 this.cities = new ArrayList<City>();
 			 for (c.moveToFirst(); !c.isAfterLast(); c.moveToNext()){
-				 City city = new City();
+				 City city = new City(c.getString(0));
 				 city.setName(c.getString(0));
 				 city.setLatitude(c.getString(1));
 				 city.setLongitude(c.getString(2));
@@ -2199,27 +2312,27 @@ public class Settings_Activity extends Activity implements LocationListener{
 	public void FajrTimeHandler(){
 		timesAdjustmentHandler(getResources().getString(R.string.fajr) , fajr_time_label , fajr_time_value , "fajr");
 	}
-	
+
    public void ShoroukTimeHandler(){
 	   timesAdjustmentHandler(getResources().getString(R.string.shorouk) , shorouk_time_label , shorouk_time_value , "shorouk");
 	}
-   
+
    public void DuhrTimeHandler(){
 	   timesAdjustmentHandler(getResources().getString(R.string.duhr) , duhr_time_label , duhr_time_value , "duhr");
 	}
-   
+
    public void AsrTimeHandler(){
 	   timesAdjustmentHandler(getResources().getString(R.string.asr) , asr_time_label , asr_time_value , "asr");
 	}
-   
+
    public void MaghribTimeHandler(){
 	   timesAdjustmentHandler(getResources().getString(R.string.maghrib) , maghrib_time_label , maghrib_time_value , "maghrib");
 	}
-   
+
    public void IshaaTimeHandler(){
 	   timesAdjustmentHandler(getResources().getString(R.string.ishaa) , ishaa_time_label , ishaa_time_value , "ishaa");
    }
-	
+
 	public void timesAdjustmentHandler(final String title , final TextView textViewLabel , final TextView textViewValue , final String property){
 		AlertDialog.Builder builder = new AlertDialog.Builder(this, R.style.AlertDialogCustom);
 		if(UserConfig.getSingleton().getLanguage().equalsIgnoreCase("ar")){
@@ -2229,11 +2342,11 @@ public class Settings_Activity extends Activity implements LocationListener{
 	    		builder.setTitle(title);
 	    	}
 		builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-			
+
 			@Override
 			public void onClick(DialogInterface dialog, int id) {
 				String value = editText.getText().toString();
-				try{						
+				try{
 					if(!value.trim().equals("")){
 						if(property.equalsIgnoreCase("fajr")){
 							UserConfig.getSingleton().setFajr_time(value);
@@ -2281,9 +2394,9 @@ public class Settings_Activity extends Activity implements LocationListener{
 	    this.upButton = (Button) view.findViewById(R.id.upButton);
 		this.downButton = (Button) view.findViewById(R.id.downButton);
 		this.editText = (EditText) view.findViewById(R.id.numberEditText);
-		
+
 		this.editText.setText("0");
-		
+
 		this.upButton.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -2330,13 +2443,17 @@ public class Settings_Activity extends Activity implements LocationListener{
 	}
 	
 	public void refreshService(){
-		stopService(new Intent(this,AthanService.class));
 		startService(new Intent(this,AthanService.class));
 	}
 	
 	public void updateWidget(){
-		this.startService(new Intent(this, MyWidgetProviderService.class));
-		this.startService(new Intent(this, MyWidgetProviderService2.class));
+		if(LargeWidgetProvider.isEnabled){
+			this.startService(new Intent(this, LargeWidgetProviderService.class));
+		}
+
+		if(SmallWidgetProvider.isEnabled){
+			this.startService(new Intent(this, SmallWidgetProviderService.class));
+		}
 	}
 	
 	private void setDefaultLanguage(String language){
@@ -2374,5 +2491,10 @@ public class Settings_Activity extends Activity implements LocationListener{
 	    NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
 	    return activeNetworkInfo != null && activeNetworkInfo.isConnected();
 	}
-	
+
+	public void DonationHandelr(){
+		Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://paypal.me/bibali1980"));
+		startActivity(browserIntent);
+	}
+
 }

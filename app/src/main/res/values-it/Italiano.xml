@@ -151,12 +151,12 @@
     <string name="notificationMessage">ora è tempo di pregare</string>
     
     <string name="app_info">Sally è un programma gratuito e open source per calcolare i tempi di preghiera islamica per la maggior parte del mondo</string>
-    <string name="app_version">Versione : Final 21.8.20</string>
+    <string name="app_version">Versione : Final 16.01.21</string>
     <string name="app_contact">Per maggiori informazioni contattatemi qui:</string>
     <string name="app_site">http://www.sallyprayertimes.com</string>
     <string name="app_footer">Sally è un libero e open source, e ognuno ha il diritto di uso e pubblicazione, basta non ti dimenticare di noi nelle vostre sincere preghiere </string>
 
-    <string name="no_network_provider_is_enabled">Nessun provider di rete abilitato, abilitare lopzione Posizione</string>
+    <string name="no_network_provider_is_enabled">Nessun provider di rete abilitato, abilitare lopzione Posizione GPS</string>
 
     <string name="battery">Batteria</string>
     <string name="battery_optimization">Ottimizzazione della batteria</string>
@@ -178,5 +178,11 @@
     <string name="gps_permission_error">Si prega di autorizzare il app ad avere accesso alla sua posizione</string>
 
     <string name="minute">1 Minuto</string>
+
+    <string name="donation">Donazione</string>
+    <string name="donation_text">Prendiamo un caffè insieme</string>
+    <string name="donation_url">http://paypal.me/bibali1980</string>
+
+    <string name="battery_optimization_warning">Rimuovi l\'app dall\'ottimizzazione della batteria per far funzionare l\'app in background, puoi farlo dalle impostazioni</string>
 
 </resources>

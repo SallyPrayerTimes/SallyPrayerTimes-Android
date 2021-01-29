@@ -24,7 +24,10 @@ import android.app.TabActivity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.PowerManager;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.view.View;
@@ -34,12 +37,12 @@ import android.widget.TabHost;
 import android.widget.TabHost.TabSpec;
 import android.widget.Toast;
 
+import com.sallyprayertimes.R;
+
 import classes.ArabicReshape;
 import classes.AthanService;
 import classes.PreferenceHandler;
 import classes.UserConfig;
-
-import com.sally.R;
 
 
 public class Home_Programe_Activity extends TabActivity{
@@ -52,7 +55,6 @@ public class Home_Programe_Activity extends TabActivity{
 	
 	private Intent prayers_activity_intent;
 	private Intent kibla_activity_intent;
-	private Intent settings_activity_intent;
 	private Intent info_activity_intent;
     
 	private int drawablePrayersTab;
@@ -76,6 +78,8 @@ public class Home_Programe_Activity extends TabActivity{
 				requestPermissions(new String[]{permission1},1);
 			}
 		}
+        //Battery Optimization
+		BatteryHandler();
 
 		changeMainBackground();
 		
@@ -103,7 +107,7 @@ public class Home_Programe_Activity extends TabActivity{
 
         this.prayers_activity_intent = new Intent().setClass(Home_Programe_Activity.this,Prayers_Activity.class);
         this.kibla_activity_intent = new Intent().setClass(Home_Programe_Activity.this,Kibla_Activity.class);
-        this.settings_activity_intent = new Intent().setClass(Home_Programe_Activity.this,Settings_Activity.class);
+		Intent settings_activity_intent = new Intent().setClass(Home_Programe_Activity.this, Settings_Activity.class);
         this.info_activity_intent = new Intent().setClass(Home_Programe_Activity.this,Info_Activity.class);
        
         this.prayersTabSpec.setContent(prayers_activity_intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)); 
@@ -118,10 +122,29 @@ public class Home_Programe_Activity extends TabActivity{
        
         this.tabHost.getTabWidget().setCurrentTab(0);  	
 	}
-	
-	
+
+	public void BatteryHandler()
+	{
+		try
+		{
+			String packageName = getPackageName();
+			if (!((PowerManager)getSystemService(POWER_SERVICE)).isIgnoringBatteryOptimizations(packageName))
+			{
+				if (Build.VERSION.SDK_INT >= 23)
+				{
+					try {
+						Intent intent = new Intent();
+						intent.setAction("android.settings.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS");
+						intent.setData(Uri.parse("package:" + packageName));
+						startActivityForResult(intent , 70);
+					} catch (Exception e) { }
+				}
+			}
+		}catch (NoSuchMethodError ex) { }
+	}
+
 	private View getIndicator(String tabTitle, int tabImage)
-	  {
+	{
 	    View localView = View.inflate(this, R.layout.tabs_menu_background, null);
 	    
 	    if (tabImage != 0){
@@ -150,5 +173,42 @@ public class Home_Programe_Activity extends TabActivity{
 	   		}
 			LinearLayout layout = (LinearLayout)this.findViewById(R.id.mainBackground);
 			layout.setBackgroundDrawable(image);
+	}
+
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data)
+	{
+		super.onActivityResult(requestCode, resultCode, data);
+
+		// check if the request code is same as what is passed  here it is 70
+		if(requestCode == 70)
+		{
+			if (resultCode == RESULT_OK)
+			{
+				UserConfig.getSingleton().setBattery_optimization("yes");
+				PreferenceHandler.getSingleton().addUserConfig(UserConfig.getSingleton());
+				if(UserConfig.getSingleton().getLanguage().equalsIgnoreCase("ar"))
+				{
+					Toast.makeText(this, ArabicReshape.reshape(getResources().getString(R.string.optimized)), Toast.LENGTH_SHORT).show();
+				}
+				else
+				{
+					Toast.makeText(this, getResources().getString(R.string.optimized), Toast.LENGTH_SHORT).show();
+				}
+			}
+			else
+			{
+				UserConfig.getSingleton().setBattery_optimization("no");
+				PreferenceHandler.getSingleton().addUserConfig(UserConfig.getSingleton());
+				if(UserConfig.getSingleton().getLanguage().equalsIgnoreCase("ar"))
+				{
+					Toast.makeText(this, ArabicReshape.reshape(getResources().getString(R.string.battery_optimization_warning)), Toast.LENGTH_LONG).show();
+				}
+				else
+				{
+					Toast.makeText(this, getResources().getString(R.string.battery_optimization_warning), Toast.LENGTH_LONG).show();
+				}
+			}
+		}
 	}
 }

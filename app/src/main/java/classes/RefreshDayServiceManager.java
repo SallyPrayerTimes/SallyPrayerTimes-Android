@@ -19,16 +19,35 @@
  *******************************************************************************/
 package classes;
 
+import android.app.AlarmManager;
+import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.widget.Toast;
 
-import widget.MyWidgetProviderService;
+import widget.LargeWidgetProvider;
+import widget.LargeWidgetProviderService;
+import widget.SmallWidgetProvider;
+import widget.SmallWidgetProviderService;
 
 public class RefreshDayServiceManager extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
-        context.startService(new Intent(context, AthanService.class));
+
+        AlarmManager am = (AlarmManager)context.getSystemService(Context.ALARM_SERVICE);
+        PendingIntent pi = PendingIntent.getBroadcast(context, 25, new Intent(context, AthanServiceBroasdcastReceiver.class), PendingIntent.FLAG_UPDATE_CURRENT);
+        am.cancel(pi);
+        PendingIntent piRefreshWidget = PendingIntent.getBroadcast(context, 37 , new Intent(context, RefreshWidgetAfter15Minutes.class), PendingIntent.FLAG_UPDATE_CURRENT);
+        am.cancel(piRefreshWidget);
+
+        if(LargeWidgetProvider.isEnabled){
+            context.startService(new Intent(context, LargeWidgetProviderService.class));
+        }
+
+        if(SmallWidgetProvider.isEnabled){
+            context.startService(new Intent(context, SmallWidgetProviderService.class));
+        }
+
+        context.startService(new Intent(context,AthanService.class));
     }
 }

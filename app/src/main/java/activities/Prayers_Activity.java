@@ -29,21 +29,15 @@ import java.util.TimerTask;
 
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.os.Build;
-import android.appwidget.AppWidgetManager;
-import android.content.ActivityNotFoundException;
-import android.content.ComponentName;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.graphics.Typeface;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import classes.ArabicReshape;
 import classes.AthanService;
@@ -52,11 +46,12 @@ import classes.MiladiTime;
 import classes.PrayersTimes;
 import classes.PreferenceHandler;
 import classes.UserConfig;
-import widget.MyWidgetProviderService;
-import widget.MyWidgetProviderService2;
-import android.os.PowerManager;
+import widget.LargeWidgetProvider;
+import widget.SmallWidgetProvider;
+import widget.LargeWidgetProviderService;
+import widget.SmallWidgetProviderService;
 
-import com.sally.R;
+import com.sallyprayertimes.R;
 
 
 public class Prayers_Activity extends Activity {
@@ -870,6 +865,8 @@ public class Prayers_Activity extends Activity {
 
 		private void setNextPrayerTime(){
 
+		AthanService.refreshTime();
+
 		if(AthanService.ifActualSalatTime == true)
 			{
 				if(this.language.equals("ar")){
@@ -886,7 +883,7 @@ public class Prayers_Activity extends Activity {
 			else
 			{
 				setActualPrayerBackground(AthanService.actualPrayerCode);
-				
+
 				if(this.language.equals("ar")){
 					this.missing_to.setText(ArabicReshape.reshape(getNextPrayerName()));
 					this.missing_salat.setText(ArabicReshape.reshape(getResources().getString(R.string.missing_to)));
@@ -902,8 +899,13 @@ public class Prayers_Activity extends Activity {
 		protected void onResume()
         {
             super.onResume();
-            this.startService(new Intent(this, MyWidgetProviderService.class));
-            this.startService(new Intent(this, MyWidgetProviderService2.class));
+			if(LargeWidgetProvider.isEnabled){
+				this.startService(new Intent(this, LargeWidgetProviderService.class));
+			}
+
+			if(SmallWidgetProvider.isEnabled){
+				this.startService(new Intent(this, SmallWidgetProviderService.class));
+			}
         }
 
 		@Override

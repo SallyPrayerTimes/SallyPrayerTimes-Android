@@ -19,9 +19,8 @@
  *******************************************************************************/
 package classes;
 
-import android.content.SharedPreferences;
 import android.content.Context;
-import android.graphics.Color;
+import android.content.SharedPreferences;
 
 public class PreferenceHandler {
 

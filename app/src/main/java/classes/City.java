@@ -28,6 +28,15 @@ public class City {
     private String timezone;//time zone of city
     private String daylight;//daylight of city
 
+    public City(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return name;
+    }
+
     public String getName() {
         return name;
     }

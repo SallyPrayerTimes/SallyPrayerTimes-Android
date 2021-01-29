@@ -41,6 +41,14 @@ public class DatabaseManager extends SQLiteOpenHelper {
 	public DatabaseManager(Context context) {
 		super(context, DB_NAME, null, 1);
 		this.myContext = context;
+
+		if(android.os.Build.VERSION.SDK_INT >= 17){
+			DB_PATH = context.getApplicationInfo().dataDir + "/databases/";
+		}
+		else
+		{
+			DB_PATH = "/data/data/" + context.getPackageName() + "/databases/";
+		}
 	}
 
 	public void createDataBase() throws IOException {
@@ -58,7 +66,7 @@ public class DatabaseManager extends SQLiteOpenHelper {
 
 	private boolean checkDataBase() {
 		File dbFile = new File(DB_PATH + DB_NAME);
-	    return dbFile.exists();
+		return dbFile.exists();
 	}
 
 	private void copyDataBase() throws IOException {

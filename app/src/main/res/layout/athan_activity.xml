@@ -23,8 +23,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/athanMainBackground"
-    tools:context="activities.Athan_Activity">
+    android:id="@+id/athanMainBackground">
 
     <TextView
         android:id="@+id/athan_label"

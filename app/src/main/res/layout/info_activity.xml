@@ -105,6 +105,31 @@
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp" />
 
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/separator"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp" />
+
+            <TextView
+                android:id="@+id/donation_label_info"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/donation_text"
+                android:textColor="#ffffffff"
+                android:textSize="18.0sp" />
+
+            <TextView
+                android:id="@+id/donation_site_info"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:autoLink="web"
+                android:linksClickable="true"
+                android:text="@string/donation_url"
+                android:textColor="#67FF22"
+                android:textSize="18.0sp" />
+
                         
         </LinearLayout>
     </ScrollView>

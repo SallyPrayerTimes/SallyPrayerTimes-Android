@@ -152,12 +152,12 @@
     <string name="notificationMessage">قد حان موعد صلاة</string>
     
     <string name="app_info">صَلِّ هو برنامج مجاني و مفتوح المصدر لحساب اوقات الصلاة الاسلامية لمعظم دول العالم</string>
-    <string name="app_version">نسخة نهائية 21.8.20</string>
+    <string name="app_version">نسخة نهائية 16.01.21</string>
     <string name="app_contact">لمزيد من المعلومات الاتصال بي هنا:</string>
     <string name="app_site">http://www.sallyprayertimes.com</string>
     <string name="app_footer">صَلِّ هو برنامج مجاني و مفتوح المصدر و يحق لكل شخص استعماله و نشره, فقط لا تنسونا من خالص دعائكم</string>
 
-    <string name="no_network_provider_is_enabled">لم يتم تمكين مزود شبكة ، يرجى تمكين خيار الموقع</string>
+    <string name="no_network_provider_is_enabled">لم يتم تمكين مزود شبكة ، يرجى تمكين خيار الموقع GPS</string>
 
     <string name="battery">البطارية</string>
     <string name="battery_optimization">تحسين البطارية</string>
@@ -179,6 +179,12 @@
     <string name="gps_permission_error">يرجى إعطاء التطبيق إذن الوصول إلى موقعك</string>
 
     <string name="minute">1 دقيقة</string>
+
+    <string name="donation">تبرع</string>
+    <string name="donation_text">يمكنك التبرع من هنا</string>
+    <string name="donation_url">http://paypal.me/bibali1980</string>
+
+    <string name="battery_optimization_warning">يرجى إزالة التطبيق من تحسين البطارية للسماح للتطبيق بالعمل في الخلفية ، يمكنك القيام بذلك من الإعدادات</string>
 
     
 </resources>

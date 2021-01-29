@@ -155,11 +155,11 @@
     <string name="notificationMessage">It is now time for prayer</string>
     
     <string name="app_info">Sally is a free and open source application to calculate Islamic prayer times for most of the world</string>
-    <string name="app_version">Version : Final 21.8.20</string>
+    <string name="app_version">Version : Final 16.01.21</string>
     <string name="app_contact">For more information contact me here:</string>
     <string name="app_site">http://www.sallyprayertimes.com</string>
     <string name="app_footer">Sally is a free and open source, and everyone has the right use and publication, just do not forget the sincere prayers</string>
-    <string name="no_network_provider_is_enabled">No network provider is enabled please enable Location option</string>
+    <string name="no_network_provider_is_enabled">No network provider is enabled please enable Location option GPS</string>
 
     <string name="battery">Battery</string>
     <string name="battery_optimization">Battery optimization</string>
@@ -182,5 +182,11 @@
     <string name="gps_permission_error">Please give the app permission to have access to your location</string>
 
     <string name="minute">1 Minute</string>
+
+    <string name="donation">Donation</string>
+    <string name="donation_text">Please buy me a coffee</string>
+    <string name="donation_url">http://paypal.me/bibali1980</string>
+
+    <string name="battery_optimization_warning">Please remove the app from battery optimization to let the app working on background , you can do this from the settings</string>
 
 </resources>

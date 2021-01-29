@@ -24,12 +24,15 @@ import java.util.List;
 import java.util.Locale;
 
 import classes.PreferenceHandler;
-import widget.MyWidgetProvider;
+import widget.LargeWidgetProvider;
+
+import android.Manifest;
 import android.app.Activity;
 import android.appwidget.AppWidgetManager;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.graphics.Typeface;
 import android.hardware.Sensor;
@@ -45,43 +48,45 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
 import android.view.animation.LinearInterpolator;
 import android.view.animation.RotateAnimation;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import classes.ArabicReshape;
 import classes.AthanService;
 import classes.KiblaDirectionCalculator;
 import classes.UserConfig;
-import widget.MyWidgetProvider2;
+import widget.SmallWidgetProvider;
 
-import com.sally.R;
+import com.sallyprayertimes.R;
 
 
-public class Kibla_Activity extends Activity implements LocationListener , SensorEventListener{
+public class Kibla_Activity extends Activity implements LocationListener, SensorEventListener {
 
 	private boolean sensorrunning;
 	private float[] mGravity;
-    private float[] mMagnetic;
+	private float[] mMagnetic;
 	private float currentDegree1 = 0.0f;
 	private float currentDegree2 = 0.0f;
 	private float currentDegree3 = 0.0f;
 	private boolean isGPSEnabled = false;
-    private boolean isNetworkEnabled = false;
-    private float kiblaDegree = 0.0F;
-    private static final long MIN_DISTANCE_CHANGE_FOR_UPDATES = 10;
-    private static final long MIN_TIME_BW_UPDATES = 1000 * 60 * 1;
+	private boolean isNetworkEnabled = false;
+	private float kiblaDegree = 0.0F;
+	private static final long MIN_DISTANCE_CHANGE_FOR_UPDATES = 10;
+	private static final long MIN_TIME_BW_UPDATES = 1000 * 60 * 1;
 	private double latitude = 0;
 	private double longitude = 0;
-    private AsyncTask<Void, Void, Location> findLocationAsynkTask;
+	private AsyncTask<Void, Void, Location> findLocationAsynkTask;
 	private TextView kibla_location_text;
 	private TextView kibla_warning_text;
 	private Typeface tf;
 	private String address;
 	private String city;
-    private String country;
+	private String country;
 	private Geocoder geocoder;
 	private List<Address> addresses = null;
 	private LocationListener locationListener;
@@ -99,190 +104,176 @@ public class Kibla_Activity extends Activity implements LocationListener , Senso
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.kibla_activity);
-		
+
 		this.mySensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
-        this.myAccelerometer = mySensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
-        this.myField = mySensorManager.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD);
-		
+		this.myAccelerometer = mySensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
+		this.myField = mySensorManager.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD);
+
 		List<Sensor> mySensors = mySensorManager.getSensorList(Sensor.TYPE_ORIENTATION);
 
 		if (mySensors.size() > 0) {
-			this.mySensorManager.registerListener(this,mySensors.get(0), SensorManager.SENSOR_DELAY_NORMAL);
+			this.mySensorManager.registerListener(this, mySensors.get(0), SensorManager.SENSOR_DELAY_NORMAL);
 			this.sensorrunning = true;
 		} else {
 			this.sensorrunning = false;
-			if(UserConfig.getSingleton().getLanguage().equalsIgnoreCase("ar")){
-     		 Toast.makeText(getApplicationContext(),ArabicReshape.reshape(getResources().getString(R.string.sensor_is_not_exist)) , Toast.LENGTH_LONG).show();  
-     	 }else{
-     		 Toast.makeText(getApplicationContext(),getResources().getString(R.string.sensor_is_not_exist) , Toast.LENGTH_LONG).show();  
-     	 }
-			 this.isSensorActive = false;
+			if (UserConfig.getSingleton().getLanguage().equalsIgnoreCase("ar")) {
+				Toast.makeText(getApplicationContext(), ArabicReshape.reshape(getResources().getString(R.string.sensor_is_not_exist)), Toast.LENGTH_LONG).show();
+			} else {
+				Toast.makeText(getApplicationContext(), getResources().getString(R.string.sensor_is_not_exist), Toast.LENGTH_LONG).show();
+			}
+			this.isSensorActive = false;
 		}
-		
-	    this.imageCompass = ((ImageView)findViewById(R.id.imageViewCompass));
-	    this.imagePointer = ((ImageView)findViewById(R.id.imageViewPointer));
-	    this.imageLayout = ((RelativeLayout)findViewById(R.id.image_layout));
-	      
-	    this.imageCompass.setDrawingCacheEnabled(true);
-	    this.imagePointer.setDrawingCacheEnabled(true);
-	    this.imageLayout.setDrawingCacheEnabled(true);
-	      
+
+		this.imageCompass = ((ImageView) findViewById(R.id.imageViewCompass));
+		this.imagePointer = ((ImageView) findViewById(R.id.imageViewPointer));
+		this.imageLayout = ((RelativeLayout) findViewById(R.id.image_layout));
+
+		this.imageCompass.setDrawingCacheEnabled(true);
+		this.imagePointer.setDrawingCacheEnabled(true);
+		this.imageLayout.setDrawingCacheEnabled(true);
+
 		this.longitude = Double.parseDouble(UserConfig.getSingleton().getLongitude());
 		this.latitude = Double.parseDouble(UserConfig.getSingleton().getLatitude());
-        
-        
+
+
 		this.actualLocation = new Location("actualLocation");
 		this.actualLocation.setLongitude(longitude);
 		this.actualLocation.setLatitude(latitude);
-		
-	    this.kibla_location_text = (TextView)findViewById(R.id.kibla_location);
-		this.kibla_warning_text = (TextView)findViewById(R.id.kibla_warning);
-		
-        this.kiblaDegree = KiblaDirectionCalculator.getQiblaDirectionFromNorth(longitude, latitude);
-		
-		this.locationManager =(LocationManager) getSystemService(Context.LOCATION_SERVICE);
+
+		this.kibla_location_text = (TextView) findViewById(R.id.kibla_location);
+		this.kibla_warning_text = (TextView) findViewById(R.id.kibla_warning);
+
+		this.kiblaDegree = KiblaDirectionCalculator.getQiblaDirectionFromNorth(longitude, latitude);
+
+		this.locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
 		this.locationListener = new Kibla_Activity();
-		
-		if(isSensorActive == false)
-		{
-			if(UserConfig.getSingleton().getLanguage().equalsIgnoreCase("ar")){
-    			this.tf = Typeface.createFromAsset(this.getAssets(), "arabic_font.ttf");
-    			this.kibla_location_text.setTypeface(tf);
-    			this.kibla_warning_text.setTypeface(tf);
-    			this.kibla_location_text.setText(ArabicReshape.reshape(getResources().getString(R.string.sensor_is_not_exist)));
-    			this.kibla_warning_text.setText(ArabicReshape.reshape(getResources().getString(R.string.kibla_warning)));
-    		}else{
-    			this.kibla_location_text.setText(getResources().getString(R.string.sensor_is_not_exist));
-    			this.kibla_warning_text.setText(getResources().getString(R.string.kibla_warning));
-    		}
+
+		if (isSensorActive == false) {
+			if (UserConfig.getSingleton().getLanguage().equalsIgnoreCase("ar")) {
+				this.tf = Typeface.createFromAsset(this.getAssets(), "arabic_font.ttf");
+				this.kibla_location_text.setTypeface(tf);
+				this.kibla_warning_text.setTypeface(tf);
+				this.kibla_location_text.setText(ArabicReshape.reshape(getResources().getString(R.string.sensor_is_not_exist)));
+				this.kibla_warning_text.setText(ArabicReshape.reshape(getResources().getString(R.string.kibla_warning)));
+			} else {
+				this.kibla_location_text.setText(getResources().getString(R.string.sensor_is_not_exist));
+				this.kibla_warning_text.setText(getResources().getString(R.string.kibla_warning));
+			}
+		} else {
+			if (locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
+				if (UserConfig.getSingleton().getLanguage().equalsIgnoreCase("ar")) {
+					this.tf = Typeface.createFromAsset(this.getAssets(), "arabic_font.ttf");
+					this.kibla_location_text.setTypeface(tf);
+					this.kibla_warning_text.setTypeface(tf);
+					if (UserConfig.getSingleton().getCountry().equalsIgnoreCase("none") || UserConfig.getSingleton().getCity().equalsIgnoreCase("none")) {
+						this.kibla_location_text.setText(UserConfig.getSingleton().getLongitude() + " - " + UserConfig.getSingleton().getLatitude());
+					} else {
+						this.kibla_location_text.setText(ArabicReshape.reshape(UserConfig.getSingleton().getCity()) + " - " + ArabicReshape.reshape(UserConfig.getSingleton().getCountry()));
+					}
+					this.kibla_warning_text.setText(ArabicReshape.reshape(getResources().getString(R.string.kibla_warning)));
+				} else {
+					if (UserConfig.getSingleton().getCountry().equalsIgnoreCase("none") || UserConfig.getSingleton().getCity().equalsIgnoreCase("none")) {
+						this.kibla_location_text.setText(UserConfig.getSingleton().getLongitude() + " - " + UserConfig.getSingleton().getLatitude());
+					} else {
+						this.kibla_location_text.setText(UserConfig.getSingleton().getCity() + " - " + UserConfig.getSingleton().getCountry());
+					}
+					this.kibla_warning_text.setText(getResources().getString(R.string.kibla_warning));
+				}
+				getLocation(locationManager);
+				findLocation();
+			} else {
+				if (isNetworkAvailable()) {
+					if (UserConfig.getSingleton().getLanguage().equalsIgnoreCase("ar")) {
+						this.tf = Typeface.createFromAsset(this.getAssets(), "arabic_font.ttf");
+						this.kibla_location_text.setTypeface(tf);
+						this.kibla_warning_text.setTypeface(tf);
+						if (UserConfig.getSingleton().getCountry().equalsIgnoreCase("none") || UserConfig.getSingleton().getCity().equalsIgnoreCase("none")) {
+							this.kibla_location_text.setText(UserConfig.getSingleton().getLongitude() + " - " + UserConfig.getSingleton().getLatitude());
+						} else {
+							this.kibla_location_text.setText(ArabicReshape.reshape(UserConfig.getSingleton().getCity()) + " - " + ArabicReshape.reshape(UserConfig.getSingleton().getCountry()));
+						}
+						this.kibla_warning_text.setText(ArabicReshape.reshape(getResources().getString(R.string.kibla_warning)));
+					} else {
+						if (UserConfig.getSingleton().getCountry().equalsIgnoreCase("none") || UserConfig.getSingleton().getCity().equalsIgnoreCase("none")) {
+							this.kibla_location_text.setText(UserConfig.getSingleton().getLongitude() + " - " + UserConfig.getSingleton().getLatitude());
+						} else {
+							this.kibla_location_text.setText(UserConfig.getSingleton().getCity() + " - " + UserConfig.getSingleton().getCountry());
+						}
+						this.kibla_warning_text.setText(getResources().getString(R.string.kibla_warning));
+					}
+					getLocation(locationManager);
+					findLocation();
+				} else {
+					if (UserConfig.getSingleton().getLanguage().equalsIgnoreCase("ar")) {
+						this.tf = Typeface.createFromAsset(this.getAssets(), "arabic_font.ttf");
+						this.kibla_location_text.setTypeface(tf);
+						this.kibla_warning_text.setTypeface(tf);
+						if (UserConfig.getSingleton().getCountry().equalsIgnoreCase("none") || UserConfig.getSingleton().getCity().equalsIgnoreCase("none")) {
+							this.kibla_location_text.setText(UserConfig.getSingleton().getLongitude() + " - " + UserConfig.getSingleton().getLatitude() + "\n" + ArabicReshape.reshape(getResources().getString(R.string.gps_is_not_on)));
+						} else {
+							this.kibla_location_text.setText(ArabicReshape.reshape(UserConfig.getSingleton().getCity()) + " - " + ArabicReshape.reshape(UserConfig.getSingleton().getCountry() + "\n" + ArabicReshape.reshape(getResources().getString(R.string.gps_is_not_on))));
+						}
+						this.kibla_warning_text.setText(ArabicReshape.reshape(getResources().getString(R.string.kibla_warning)));
+					} else {
+						if (UserConfig.getSingleton().getCountry().equalsIgnoreCase("none") || UserConfig.getSingleton().getCity().equalsIgnoreCase("none")) {
+							this.kibla_location_text.setText(UserConfig.getSingleton().getLongitude() + " - " + UserConfig.getSingleton().getLatitude() + "\n" + getResources().getString(R.string.gps_is_not_on));
+						} else {
+							this.kibla_location_text.setText(UserConfig.getSingleton().getCity() + " - " + UserConfig.getSingleton().getCountry() + "\n" + getResources().getString(R.string.gps_is_not_on));
+						}
+						this.kibla_warning_text.setText(getResources().getString(R.string.kibla_warning));
+					}
+				}
+			}
 		}
-		else
-		{
-		 if (locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) { 
-			 if(UserConfig.getSingleton().getLanguage().equalsIgnoreCase("ar")){
-	    			this.tf = Typeface.createFromAsset(this.getAssets(), "arabic_font.ttf");
-	    			this.kibla_location_text.setTypeface(tf);
-	    			this.kibla_warning_text.setTypeface(tf);
-	    			 if(UserConfig.getSingleton().getCountry().equalsIgnoreCase("none") || UserConfig.getSingleton().getCity().equalsIgnoreCase("none")){
-	    				this.kibla_location_text.setText(UserConfig.getSingleton().getLongitude()+" - "+UserConfig.getSingleton().getLatitude());
-	    				}
-	    				else{
-	    					this.kibla_location_text.setText(ArabicReshape.reshape(UserConfig.getSingleton().getCity())+" - "+ArabicReshape.reshape(UserConfig.getSingleton().getCountry()));
-	    				}
-	    			this.kibla_warning_text.setText(ArabicReshape.reshape(getResources().getString(R.string.kibla_warning)));
-	    		}else{
-	    			if(UserConfig.getSingleton().getCountry().equalsIgnoreCase("none") || UserConfig.getSingleton().getCity().equalsIgnoreCase("none")){
-	    				this.kibla_location_text.setText(UserConfig.getSingleton().getLongitude()+" - "+UserConfig.getSingleton().getLatitude());
-	    				}
-	    				else{
-	    					this.kibla_location_text.setText(UserConfig.getSingleton().getCity()+" - "+UserConfig.getSingleton().getCountry());
-	    				}
-	    			this.kibla_warning_text.setText(getResources().getString(R.string.kibla_warning));
-	    		}
-         	getLocation(locationManager);
-         	findLocation(); 	            	
-           } else { 
-         	  if(isNetworkAvailable())
-         	  {
-         		 if(UserConfig.getSingleton().getLanguage().equalsIgnoreCase("ar")){
- 	    			this.tf = Typeface.createFromAsset(this.getAssets(), "arabic_font.ttf");
- 	    			this.kibla_location_text.setTypeface(tf);
- 	    			this.kibla_warning_text.setTypeface(tf);
- 	    			 if(UserConfig.getSingleton().getCountry().equalsIgnoreCase("none") || UserConfig.getSingleton().getCity().equalsIgnoreCase("none")){
- 	    				this.kibla_location_text.setText(UserConfig.getSingleton().getLongitude()+" - "+UserConfig.getSingleton().getLatitude());
- 	    				}
- 	    				else{
- 	    					this.kibla_location_text.setText(ArabicReshape.reshape(UserConfig.getSingleton().getCity())+" - "+ArabicReshape.reshape(UserConfig.getSingleton().getCountry()));
- 	    				}
- 	    			this.kibla_warning_text.setText(ArabicReshape.reshape(getResources().getString(R.string.kibla_warning)));
- 	    		}else{
- 	    			if(UserConfig.getSingleton().getCountry().equalsIgnoreCase("none") || UserConfig.getSingleton().getCity().equalsIgnoreCase("none")){
- 	    				this.kibla_location_text.setText(UserConfig.getSingleton().getLongitude()+" - "+UserConfig.getSingleton().getLatitude());
- 	    				}
- 	    				else{
- 	    					this.kibla_location_text.setText(UserConfig.getSingleton().getCity()+" - "+UserConfig.getSingleton().getCountry());
- 	    				}
- 	    			this.kibla_warning_text.setText(getResources().getString(R.string.kibla_warning));
- 	    		}
-         		  getLocation(locationManager);
-		          findLocation();
-         	  }else
-         	  {
-         		 if(UserConfig.getSingleton().getLanguage().equalsIgnoreCase("ar")){
-	         			this.tf = Typeface.createFromAsset(this.getAssets(), "arabic_font.ttf");
-	         			this.kibla_location_text.setTypeface(tf);
-	         			this.kibla_warning_text.setTypeface(tf);
-	         			 if(UserConfig.getSingleton().getCountry().equalsIgnoreCase("none") || UserConfig.getSingleton().getCity().equalsIgnoreCase("none")){
-	         				this.kibla_location_text.setText(UserConfig.getSingleton().getLongitude()+" - "+UserConfig.getSingleton().getLatitude()+"\n"+ArabicReshape.reshape(getResources().getString(R.string.gps_is_not_on)));
-	         				}
-	         				else{
-	         					this.kibla_location_text.setText(ArabicReshape.reshape(UserConfig.getSingleton().getCity())+" - "+ArabicReshape.reshape(UserConfig.getSingleton().getCountry()+"\n"+ArabicReshape.reshape(getResources().getString(R.string.gps_is_not_on))));
-	         				}
-	         			this.kibla_warning_text.setText(ArabicReshape.reshape(getResources().getString(R.string.kibla_warning)));
-	            	 }else{
-	         			if(UserConfig.getSingleton().getCountry().equalsIgnoreCase("none") || UserConfig.getSingleton().getCity().equalsIgnoreCase("none")){
-	         				this.kibla_location_text.setText(UserConfig.getSingleton().getLongitude()+" - "+UserConfig.getSingleton().getLatitude()+"\n"+getResources().getString(R.string.gps_is_not_on));
-	         				}
-	         				else{
-	         					this.kibla_location_text.setText(UserConfig.getSingleton().getCity()+" - "+UserConfig.getSingleton().getCountry()+"\n"+getResources().getString(R.string.gps_is_not_on));
-	         				}
-	         			this.kibla_warning_text.setText(getResources().getString(R.string.kibla_warning)); 
-	         		} 
-         	  } 
-           }
-	    }
-		
+
 	}
 
-	public void findLocation(){
-		this.findLocationAsynkTask = new AsyncTask<Void, Void, Location>(){
+	public void findLocation() {
+		this.findLocationAsynkTask = new AsyncTask<Void, Void, Location>() {
 			@Override
 			protected Location doInBackground(Void... params) {
-				
+
 				while (longitude == 0.0 || latitude == 0.0) {
-                      getLocation(locationManager);
-                      if (isCancelled()) break;
-	            }
+					getLocation(locationManager);
+					if (isCancelled()) break;
+				}
 
 				try {
-					 geocoder = new Geocoder(getApplicationContext(), Locale.getDefault());
-					 addresses = geocoder.getFromLocation(latitude, longitude, 1);
-					 address = addresses.get(0).getAddressLine(0);
-				     city = addresses.get(0).getLocality();
-				     country = addresses.get(0).getCountryName();
+					geocoder = new Geocoder(getApplicationContext(), Locale.getDefault());
+					addresses = geocoder.getFromLocation(latitude, longitude, 1);
+					address = addresses.get(0).getAddressLine(0);
+					city = addresses.get(0).getLocality();
+					country = addresses.get(0).getCountryName();
 				} catch (Exception e) {
-					address="";
-					country="";
-					city="";
+					address = "";
+					country = "";
+					city = "";
 				}
 
 				return null;
 			}
-			
+
 			@Override
-	        protected void onCancelled(){
+			protected void onCancelled() {
 				findLocationAsynkTask.cancel(true);
-	            locationManager.removeUpdates(locationListener);
-	        }
+				locationManager.removeUpdates(locationListener);
+			}
 
 			@Override
 			protected void onPostExecute(Location result) {
-				
-			    kiblaDegree = KiblaDirectionCalculator.getQiblaDirectionFromNorth(longitude,latitude);
-				
-				if(country != null && !country.equalsIgnoreCase(""))
-				{
+
+				kiblaDegree = KiblaDirectionCalculator.getQiblaDirectionFromNorth(longitude, latitude);
+
+				if (country != null && !country.equalsIgnoreCase("")) {
 					UserConfig.getSingleton().setCountry(country);
 				}
-				
-				if(city != null && !city.equalsIgnoreCase(""))
-				{
+
+				if (city != null && !city.equalsIgnoreCase("")) {
 					UserConfig.getSingleton().setCity(city);
 				}
-				
-				if(longitude != 0.0 && latitude != 0.0)
-					{
-					try{
+
+				if (longitude != 0.0 && latitude != 0.0) {
+					try {
 						setDefaultLanguage("en");
 						DecimalFormat formatter = new DecimalFormat("##0.00##");
 						UserConfig.getSingleton().setLongitude(String.valueOf(formatter.format(longitude)));
@@ -291,119 +282,122 @@ public class Kibla_Activity extends Activity implements LocationListener , Senso
 
 						PreferenceHandler.getSingleton().addUserConfig(UserConfig.getSingleton());
 						//setUserConfig();
-					}catch(Exception ex){}
+					} catch (Exception ex) {
 					}
-				
-				if(UserConfig.getSingleton().getLanguage().equalsIgnoreCase("ar")){
+				}
+
+				if (UserConfig.getSingleton().getLanguage().equalsIgnoreCase("ar")) {
 					tf = Typeface.createFromAsset(getAssets(), "arabic_font.ttf");
 					kibla_location_text.setTypeface(tf);
 					kibla_warning_text.setTypeface(tf);
-					if(address!=null && !address.equals("")){
-						kibla_location_text.setText(ArabicReshape.reshape(UserConfig.getSingleton().getCity())+" - "+ArabicReshape.reshape(UserConfig.getSingleton().getCountry())+"\n"+ArabicReshape.reshape(address));
+					if (address != null && !address.equals("")) {
+						kibla_location_text.setText(ArabicReshape.reshape(UserConfig.getSingleton().getCity()) + " - " + ArabicReshape.reshape(UserConfig.getSingleton().getCountry()) + "\n" + ArabicReshape.reshape(address));
+					} else {
+						if (UserConfig.getSingleton().getCountry().equalsIgnoreCase("none") || UserConfig.getSingleton().getCity().equalsIgnoreCase("none")) {
+							kibla_location_text.setText(UserConfig.getSingleton().getLongitude() + " - " + UserConfig.getSingleton().getLatitude());
+						} else {
+							kibla_location_text.setText(ArabicReshape.reshape(UserConfig.getSingleton().getCity()) + " - " + ArabicReshape.reshape(UserConfig.getSingleton().getCountry()));
+						}
 					}
-					else{
-					 if(UserConfig.getSingleton().getCountry().equalsIgnoreCase("none") || UserConfig.getSingleton().getCity().equalsIgnoreCase("none")){
-						kibla_location_text.setText(UserConfig.getSingleton().getLongitude()+" - "+UserConfig.getSingleton().getLatitude());
-						}
-						else{
-							kibla_location_text.setText(ArabicReshape.reshape(UserConfig.getSingleton().getCity())+" - "+ArabicReshape.reshape(UserConfig.getSingleton().getCountry()));
-						}
-				}
 					kibla_warning_text.setText(ArabicReshape.reshape(getResources().getString(R.string.kibla_warning)));
-				}else{
-					if(address!=null && !address.equals("")){
-						kibla_location_text.setText(UserConfig.getSingleton().getCity()+" - "+UserConfig.getSingleton().getCountry()+"\n"+address);
+				} else {
+					if (address != null && !address.equals("")) {
+						kibla_location_text.setText(UserConfig.getSingleton().getCity() + " - " + UserConfig.getSingleton().getCountry() + "\n" + address);
+					} else {
+						if (UserConfig.getSingleton().getCountry().equalsIgnoreCase("none") || UserConfig.getSingleton().getCity().equalsIgnoreCase("none")) {
+							kibla_location_text.setText(UserConfig.getSingleton().getLongitude() + " - " + UserConfig.getSingleton().getLatitude());
+						} else {
+							kibla_location_text.setText(UserConfig.getSingleton().getCity() + " - " + UserConfig.getSingleton().getCountry());
+						}
 					}
-					else{
-					if(UserConfig.getSingleton().getCountry().equalsIgnoreCase("none") || UserConfig.getSingleton().getCity().equalsIgnoreCase("none")){
-						kibla_location_text.setText(UserConfig.getSingleton().getLongitude()+" - "+UserConfig.getSingleton().getLatitude());
-						}
-						else{
-							kibla_location_text.setText(UserConfig.getSingleton().getCity()+" - "+UserConfig.getSingleton().getCountry());
-						}
-				}
 					kibla_warning_text.setText(getResources().getString(R.string.kibla_warning));
 				}
-				
+
 			}
+
 			@Override
 			protected void onPreExecute() {
-				if(UserConfig.getSingleton().getLanguage().equalsIgnoreCase("ar")){
- 	    			tf = Typeface.createFromAsset(getAssets(), "arabic_font.ttf");
- 	    			kibla_location_text.setTypeface(tf);
- 	    			kibla_warning_text.setTypeface(tf);
- 	    			 if(UserConfig.getSingleton().getCountry().equalsIgnoreCase("none") || UserConfig.getSingleton().getCity().equalsIgnoreCase("none")){
- 	    				kibla_location_text.setText(UserConfig.getSingleton().getLongitude()+" - "+UserConfig.getSingleton().getLatitude());
- 	    				}
- 	    				else{
- 	    					kibla_location_text.setText(ArabicReshape.reshape(UserConfig.getSingleton().getCity())+" - "+ArabicReshape.reshape(UserConfig.getSingleton().getCountry()));
- 	    				}
- 	    			kibla_warning_text.setText(ArabicReshape.reshape(getResources().getString(R.string.kibla_warning)));
- 	    		}else{
- 	    			if(UserConfig.getSingleton().getCountry().equalsIgnoreCase("none") || UserConfig.getSingleton().getCity().equalsIgnoreCase("none")){
- 	    				kibla_location_text.setText(UserConfig.getSingleton().getLongitude()+" - "+UserConfig.getSingleton().getLatitude());
- 	    				}
- 	    				else{
- 	    					kibla_location_text.setText(UserConfig.getSingleton().getCity()+" - "+UserConfig.getSingleton().getCountry());
- 	    				}
- 	    			kibla_warning_text.setText(getResources().getString(R.string.kibla_warning));
- 	    		}
+				if (UserConfig.getSingleton().getLanguage().equalsIgnoreCase("ar")) {
+					tf = Typeface.createFromAsset(getAssets(), "arabic_font.ttf");
+					kibla_location_text.setTypeface(tf);
+					kibla_warning_text.setTypeface(tf);
+					if (UserConfig.getSingleton().getCountry().equalsIgnoreCase("none") || UserConfig.getSingleton().getCity().equalsIgnoreCase("none")) {
+						kibla_location_text.setText(UserConfig.getSingleton().getLongitude() + " - " + UserConfig.getSingleton().getLatitude());
+					} else {
+						kibla_location_text.setText(ArabicReshape.reshape(UserConfig.getSingleton().getCity()) + " - " + ArabicReshape.reshape(UserConfig.getSingleton().getCountry()));
+					}
+					kibla_warning_text.setText(ArabicReshape.reshape(getResources().getString(R.string.kibla_warning)));
+				} else {
+					if (UserConfig.getSingleton().getCountry().equalsIgnoreCase("none") || UserConfig.getSingleton().getCity().equalsIgnoreCase("none")) {
+						kibla_location_text.setText(UserConfig.getSingleton().getLongitude() + " - " + UserConfig.getSingleton().getLatitude());
+					} else {
+						kibla_location_text.setText(UserConfig.getSingleton().getCity() + " - " + UserConfig.getSingleton().getCountry());
+					}
+					kibla_warning_text.setText(getResources().getString(R.string.kibla_warning));
+				}
 			}
-			@Override
-			protected void onProgressUpdate(Void... values){
-			}
-			}.execute();
-	}
-	
-	public Location getLocation(LocationManager locationManager) {
-        try {
-            isGPSEnabled = locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER);
-            isNetworkEnabled = locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER);
- 
-                if (isNetworkEnabled) {
-                    locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER,MIN_TIME_BW_UPDATES,
-                            MIN_DISTANCE_CHANGE_FOR_UPDATES,this);
-                    if (locationManager != null) {
-                        actualLocation = locationManager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
-                        if (actualLocation != null) {
-                            latitude = actualLocation.getLatitude();
-                            longitude = actualLocation.getLongitude();
-                            if(latitude == 0 || longitude == 0)
-                            {
-                            	actualLocation = null;
-                            }else
-                            {
-                                latitude = actualLocation.getLatitude();
-                                longitude = actualLocation.getLongitude();
-                                kiblaDegree = KiblaDirectionCalculator.getQiblaDirectionFromNorth(longitude,latitude);
-                            }
-                        }else{
-                        	actualLocation = null;
-                        }
-                    }
-                }
 
-                if (isGPSEnabled) {
-                        locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER,MIN_TIME_BW_UPDATES,
-                                MIN_DISTANCE_CHANGE_FOR_UPDATES, this);
-                        if (locationManager != null) {
-                        	actualLocation = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
-                            if (actualLocation != null) {
-                            	latitude = actualLocation.getLatitude();
-                                longitude = actualLocation.getLongitude();
-                                if(latitude == 0 || longitude == 0)
-                                {
-                                	actualLocation = null;
-                                }else
-                                {
-                                    latitude = actualLocation.getLatitude();
-                                    longitude = actualLocation.getLongitude();
-                                    kiblaDegree = KiblaDirectionCalculator.getQiblaDirectionFromNorth(longitude,latitude);
-                                }
-                            }else{
-                            	actualLocation = null;
-                            }
-                        }
+			@Override
+			protected void onProgressUpdate(Void... values) {
+			}
+		}.execute();
+	}
+
+	public Location getLocation(LocationManager locationManager) {
+		try {
+			isGPSEnabled = locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER);
+			isNetworkEnabled = locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER);
+
+			if (isNetworkEnabled) {
+				if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+					locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, MIN_TIME_BW_UPDATES,
+							MIN_DISTANCE_CHANGE_FOR_UPDATES, this);
+					if (locationManager != null) {
+						actualLocation = locationManager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
+						if (actualLocation != null) {
+							latitude = actualLocation.getLatitude();
+							longitude = actualLocation.getLongitude();
+							if (latitude == 0 || longitude == 0) {
+								actualLocation = null;
+							} else {
+								latitude = actualLocation.getLatitude();
+								longitude = actualLocation.getLongitude();
+								kiblaDegree = KiblaDirectionCalculator.getQiblaDirectionFromNorth(longitude, latitude);
+							}
+						} else {
+							actualLocation = null;
+						}
+					}
+				} else {
+					actualLocation = null;
+				}
+			}
+
+			if (isGPSEnabled) {
+				if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+					locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, MIN_TIME_BW_UPDATES,
+							MIN_DISTANCE_CHANGE_FOR_UPDATES, this);
+					if (locationManager != null) {
+						actualLocation = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+						if (actualLocation != null) {
+							latitude = actualLocation.getLatitude();
+							longitude = actualLocation.getLongitude();
+							if(latitude == 0 || longitude == 0)
+							{
+								actualLocation = null;
+							}else
+							{
+								latitude = actualLocation.getLatitude();
+								longitude = actualLocation.getLongitude();
+								kiblaDegree = KiblaDirectionCalculator.getQiblaDirectionFromNorth(longitude,latitude);
+							}
+						}else{
+							actualLocation = null;
+						}
+					}
+				}else{
+					actualLocation = null;
+				}
                 }
  
         } catch (Exception e) {
@@ -540,23 +534,22 @@ public class Kibla_Activity extends Activity implements LocationListener , Senso
 			finish();
 		}
 
-		stopService(new Intent(this,AthanService.class));
 		startService(new Intent(this,AthanService.class));
 
 		try//update large widget
 		{
-			Intent intent = new Intent(getApplicationContext() , MyWidgetProvider.class);
+			Intent intent = new Intent(getApplicationContext() , LargeWidgetProvider.class);
 			intent.setAction("android.appwidget.action.APPWIDGET_UPDATE");
-			int ids[] = AppWidgetManager.getInstance(getApplication()).getAppWidgetIds(new ComponentName(getApplication(), MyWidgetProvider.class));
+			int ids[] = AppWidgetManager.getInstance(getApplication()).getAppWidgetIds(new ComponentName(getApplication(), LargeWidgetProvider.class));
 			intent.putExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS,ids);
 			sendBroadcast(intent);
 		}catch(Exception e){}
 
 		try//update small widget
 		{
-			Intent intent = new Intent(getApplicationContext() , MyWidgetProvider2.class);
+			Intent intent = new Intent(getApplicationContext() , SmallWidgetProvider.class);
 			intent.setAction("android.appwidget.action.APPWIDGET_UPDATE");
-			int ids[] = AppWidgetManager.getInstance(getApplication()).getAppWidgetIds(new ComponentName(getApplication(), MyWidgetProvider2.class));
+			int ids[] = AppWidgetManager.getInstance(getApplication()).getAppWidgetIds(new ComponentName(getApplication(), SmallWidgetProvider.class));
 			intent.putExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS,ids);
 			sendBroadcast(intent);
 		}catch(Exception e){}

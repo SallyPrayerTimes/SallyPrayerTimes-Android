@@ -30,7 +30,7 @@ import org.joda.time.chrono.IslamicChronology;
 
 import android.content.Context;
 
-import com.sally.R;
+import com.sallyprayertimes.R;
 
 public class HijriTime {
 

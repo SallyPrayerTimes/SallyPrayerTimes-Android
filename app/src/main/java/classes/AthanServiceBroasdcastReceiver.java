@@ -19,11 +19,6 @@
  *******************************************************************************/
 package classes;
 
-import java.util.Calendar;
-
-import Athan.AthanPlayer;
-import Athan.AthanStopReceiver;
-
 import android.app.AlarmManager;
 import android.app.Notification;
 import android.app.NotificationChannel;
@@ -32,22 +27,27 @@ import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.media.AudioAttributes;
 import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Build;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.os.PowerManager;
 
+import com.sallyprayertimes.R;
 
-import com.sally.R;
+import java.util.Calendar;
 
+import Athan.AthanPlayer;
+import Athan.AthanStopReceiver;
 import activities.SplashScreen_Activity;
-import widget.MyWidgetProvider;
-import widget.MyWidgetProvider2;
-import widget.MyWidgetProviderService;
-import widget.MyWidgetProviderService2;
+import widget.LargeWidgetProvider;
+import widget.LargeWidgetProviderBroadcastReceiver;
+import widget.SmallWidgetProvider;
+import widget.SmallWidgetProviderBroadcastReceiver;
+import widget.LargeWidgetProviderService;
+import widget.SmallWidgetProviderService;
 
 public class AthanServiceBroasdcastReceiver extends BroadcastReceiver{
 
@@ -63,13 +63,9 @@ public class AthanServiceBroasdcastReceiver extends BroadcastReceiver{
     {
         if(startAthan)
         {
-            AthanService.actualPrayerCode = AthanService.nextPrayerCode;
             AthanService.ifActualSalatTime = true;
 
             Calendar calendar = Calendar.getInstance();
-            int hour = calendar.get(Calendar.HOUR_OF_DAY);
-            int minutes = calendar.get(Calendar.MINUTE);
-            AthanService.actualSalatTimeMinutes = (hour * 60) + minutes;
 
             startAthanNotification(AthanService.nextPrayerCode , context);
 
@@ -101,19 +97,35 @@ public class AthanServiceBroasdcastReceiver extends BroadcastReceiver{
             } else {
                 am.set(AlarmManager.RTC, calendar.getTimeInMillis()  , pi);
             }
+
+            AlarmManager amRefreshWidget = (AlarmManager)context.getSystemService(Context.ALARM_SERVICE);
+            Intent intentRefreshWidget = new Intent(context, RefreshWidgetAfter15Minutes.class);
+            PendingIntent piRefreshWidget = PendingIntent.getBroadcast(context, 37 , intentRefreshWidget, PendingIntent.FLAG_UPDATE_CURRENT);
+
+            amRefreshWidget.cancel(piRefreshWidget);
+
+            Calendar calendarRefreshWidget = Calendar.getInstance();
+            calendarRefreshWidget.add(Calendar.MINUTE , 15);// update widget after 15 minutes from actual salat time
+
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                amRefreshWidget.setExactAndAllowWhileIdle(AlarmManager.RTC, calendarRefreshWidget.getTimeInMillis()  , piRefreshWidget);
+            } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+                amRefreshWidget.setExact(AlarmManager.RTC, calendarRefreshWidget.getTimeInMillis()  , piRefreshWidget);
+            } else {
+                amRefreshWidget.set(AlarmManager.RTC, calendarRefreshWidget.getTimeInMillis()  , piRefreshWidget);
+            }
+
+            if(LargeWidgetProvider.isEnabled){
+                context.startService(new Intent(context, LargeWidgetProviderService.class));
+            }
+
+            if(SmallWidgetProvider.isEnabled){
+                context.startService(new Intent(context, SmallWidgetProviderService.class));
+            }
         }
         else
         {
             Calendar calendar = Calendar.getInstance();
-
-            PreferenceHandler.getSingleton().setContext(context);
-            AthanService.prayerTimes = new PrayersTimes(calendar , PreferenceHandler.getSingleton().getUserConfig());
-
-            AthanService.prayerTimesInMinutes = new int[6];
-            AthanService.prayerTimesInMinutes = AthanService.prayerTimes.getAllPrayrTimesInMinutes();//get all prayer times in minutes
-
-            AthanService.calendar = calendar;
-            AthanService.getNextPrayer(false);
 
             AlarmManager am = (AlarmManager)context.getSystemService(Context.ALARM_SERVICE);
             Intent AthanServiceBroasdcastReceiverIntent = new Intent(context, AthanServiceBroasdcastReceiver.class);
@@ -141,10 +153,15 @@ public class AthanServiceBroasdcastReceiver extends BroadcastReceiver{
             } else {
                 am.set(AlarmManager.RTC, calendar.getTimeInMillis()  , pi);
             }
-        }
 
-        context.startService(new Intent(context, MyWidgetProviderService.class));
-        context.startService(new Intent(context, MyWidgetProviderService2.class));
+            if(LargeWidgetProvider.isEnabled){
+                context.startService(new Intent(context, LargeWidgetProviderService.class));
+            }
+
+            if(SmallWidgetProvider.isEnabled){
+                context.startService(new Intent(context, SmallWidgetProviderService.class));
+            }
+        }
     }
 
     public static void startAthanNotification(int nextPrayerCode , Context context){

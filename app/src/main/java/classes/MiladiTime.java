@@ -24,7 +24,7 @@ import java.util.Calendar;
 
 import android.content.Context;
 
-import com.sally.R;
+import com.sallyprayertimes.R;
 
 public class MiladiTime {
 
