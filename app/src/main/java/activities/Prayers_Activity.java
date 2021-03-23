@@ -276,7 +276,7 @@ public class Prayers_Activity extends Activity {
 		else{
 			this.fajr_label.setText(" "+getResources().getString(R.string.fajr));
 			this.shorouk_label.setText(" "+getResources().getString(R.string.shorouk));
-			this.duhr_label.setText(" "+getResources().getString(R.string.duhr)+" ");
+			this.duhr_label.setText(" "+getResources().getString(R.string.duhr));
 			this.asr_label.setText(" "+getResources().getString(R.string.asr));
 			this.maghrib_label.setText(" "+getResources().getString(R.string.maghrib));
 			this.ishaa_label.setText(" "+getResources().getString(R.string.ishaa));
