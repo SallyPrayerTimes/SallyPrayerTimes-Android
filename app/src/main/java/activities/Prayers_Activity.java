@@ -250,19 +250,12 @@ public class Prayers_Activity extends Activity {
 		this.missing_to.setTypeface(tf);
 		this.missing_salat.setTypeface(tf);
 		
-		this.fajr_label.setText(ArabicReshape.reshape(getResources().getString(R.string.fajr)));
-		this.shorouk_label.setText(ArabicReshape.reshape(getResources().getString(R.string.shorouk)));
-		this.duhr_label.setText(ArabicReshape.reshape(getResources().getString(R.string.duhr)));
-		this.asr_label.setText(ArabicReshape.reshape(getResources().getString(R.string.asr)));
-		this.maghrib_label.setText(ArabicReshape.reshape(getResources().getString(R.string.maghrib)));
-		this.ishaa_label.setText(ArabicReshape.reshape(getResources().getString(R.string.ishaa)));
-
-		this.fajr.setText(AthanService.prayerTimes.getFajrFinalTime());
-		this.shorouk.setText(AthanService.prayerTimes.getShorou9FinalTime());
-		this.duhr.setText(AthanService.prayerTimes.getDuhrFinalTime());
-		this.asr.setText(AthanService.prayerTimes.getAsrFinalTime());
-		this.maghrib.setText(AthanService.prayerTimes.getMaghribFinalTime());
-		this.ishaa.setText(AthanService.prayerTimes.getIshaaFinalTime());
+		this.fajr_label.setText(" "+ArabicReshape.reshape(getResources().getString(R.string.fajr))+" ");
+		this.shorouk_label.setText(" "+ArabicReshape.reshape(getResources().getString(R.string.shorouk))+" ");
+		this.duhr_label.setText(" "+ArabicReshape.reshape(getResources().getString(R.string.duhr))+" ");
+		this.asr_label.setText(" "+ArabicReshape.reshape(getResources().getString(R.string.asr))+" ");
+		this.maghrib_label.setText(" "+ArabicReshape.reshape(getResources().getString(R.string.maghrib))+" ");
+		this.ishaa_label.setText(" "+ArabicReshape.reshape(getResources().getString(R.string.ishaa))+" ");
 		
 		if(this.country.equalsIgnoreCase("none") || this.city.equalsIgnoreCase("none")){
 		this.location_country.setText(longitude);
@@ -281,19 +274,13 @@ public class Prayers_Activity extends Activity {
 		}
 		}
 		else{
-			this.fajr_label.setText(getResources().getString(R.string.fajr));
-			this.shorouk_label.setText(getResources().getString(R.string.shorouk));
-			this.duhr_label.setText(getResources().getString(R.string.duhr));
-			this.asr_label.setText(getResources().getString(R.string.asr));
-			this.maghrib_label.setText(getResources().getString(R.string.maghrib));
-			this.ishaa_label.setText(getResources().getString(R.string.ishaa));
-			
-			this.fajr.setText(AthanService.prayerTimes.getFajrFinalTime());
-			this.shorouk.setText(AthanService.prayerTimes.getShorou9FinalTime());
-			this.duhr.setText(AthanService.prayerTimes.getDuhrFinalTime());
-			this.asr.setText(AthanService.prayerTimes.getAsrFinalTime());
-			this.maghrib.setText(AthanService.prayerTimes.getMaghribFinalTime());
-			this.ishaa.setText(AthanService.prayerTimes.getIshaaFinalTime());
+			this.fajr_label.setText(" "+getResources().getString(R.string.fajr));
+			this.shorouk_label.setText(" "+getResources().getString(R.string.shorouk));
+			this.duhr_label.setText(" "+getResources().getString(R.string.duhr)+" ");
+			this.asr_label.setText(" "+getResources().getString(R.string.asr));
+			this.maghrib_label.setText(" "+getResources().getString(R.string.maghrib));
+			this.ishaa_label.setText(" "+getResources().getString(R.string.ishaa));
+
 			if(this.country.equalsIgnoreCase("none") || this.city.equalsIgnoreCase("none")){
 				this.location_country.setText(longitude);
 				this.location_city.setText(latitude);
@@ -310,6 +297,13 @@ public class Prayers_Activity extends Activity {
 					}
 				}
 		}
+
+		this.fajr.setText(AthanService.prayerTimes.getFajrFinalTime()+" ");
+		this.shorouk.setText(AthanService.prayerTimes.getShorou9FinalTime()+" ");
+		this.duhr.setText(AthanService.prayerTimes.getDuhrFinalTime()+" ");
+		this.asr.setText(AthanService.prayerTimes.getAsrFinalTime()+" ");
+		this.maghrib.setText(AthanService.prayerTimes.getMaghribFinalTime()+" ");
+		this.ishaa.setText(AthanService.prayerTimes.getIshaaFinalTime()+" ");
 		
 		try {
 			this.miladi_label.setText(new MiladiTime(Calendar.getInstance(),getApplicationContext()).getMiladiTime());
@@ -887,6 +881,8 @@ public class Prayers_Activity extends Activity {
 				if(this.language.equals("ar")){
 					this.missing_to.setText(ArabicReshape.reshape(getNextPrayerName()));
 					this.missing_salat.setText(ArabicReshape.reshape(getResources().getString(R.string.missing_to)));
+					this.tf = Typeface.createFromAsset(this.getAssets(), "arabic_font.ttf");
+					this.missing_time.setTypeface(tf);
 				}else{
 					this.missing_to.setText(getResources().getString(R.string.missing_to));
 					this.missing_salat.setText(getNextPrayerName());
