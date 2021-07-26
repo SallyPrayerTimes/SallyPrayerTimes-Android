@@ -27,7 +27,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.widget.RemoteViews;
 
-import com.sally.R;
+import com.sallyprayertimes.R;
 
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
