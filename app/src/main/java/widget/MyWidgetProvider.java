@@ -38,7 +38,7 @@ import classes.ArabicReshape;
 import classes.AthanService;
 import classes.UserConfig;
 
-import com.sally.R;
+import com.sallyprayertimes.R;
 
 public class MyWidgetProvider extends AppWidgetProvider {
 
