@@ -30,7 +30,7 @@ import android.os.IBinder;
 import android.support.annotation.Nullable;
 import android.widget.RemoteViews;
 
-import com.sally.R;
+import com.sallyprayertimes.R;
 
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
